@@ -1,0 +1,62 @@
+# NetScript
+# 
+# Exported from diseño_placa_pcb.sch at 04-07-2025 17:11
+# 
+# EAGLE Version 9.6.2 Copyright (c) 1988-2020 Autodesk, Inc.
+# 
+Change Class 0;
+Signal 'GND1'     'IC1'      '9' \
+                  ;
+Change Class 0;
+Signal 'N$1'      'IC1'      '4' \
+                  'IC3'      '4' \
+                  ;
+Change Class 0;
+Signal 'N$2'      'IC1'      '14' \
+                  ;
+Change Class 0;
+Signal 'N$3'      'IC1'      '13' \
+                  ;
+Change Class 0;
+Signal 'N$4'      'IC1'      '12' \
+                  ;
+Change Class 0;
+Signal 'N$5'      'IC1'      '11' \
+                  ;
+Change Class 0;
+Signal 'N$6'      'IC1'      '10' \
+                  'IC1'      '15' \
+                  'IC3'      '15' \
+                  'IC3'      '9' \
+                  'VCC'      '2' \
+                  ;
+Change Class 0;
+Signal 'N$7'      'IC1'      '2' \
+                  'IC3'      '2' \
+                  ;
+Change Class 0;
+Signal 'N$8'      'IC3'      '5' \
+                  'IC3'      '6' \
+                  ;
+Change Class 0;
+Signal 'N$9'      'IC1'      '3' \
+                  'IC3'      '3' \
+                  ;
+Change Class 0;
+Signal 'N$10'     'IC1'      '16' \
+                  'IC3'      '16' \
+                  'VCC'      '1' \
+                  ;
+Change Class 0;
+Signal 'N$11'     'IC1'      '5' \
+                  'IC1'      '6' \
+                  ;
+Change Class 0;
+Signal 'N$12'     'IC1'      '1' \
+                  ;
+Change Class 0;
+Signal 'N$14'     'IC3'      '1' \
+                  ;
+Change Class 0;
+Signal 'VDD'      'IC3'      '10' \
+                  ;
