@@ -11,7 +11,5 @@ D18      round    0.0010mm
 D19      round    0.0000mm
 D20      round    0.8000mm
 D21      round    1.0000mm
-D22      round    1.1000mm
-D23      round    1.2000mm
-D24      round    1.4000mm
-D25      round    3.3000mm
+D22      round    1.2000mm
+D23      round    1.4000mm
