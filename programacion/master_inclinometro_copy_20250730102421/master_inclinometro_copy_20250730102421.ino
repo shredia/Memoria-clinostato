@@ -4,18 +4,7 @@
 #include <HardwareSerial.h>
 #include <ArduinoOTA.h>
 
-// Pines de motores y control
-#define DIR_PINX 27
-#define STEP_PINX 14  
 
-#define DIR_PINY 25
-#define STEP_PINY 33
-
-#define ENABLE_PIN 13
-
-#define MS1_PIN 12
-#define MS2_PIN 32 
-#define MS3_PIN 26 
 
 // Pines UART del sensor LP8
 #define RX_uart1 16
@@ -347,11 +336,7 @@ void setup() {
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
 
-   Serial.printf("Iniciando configuración de pines motores");
-  pinMode(ENABLE_PIN, OUTPUT);
-  pinMode(MS1_PIN, OUTPUT);
-  pinMode(MS2_PIN, OUTPUT);
-  pinMode(MS3_PIN, OUTPUT);
+   
   setMicrostepping(microstepping);
   digitalWrite(ENABLE_PIN, HIGH);
 
@@ -455,7 +440,7 @@ void loop() {
   
        
   // Medición de CO₂ periódica
-if (continuousMeasurement && millis() - lastMeasurement >= measurementInterval) {
+  if (continuousMeasurement && millis() - lastMeasurement >= measurementInterval) {
   Serial.println("=== Iniciando ciclo de medición de CO₂ ===");
 
   digitalWrite(vbb_en1, LOW);
