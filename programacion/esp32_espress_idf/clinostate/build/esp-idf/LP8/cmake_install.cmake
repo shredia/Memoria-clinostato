@@ -1,4 +1,4 @@
-# Install script for directory: D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper-esp-idf
+# Install script for directory: D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/sensores/LP8
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,5 +1,5 @@
 {
-    "C_Cpp.intelliSenseEngine": "default",
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
     "idf.espIdfPathWin": "C:/Espressif/frameworks/esp-idf-v5.4/",
     "idf.pythonInstallPath": "c:\\Espressif\\tools\\tools\\idf-python\\3.11.2\\python.exe",
     "idf.openOcdConfigs": [
@@ -7,6 +7,10 @@
     ],
     "idf.toolsPathWin": "c:\\Espressif\\tools",
     "files.associations": {
-        "accelstepper.h": "c"
-    }
+        "accelstepper.h": "c",
+        "gpio.h": "c",
+        "cstdint": "c",
+        "cstddef": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }

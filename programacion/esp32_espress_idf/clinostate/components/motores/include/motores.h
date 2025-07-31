@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-#include "AccelStepper.h"
+
 #include <driver/gpio.h>
 
 

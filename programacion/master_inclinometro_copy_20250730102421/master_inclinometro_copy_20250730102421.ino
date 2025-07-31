@@ -77,15 +77,8 @@ void sendRequest(HardwareSerial &SerialPort, byte packet[]) {
   n = 4;
   m = 8;
   }
-  
-  // Enviar el paquete
-
-  
     Serial.println("Esperando disponibilidad del puerto serial...");
     SerialPort.write(packet, m);
-    
-  
-
   // Esperar el byte de inicio FE
   unsigned long startTime = millis();
   bool startFound = false;
