@@ -10,7 +10,9 @@
         "accelstepper.h": "c",
         "gpio.h": "c",
         "cstdint": "c",
-        "cstddef": "c"
+        "cstddef": "c",
+        "esp_timer.h": "c",
+        "compare": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

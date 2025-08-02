@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "clinostate",
-    "project_version":    "7ef2593-dirty",
+    "project_version":    "bf47776-dirty",
     "project_path":       "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.4",
     "build_dir":          "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build",
@@ -50,12 +50,12 @@
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/sensores/LP8",
             "type": "LIBRARY",
             "lib": "__idf_LP8",
-            "reqs": [ "driver" ],
+            "reqs": [ "driver", "esp_timer" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/LP8/libLP8.a",
-            "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/sensores/LP8/src/LP8_protocolo.c", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/sensores/LP8/src/LP8_libreria.c" ],
+            "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/sensores/LP8/src/LP8_protocolo.c", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/sensores/LP8/src/LP8_libreria.cpp" ],
             "include_dirs": [ "include" ]
         },
         "app_trace": {
@@ -2898,7 +2898,7 @@
             "prefix": "idf",
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/sensores/LP8",
             "lib": "__idf_LP8",
-            "reqs": [ "driver" ],
+            "reqs": [ "driver", "esp_timer" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],

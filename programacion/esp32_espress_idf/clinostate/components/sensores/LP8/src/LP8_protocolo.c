@@ -1,1 +1,2 @@
-#include "LP8_libreria.h"
+#include "LP8_libreria.hpp"
+

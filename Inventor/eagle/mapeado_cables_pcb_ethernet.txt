@@ -1,0 +1,8 @@
+1.-verde/blanco    -> IO15 -> vbb_en1
+2.-verde 	   ->
+3.-naranjo/blanco  ->
+4.-azul		   ->
+5.-azul/verde	   ->
+6.-naranjo	   ->
+7.-café/blanco	   ->
+8.-café		   ->

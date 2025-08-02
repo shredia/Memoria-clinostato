@@ -1272,14 +1272,6 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <wire x1="58.42" y1="154.94" x2="55.88" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$24" class="0">
-<segment>
-<wire x1="33.02" y1="119.38" x2="33.02" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="LEFT_MOTOR" gate="G$1" pin="VMOT"/>
-<wire x1="33.02" y1="142.24" x2="53.34" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="142.24" x2="53.34" y2="144.78" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$26" class="0">
 <segment>
 <pinref part="IC2" gate="A1" pin="VI"/>
@@ -1288,6 +1280,10 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <wire x1="43.18" y1="109.22" x2="43.18" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="VCC1" gate="-1" pin="KL"/>
 <wire x1="43.18" y1="119.38" x2="38.1" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="LEFT_MOTOR" gate="G$1" pin="VMOT"/>
+<wire x1="53.34" y1="144.78" x2="38.1" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="144.78" x2="38.1" y2="119.38" width="0.1524" layer="91"/>
+<junction x="38.1" y="119.38"/>
 </segment>
 </net>
 <net name="N$28" class="0">

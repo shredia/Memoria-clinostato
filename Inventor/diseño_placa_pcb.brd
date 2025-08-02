@@ -104,6 +104,7 @@
 <wire x1="100" y1="0" x2="100" y2="80" width="0" layer="20"/>
 <wire x1="100" y1="80" x2="0" y2="80" width="0" layer="20"/>
 <wire x1="0" y1="80" x2="0" y2="0" width="0" layer="20"/>
+<dimension x1="100" y1="80" x2="100.33" y2="0" x3="132.008753125" y3="40.131353125" textsize="1.778" layer="16"/>
 </plain>
 <libraries>
 <library name="linear" urn="urn:adsk.eagle:library:262">
@@ -616,7 +617,7 @@ design rules under a new name.</description>
 <contactref element="LEFT_MOTOR" pad="6"/>
 <wire x1="54.61" y1="45.72" x2="52.07" y2="45.72" width="1" layer="16"/>
 </signal>
-<signal name="N$1">
+<signal name="ENABLE">
 <contactref element="LEFT_MOTOR" pad="1"/>
 <contactref element="RIGHT_MOTOR" pad="1"/>
 <contactref element="U$1" pad="D13"/>
@@ -636,7 +637,7 @@ design rules under a new name.</description>
 <wire x1="57.15" y1="30.48" x2="57.15" y2="29.845" width="1" layer="16"/>
 <wire x1="57.15" y1="30.48" x2="57.14" y2="30.915" width="1" layer="16"/>
 </signal>
-<signal name="N$2">
+<signal name="MS1">
 <contactref element="LEFT_MOTOR" pad="2"/>
 <contactref element="RIGHT_MOTOR" pad="2"/>
 <contactref element="U$1" pad="D12"/>
@@ -652,7 +653,7 @@ design rules under a new name.</description>
 <wire x1="44.45" y1="50.4825" x2="46.99" y2="53.0225" width="1" layer="16"/>
 <wire x1="44.45" y1="45.72" x2="44.45" y2="50.4825" width="1" layer="16"/>
 </signal>
-<signal name="N$3">
+<signal name="MS2">
 <contactref element="LEFT_MOTOR" pad="3"/>
 <contactref element="RIGHT_MOTOR" pad="3"/>
 <contactref element="U$1" pad="D32"/>
@@ -668,7 +669,7 @@ design rules under a new name.</description>
 <wire x1="67.945" y1="59.69" x2="65.0875" y2="56.8325" width="1" layer="16"/>
 <wire x1="72.39" y1="59.69" x2="67.945" y2="59.69" width="1" layer="16"/>
 </signal>
-<signal name="N$5">
+<signal name="MS3">
 <contactref element="LEFT_MOTOR" pad="4"/>
 <contactref element="RIGHT_MOTOR" pad="4"/>
 <contactref element="U$1" pad="D26"/>
@@ -687,7 +688,7 @@ design rules under a new name.</description>
 <contactref element="RIGHT_MOTOR" pad="6"/>
 <wire x1="72.39" y1="54.61" x2="72.39" y2="52.07" width="1" layer="16"/>
 </signal>
-<signal name="N$7">
+<signal name="STEP_X">
 <contactref element="LEFT_MOTOR" pad="7"/>
 <contactref element="U$1" pad="D14"/>
 <wire x1="62.23" y1="43.18" x2="62.23" y2="31.115" width="1" layer="16"/>
@@ -696,27 +697,27 @@ design rules under a new name.</description>
 <wire x1="57.15" y1="45.72" x2="57.15" y2="44.45" width="1" layer="16"/>
 <wire x1="62.23" y1="31.115" x2="62.22" y2="30.915" width="1" layer="16"/>
 </signal>
-<signal name="N$9">
+<signal name="DIR_X">
 <contactref element="LEFT_MOTOR" pad="8"/>
 <contactref element="U$1" pad="D27"/>
 <wire x1="64.77" y1="45.72" x2="64.77" y2="31.115" width="1" layer="16"/>
 <wire x1="59.69" y1="45.72" x2="64.77" y2="45.72" width="1" layer="16"/>
 <wire x1="64.77" y1="31.115" x2="64.76" y2="30.915" width="1" layer="16"/>
 </signal>
-<signal name="N$10">
+<signal name="STEP_Y">
 <contactref element="U$1" pad="D25"/>
 <contactref element="RIGHT_MOTOR" pad="7"/>
 <wire x1="69.85" y1="49.53" x2="69.85" y2="31.115" width="1" layer="16"/>
 <wire x1="72.39" y1="49.53" x2="69.85" y2="49.53" width="1" layer="16"/>
 <wire x1="69.85" y1="31.115" x2="69.84" y2="30.915" width="1" layer="16"/>
 </signal>
-<signal name="N$11">
+<signal name="DIR_Y">
 <contactref element="RIGHT_MOTOR" pad="8"/>
 <contactref element="U$1" pad="D33"/>
 <wire x1="72.39" y1="46.99" x2="72.39" y2="31.115" width="1" layer="16"/>
 <wire x1="72.39" y1="31.115" x2="72.38" y2="30.915" width="1" layer="16"/>
 </signal>
-<signal name="N$12">
+<signal name="GND">
 <contactref element="U$1" pad="GND@1"/>
 <contactref element="IC2" pad="2"/>
 <contactref element="RIGHT_MOTOR" pad="9"/>
@@ -759,7 +760,7 @@ design rules under a new name.</description>
 <wire x1="39.0525" y1="56.1975" x2="29.845" y2="56.1975" width="1" layer="16"/>
 <wire x1="39.0525" y1="56.1975" x2="39.37" y2="55.88" width="1" layer="16"/>
 </signal>
-<signal name="N$13">
+<signal name="VCC_5V">
 <contactref element="IC2" pad="3"/>
 <contactref element="U$1" pad="VIN"/>
 <contactref element="U$2" pad="RD+"/>
@@ -775,7 +776,7 @@ design rules under a new name.</description>
 <wire x1="6.985" y1="31.75" x2="51.1175" y2="31.75" width="1" layer="16"/>
 <wire x1="51.7525" y1="31.115" x2="52.06" y2="30.915" width="1" layer="16"/>
 </signal>
-<signal name="N$15">
+<signal name="VCC_3.3">
 <contactref element="U$1" pad="3V3"/>
 <contactref element="RIGHT_MOTOR" pad="10"/>
 <contactref element="LEFT_MOTOR" pad="10"/>
@@ -867,7 +868,7 @@ design rules under a new name.</description>
 <wire x1="46.99" y1="73.66" x2="46.99" y2="58.42" width="1" layer="16"/>
 <wire x1="46.99" y1="73.66" x2="47.03" y2="73.66" width="1" layer="16"/>
 </signal>
-<signal name="N$26">
+<signal name="VIN">
 <contactref element="IC2" pad="1"/>
 <contactref element="VCC1" pad="1"/>
 <contactref element="LEFT_MOTOR" pad="16"/>
@@ -903,7 +904,7 @@ design rules under a new name.</description>
 <wire x1="23.8125" y1="24.4475" x2="23.81" y2="24.45" width="1" layer="16"/>
 <wire x1="77.47" y1="5.715" x2="77.46" y2="5.51" width="1" layer="16"/>
 </signal>
-<signal name="N$30">
+<signal name="TX">
 <contactref element="U$2" pad="P4"/>
 <contactref element="U$1" pad="D17"/>
 <wire x1="50.4825" y1="21.9075" x2="23.8125" y2="21.9075" width="1" layer="16"/>
@@ -914,7 +915,7 @@ design rules under a new name.</description>
 <wire x1="23.8125" y1="21.9075" x2="23.81" y2="21.91" width="1" layer="16"/>
 <wire x1="67.31" y1="5.715" x2="67.3" y2="5.51" width="1" layer="16"/>
 </signal>
-<signal name="N$25">
+<signal name="RX">
 <contactref element="U$1" pad="D16"/>
 <contactref element="U$2" pad="RD-"/>
 <wire x1="44.1325" y1="19.3675" x2="23.8125" y2="19.3675" width="1" layer="16"/>
@@ -925,7 +926,7 @@ design rules under a new name.</description>
 <wire x1="23.8125" y1="19.3675" x2="23.81" y2="19.37" width="1" layer="16"/>
 <wire x1="64.77" y1="5.715" x2="64.76" y2="5.51" width="1" layer="16"/>
 </signal>
-<signal name="N$31">
+<signal name="RDY1">
 <contactref element="U$2" pad="GND"/>
 <contactref element="U$1" pad="D2"/>
 <wire x1="30.1625" y1="10.4775" x2="23.81" y2="16.83" width="1" layer="16"/>
@@ -934,7 +935,7 @@ design rules under a new name.</description>
 <wire x1="59.69" y1="5.715" x2="59.69" y2="6.985" width="1" layer="16"/>
 <wire x1="59.69" y1="5.715" x2="59.68" y2="5.51" width="1" layer="16"/>
 </signal>
-<signal name="N$32">
+<signal name="VBB_EN1">
 <contactref element="U$2" pad="NC"/>
 <contactref element="U$1" pad="D15"/>
 <wire x1="21.2725" y1="8.255" x2="21.2725" y2="17.78" width="1" layer="16"/>
