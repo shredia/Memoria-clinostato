@@ -1,5 +1,5 @@
 {
-    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "C_Cpp.intelliSenseEngine": "default",
     "idf.espIdfPathWin": "C:/Espressif/frameworks/esp-idf-v5.4/",
     "idf.pythonInstallPath": "c:\\Espressif\\tools\\tools\\idf-python\\3.11.2\\python.exe",
     "idf.openOcdConfigs": [
@@ -7,6 +7,7 @@
     ],
     "idf.toolsPathWin": "c:\\Espressif\\tools",
     "files.associations": {
+<<<<<<< HEAD
         "accelstepper.h": "c",
         "gpio.h": "c",
         "cstdint": "c",
@@ -15,4 +16,8 @@
         "compare": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
+=======
+        "accelstepper.h": "c"
+    }
+>>>>>>> parent of bf47776 (Creacion: Componentes LP8,motores y AccelStepper)
 }
