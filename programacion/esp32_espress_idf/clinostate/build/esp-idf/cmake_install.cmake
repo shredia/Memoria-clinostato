@@ -549,6 +549,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_wifi/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/AccelStepper/cmake_install.cmake")
 endif()
 

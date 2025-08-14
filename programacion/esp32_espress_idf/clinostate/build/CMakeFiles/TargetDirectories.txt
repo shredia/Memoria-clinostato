@@ -824,6 +824,13 @@ D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/c
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/wifi_provisioning/CMakeFiles/install.dir
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/wifi_provisioning/CMakeFiles/install/local.dir
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/wifi_provisioning/CMakeFiles/install/strip.dir
+D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_wifi/CMakeFiles/__idf_app_wifi.dir
+D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_wifi/CMakeFiles/edit_cache.dir
+D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_wifi/CMakeFiles/rebuild_cache.dir
+D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_wifi/CMakeFiles/list_install_components.dir
+D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_wifi/CMakeFiles/install.dir
+D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_wifi/CMakeFiles/install/local.dir
+D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_wifi/CMakeFiles/install/strip.dir
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/AccelStepper/CMakeFiles/__idf_AccelStepper.dir
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/AccelStepper/CMakeFiles/edit_cache.dir
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/AccelStepper/CMakeFiles/rebuild_cache.dir

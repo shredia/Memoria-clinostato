@@ -7,7 +7,6 @@
     ],
     "idf.toolsPathWin": "c:\\Espressif\\tools",
     "files.associations": {
-<<<<<<< HEAD
         "accelstepper.h": "c",
         "gpio.h": "c",
         "cstdint": "c",
@@ -15,9 +14,10 @@
         "esp_timer.h": "c",
         "compare": "c"
     },
-    "C_Cpp.errorSquiggles": "enabled"
-=======
-        "accelstepper.h": "c"
-    }
->>>>>>> parent of bf47776 (Creacion: Componentes LP8,motores y AccelStepper)
+    "C_Cpp.errorSquiggles": "enabled",
+    "idf.customExtraVars": {
+        "IDF_TARGET": "esp32"
+    },
+    "idf.flashType": "UART",
+    "idf.portWin": "COM11"
 }

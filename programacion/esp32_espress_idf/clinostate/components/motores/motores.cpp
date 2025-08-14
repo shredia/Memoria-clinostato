@@ -2,14 +2,14 @@
 #include <driver/gpio.h>
 
 extern "C" {
-#define DIR_PINX ((gpio_num_t)27)
-#define STEP_PINX ((gpio_num_t)14)
-#define DIR_PINY ((gpio_num_t)25)
-#define STEP_PINY ((gpio_num_t)33)
-#define MS1_PIN   ((gpio_num_t)12)
-#define MS2_PIN   ((gpio_num_t)32)
-#define MS3_PIN   ((gpio_num_t)26)
-#define ENABLE_PIN ((gpio_num_t)33)
+#define DIR_PINX ((gpio_num_t)13)
+#define STEP_PINX ((gpio_num_t)12)
+#define DIR_PINY ((gpio_num_t)14)
+#define STEP_PINY ((gpio_num_t)27)
+#define MS1_PIN   ((gpio_num_t)25)
+#define MS2_PIN   ((gpio_num_t)33)
+#define MS3_PIN   ((gpio_num_t)32)
+#define ENABLE_PIN ((gpio_num_t)26)
  
     static AccelStepper stepperX(AccelStepper::DRIVER, DIR_PINX, STEP_PINX); // 
     static AccelStepper steppery(AccelStepper::DRIVER, DIR_PINY, STEP_PINY); // 
@@ -60,7 +60,7 @@ extern "C" {
     gpio_config(&io_conf_MS3_PIN);
 }
 
-void setMicrostepping(int ms) {
+    void setMicrostepping(int ms) {
     if (ms == 0) {
     gpio_set_level(MS1_PIN, 0);
     gpio_set_level(MS2_PIN, 0);

@@ -9,7 +9,7 @@ from collections import deque
 import os
 import json
 
-BROKER = "192.168.31.61"  # Cambia por tu IP
+BROKER = "192.168.31.81"  # Cambia por tu IP
 PORT = 1883
 
 HEARTBEAT_TOPIC = "esp32/heartbeat/#"

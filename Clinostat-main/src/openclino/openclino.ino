@@ -1,21 +1,30 @@
-#include <AccelStepper.h>
+/*
+ * OpenClino
+ * 
+ * X is the outer frame.
+ * Y is the inner frame.
+ */
 
-// pins
-const int buttonPin = 2;
+// 🛠 Motor & Button Pins
 
-const int stepPinX = 4;
-const int dirPinX = 5;
 
-const int stepPinY = 7;
-const int dirPinY = 8;
+const int stepPinX = 13;
+const int dirPinX = 12;
+
+const int stepPinY = 14;
+const int dirPinY = 27;
+
+const int MS1_PIN = 25;
+const int MS2_PIN = 33;
+const int MS3_PIN = 32; 
+
+const int enablePin = 26;
+ int buttonState = 1;
 
 // Define steps per revolution
 const int motorSteps = 200;
-const int subStep = 200;
+const int subStep = 16;
 const unsigned long stepsPerRevolution = motorSteps * subStep;
-// eposilon to fix discrepancy between motor substeps
-// set to 1 to undo calibration.
-const double epsilon = 1;
 
 // Pulley teeth
 const float xMotTeeth = 16;
@@ -24,259 +33,248 @@ const float yMotTeeth = 16;
 const float yTurnTeeth = 50;
 const float yPulleyTeeth = 20;
 
-// Calculate the gear ratios based on pulley teeth
+// Calculate the gear ratios based on pulley teeth and calibration factor
 const double xRatio = xPulleyTeeth / xMotTeeth;
 const double yRatio1 = yTurnTeeth / yMotTeeth;
 const double yRatio2 = yPulleyTeeth / yTurnTeeth;
-const double yRatio = yRatio1 * yRatio2 * epsilon;
+double yCorrection = 1.5; // Found from calibration using calibrate_y_correction()
+double yRatio = yRatio1 * yRatio2 * yCorrection;
 
 // Calculate effective steps per rotation
 const double nStepsPerRotX = stepsPerRevolution * xRatio;
-const double nStepsPerRotY = stepsPerRevolution * yRatio;
+double nStepsPerRotY = stepsPerRevolution * yRatio;
 
-int buttonState = 0;
+// 🏁 Enable or disable motors
+void enable(bool enable) {
+    digitalWrite(enablePin, enable ? LOW : HIGH);  // LOW = Enabled, HIGH = Disabled
+}
 
-// Define AccelStepper objects for X and Y axes
-AccelStepper stepperX(1, stepPinX, dirPinX);
-AccelStepper stepperY(1, stepPinY, dirPinY);
+// functions
+void spin_degs(float Q1_target, float Q2_target, float maxRPM = 10, int finalDelay = 100) {
+    // 🎯 Compute target step movement for X-axis
+    long stepsX = round((Q1_target / 360.0) * nStepsPerRotX);
+    
+    // 🔄 Compute Y-axis movement with compensation to align timing
+    long rawStepsY = round((Q2_target / 360.0) * nStepsPerRotY);
+    long compensatedStepsY = rawStepsY - stepsX;  
 
+    // Flip Y direction
+    compensatedStepsY = -compensatedStepsY;
 
+    // Normalize motion so that both axes complete at the same time
+    long maxSteps = max(abs(stepsX), abs(compensatedStepsY));
+    float ratioX = (maxSteps > 0) ? abs(stepsX) / (float)maxSteps : 0;
+    float ratioY = (maxSteps > 0) ? abs(compensatedStepsY) / (float)maxSteps : 0;
 
-void xClockwise(bool foo)
-{
-  if (foo == true)
-  {
+    // Set direction
+    digitalWrite(dirPinX, (stepsX > 0) ? HIGH : LOW);
+    digitalWrite(dirPinY, (compensatedStepsY > 0) ? HIGH : LOW);
+
+    // Convert max RPM to step delay
+    float stepsPerSecond = (maxRPM / 60.0) * max(nStepsPerRotX, nStepsPerRotY);
+    float stepDelay = (1.0 / stepsPerSecond) * 1000000.0;
+
+    Serial.print("stepsX: ");
+    Serial.println(stepsX);
+    Serial.print("compensatedStepsY: ");
+    Serial.println(compensatedStepsY);
+
+    // Step both motors proportionally
+    long stepCountX = 0, stepCountY = 0;
+    for (long i = 0; i < maxSteps; i++) {
+        if (stepCountX < abs(stepsX) && (i * ratioX) >= stepCountX) {
+            digitalWrite(stepPinX, HIGH);
+            digitalWrite(stepPinX, LOW);
+            stepCountX++;
+        }
+
+        if (stepCountY < abs(compensatedStepsY) && (i * ratioY) >= stepCountY) {
+            digitalWrite(stepPinY, HIGH);
+            digitalWrite(stepPinY, LOW);
+            stepCountY++;
+        }
+
+        delayMicroseconds(stepDelay);
+    }
+    delay(finalDelay);
+    Serial.println("Motion complete.\n");
+}
+
+void spin_continuous(float speedX = 10, float speedY = 10, int buttonDelay = 1000) {
+    // Convert RPM to steps per second
+    float stepsPerSecondX = (speedX / 60.0) * nStepsPerRotX;
+    float rawStepsPerSecondY = (speedY / 60.0) * nStepsPerRotY;
+    float compensatedStepsPerSecondY = rawStepsPerSecondY - stepsPerSecondX;
+
+    // Set motor direction, both should always spin clockwise
     digitalWrite(dirPinX, HIGH);
-  }
-  else
-  {
-    digitalWrite(dirPinX, LOW);
-  }
+    digitalWrite(dirPinY, (compensatedStepsPerSecondY > 0) ? LOW : HIGH);
+    
+    stepsPerSecondX = fabs(stepsPerSecondX);
+    compensatedStepsPerSecondY = fabs(compensatedStepsPerSecondY);
+
+    // Compute step delays
+    float stepDelayX = (stepsPerSecondX > 0) ? (1.0 / stepsPerSecondX) * 1e6 : 0;
+    float stepDelayY = (compensatedStepsPerSecondY > 0) ? (1.0 / compensatedStepsPerSecondY) * 1e6 : 0;
+
+    Serial.println("Starting continuous motion...");
+    Serial.print("Step Delay X: "); Serial.println(stepDelayX);
+    Serial.print("Step Delay Y: "); Serial.println(stepDelayY);
+
+    delay(buttonDelay);
+    buttonState = 1;
+
+    // Track last step times
+    unsigned long lastStepTimeX = micros();
+    unsigned long lastStepTimeY = micros();
+
+    while (buttonState == LOW) {
+        buttonState = 1;
+        unsigned long now = micros();
+
+        // Step X motor if delay has passed
+        if (stepsPerSecondX > 0 && (now - lastStepTimeX >= stepDelayX)) {
+            digitalWrite(stepPinX, HIGH);
+            digitalWrite(stepPinX, LOW);
+            lastStepTimeX = now;
+        }
+
+        // Step Y motor if delay has passed
+        if (compensatedStepsPerSecondY > 0 && (now - lastStepTimeY >= stepDelayY)) {
+            digitalWrite(stepPinY, HIGH);
+            digitalWrite(stepPinY, LOW);
+            lastStepTimeY = now;
+        }
+    }
+
+    delay(buttonDelay);
+    Serial.println("Continuous motion stopped.");
 }
 
-void yClockwise(bool foo)
+
+// calibration
+void calibrate_y_correction()
 {
-  if (foo == true)
-  {
-    digitalWrite(dirPinY, LOW);
+  Serial.println("Starting rotation diagnostic...");
+  Serial.println("Resetting Y-axis correction factor to 1.0.");
+  yCorrection = 1.0;
+  yRatio = yRatio1 * yRatio2 * yCorrection;
+  nStepsPerRotY = stepsPerRevolution * yRatio;
+
+  // Step 2: Test Y-Axis Rotation
+  Serial.println("Rotating Y-Axis by 360°...");
+  spin_degs(0, 360);
+  delay(1000); // Wait for movement to stop
+
+  // Step 3: Ask User to Measure Actual Y-Axis Rotation
+  Serial.println("⚠ Please enter how much the Y-axis actually rotated in degrees:");
+
+  while (Serial.available() == 0) {} // Wait for user input
+
+  // Rotate back to 0 to reset before measuring correction
+  spin_degs(0, -360);
+
+  float measuredY = Serial.parseFloat(); // Read user input
+
+  if (measuredY == 0.0) {
+    Serial.print("\n❌ Error, exiting calibration. You entered: "); 
+    Serial.println(measuredY);
+    return;
   }
-  else
-  {
-    digitalWrite(dirPinY, HIGH);
-  }
-}
+  
+  yCorrection = 360.0 / measuredY;
+  yRatio = yRatio1 * yRatio2 * yCorrection;
+  nStepsPerRotY = stepsPerRevolution * yRatio;
 
-void spin_continuous(float speedX = 10, float speedY = 10, int finalDelay = 100)
-{
-  bool xClock;
-  bool yClock;
-
-  if (speedX >= 0)
-  {
-    xClock = true;
-  }
-  else
-  {
-    xClock = false;
-  }
-  if (speedY >= 0)
-  {
-    yClock = true;
-  }
-  else
-  {
-    yClock = false;
-  }
-
-  long IntervalX = (6e7 / speedX) / nStepsPerRotX;
-  long IntervalY = (6e7 / speedY) / nStepsPerRotY;
-  unsigned long stepsY = 0;
-  unsigned long stepsX = 0;
-  unsigned long previousTimeX = micros();
-  unsigned long previousTimeY = micros();
-
-  while (true)
-  {
-    unsigned long currentTimeX = micros();
-    unsigned long currentTimeY = micros();
-    bool xGo = false; // whether to step x
-    bool yGo = false; // whether to step y
-    bool skipCompensation = false;
-
-    digitalWrite(stepPinX, HIGH);
-    digitalWrite(stepPinY, HIGH);
-
-    if (currentTimeX - previousTimeX > IntervalX)
-    {
-      xGo = true;
-    }
-    if (currentTimeY - previousTimeY > IntervalY)
-    {
-      yGo = true;
-    }
-    if (yGo == true && xGo == true && yClock == false && xClock != yClock)
-    {
-      skipCompensation = true;
-    }
-
-    if (xGo)
-    {
-      xClockwise(xClock);
-      digitalWrite(stepPinX, LOW);
-      digitalWrite(stepPinX, HIGH);
-      previousTimeX = currentTimeX;
-
-      if (skipCompensation == false)
-      {
-        yClockwise(!xClock); // spin y motor with x
-
-        digitalWrite(stepPinY, LOW); // compensator
-        digitalWrite(stepPinY, HIGH);
-      }
-      stepsX++;
-    }
-
-    if (yGo)
-    {
-      yClockwise(yClock);
-      digitalWrite(stepPinY, LOW);
-      digitalWrite(stepPinY, HIGH);
-      previousTimeY = currentTimeY;
-      stepsY++;
-    }
-    //    if (stepsX >= nStepsX && stepsY >= nStepsY) {keepGoing = false;} // check if finished
-  }
-  delay(finalDelay);
-}
-
-void spin_degs(float degX, float degY, float speedX = 10, float speedY = 10, int finalDelay = 100)
-{
-  // This function is perfect without accel
-  // Initialize motor direction based on target degrees
-  bool xClock = (degX >= 0);
-  bool yClock = (degY >= 0);
-
-  // Calculate steps needed for each axis based on degree input
-  int nStepsX = nStepsPerRotX * abs(degX / 360.0);
-  int nStepsY = nStepsPerRotY * abs(static_cast<float>(degY) / 360.0);
-
-  // Determine intervals for each motor based on speed
-  long intervalX = (6e7 / speedX) / nStepsPerRotX;
-  long intervalY = (6e7 / speedY) / nStepsPerRotY;
-
-  // Initialize step counters and timing variables
-  unsigned long stepsX = 0;
-  unsigned long stepsY = 0;
-  unsigned long previousTimeX = micros();
-  unsigned long previousTimeY = micros();
-
-  while (stepsX < nStepsX || stepsY < nStepsY)
-  {
-    unsigned long currentTime = micros();
-    bool skipCompensation = false;
-
-    // Check if it's time to move motor X
-    if ((currentTime - previousTimeX > intervalX) && (stepsX < nStepsX))
-    {
-      // Move X motor
-      xClockwise(xClock);
-      digitalWrite(stepPinX, LOW);
-      digitalWrite(stepPinX, HIGH);
-      previousTimeX = currentTime;
-      stepsX++;
-
-      // Compensation logic: Skip compensation when both axes move, Y motor moves in opposite direction to X
-      if (!(stepsY < nStepsY && (currentTime - previousTimeY > intervalY) && yClock != xClock))
-      {
-        // Move Y motor to compensate
-        yClockwise(!xClock);
-        digitalWrite(stepPinY, LOW);
-        digitalWrite(stepPinY, HIGH);
-      }
-    }
-
-    // Check if it's time to move motor Y
-    if ((currentTime - previousTimeY > intervalY) && (stepsY < nStepsY))
-    {
-      // Move Y motor
-      yClockwise(yClock);
-      digitalWrite(stepPinY, LOW);
-      digitalWrite(stepPinY, HIGH);
-      previousTimeY = currentTime;
-      stepsY++;
-    }
-  }
-
-  delay(finalDelay); // Final delay to settle motors
-}
-
-void RPM()
-{
-  spin_degs(random(-360, 360), random(-360, 360));
+  Serial.println("\n✅ Calibration Complete!");
+  Serial.print("  - Measured Y Rotation: ");
+  Serial.print(measuredY);
+  Serial.println("° / 360°");
+  Serial.print("  - Suggested Correction Factor: ");
+  Serial.println(yCorrection);
+  Serial.print("  - Suggested yRatio: ");
+  Serial.print(yRatio);
+  Serial.println("\n");
 }
 
 // Unit tests
-
-void calibrate_pulley_teeth()
+void test_pulley_ratios()
 {
-  spin_degs(90.0, 0);
-  spin_degs(-90.0, 0);
-  spin_degs(0, 90.0);
-  spin_degs(0, -90.0);
+  Serial.println("Testing pulley ratios, outer frame (X) should rotate 360° and back.");
+  spin_degs(360.0, 0);
+  spin_degs(-360.0, 0);
+  Serial.println("Inner frame should rotate 360° and back.");
+  spin_degs(0, 360.0);
+  spin_degs(0, -360.0);
 }
 
 void test_spin_degs_multi()
 {
-  spin_degs(90, -90);
-  spin_degs(-90, 90);
-  spin_degs(180, -180);
-  spin_degs(-180, 180);
+  Serial.println("--\nTesting spin_degs.\n--");
+  Serial.println("90°");
+  spin_degs(90, 90);
+  spin_degs(-90, -90);
+  Serial.println("180°");
+  spin_degs(180, 180);
+  spin_degs(-180, -180);
+  Serial.println("360°");
   spin_degs(360, 360);
   spin_degs(-360, -360);
 }
 
 void setup()
 {
-  pinMode(buttonPin, INPUT);
+
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(stepPinX, OUTPUT);
   pinMode(dirPinX, OUTPUT);
   pinMode(stepPinY, OUTPUT);
   pinMode(dirPinY, OUTPUT);
+  pinMode(enablePin, OUTPUT);
+  pinMode(MS1_PIN,OUTPUT);
+  pinMode(MS2_PIN,OUTPUT);
+  pinMode(MS3_PIN,OUTPUT);
+  digitalWrite(MS1_PIN,0);
+  digitalWrite(MS2_PIN,0);
+  digitalWrite(MS3_PIN,0);
 
   Serial.begin(9600);
-  Serial.print("--\nHello from OpenClino.\n--");
+  Serial.print("--\nHello from OpenClino.\n--\n");
+  // print gear ratios and nStepsPerRotX, nStepsPerRotY
+  Serial.print("xRatio: ");
+  Serial.println(xRatio);
+  Serial.print("yRatio: ");
+  Serial.println(yRatio);
+  Serial.print("nStepsPerRotX: ");
+  Serial.println(nStepsPerRotX);
+  Serial.print("nStepsPerRotY: ");
+  Serial.println(nStepsPerRotY);
+  Serial.print("--\n");
 
-  stepperX.setMaxSpeed(200);  // Máxima velocidad en pasos/segundo
-stepperX.setAcceleration(100);  // Aceleración en pasos/seg²
-
-stepperY.setMaxSpeed(200);
-stepperY.setAcceleration(100);
-  
+  enable(false);
 }
 
 void loop()
 {
-  buttonState = digitalRead(buttonPin);
-  Serial.print(buttonState);
-  // Turn off motors when button is not pressed.
+  
+  buttonState = 1;
+  // Disable motors when button is not pressed
   
 
-  if (buttonState == HIGH)
-  { 
-    Serial.println("boton prendido");
+  if (1)
+  {
     digitalWrite(LED_BUILTIN, HIGH);
-   
-    //calibrate_pulley_teeth();
-    //test_spin_degs_multi();
-    // uncomment to run continuous spin
-     //spin_continuous(4, 20);
-    // uncomment to run RPM
-    //RPM();
-    
-  xClockwise(true);
-  yClockwise(true);
-
-  spin_continuous(4,20);
+    // Enable motors
+    enable(true); 
+    // Run calibration procedure
+    // please open your Serial Monitor and follow the instructions.
+    calibrate_y_correction();
+    // These functions will run a test procedure.
+    // Open the Serial Monitor and ensure the 
+    // frames are rotating correctly.
+    test_pulley_ratios();
+    test_spin_degs_multi();
+    // Uncomment to run continuous spin at 10 rpm for both axes
+    // spin_continuous(10, 10);
   }
 }
