@@ -2,6 +2,7 @@
 #include "esp_timer.h"
 #include <stdint.h>
 #include "LP8_libreria.hpp"
+#include <esp_mac.h>
 
 // Pines UART del sensor LP8
 #define RX_uart1 GPIO_NUM_16

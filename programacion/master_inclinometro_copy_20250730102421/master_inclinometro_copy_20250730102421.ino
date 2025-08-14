@@ -4,7 +4,7 @@
 #include <HardwareSerial.h>
 #include <ArduinoOTA.h>
 
-
+#define S
 
 // Pines UART del sensor LP8
 #define RX_uart1 16

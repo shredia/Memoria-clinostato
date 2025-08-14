@@ -1,4 +1,5 @@
 idf_component_register(
-    SRCS "motores.c"
+    SRCS "motores.cpp"
     INCLUDE_DIRS "include"
+    REQUIRES AccelStepper
 )
