@@ -9,7 +9,7 @@ from collections import deque
 import os
 import json
 
-BROKER = "192.168.31.81"  # Cambia por tu IP
+BROKER = "192.168.31.82"  # Cambia por tu IP
 PORT = 1883
 
 HEARTBEAT_TOPIC = "esp32/heartbeat/#"
@@ -167,20 +167,34 @@ class App:
             topic = f"esp32/{client_id}/{topic_suffix}"
             self.client.publish(topic, str(value))
 
+        speed_vars = {}
+        dir_vars = {}
+
         for axis in ['X', 'Y']:
             row = tk.Frame(control_frame)
             row.pack(fill=tk.X, padx=5, pady=2)
             tk.Label(row, text=f"Velocidad {axis}", width=15).pack(side=tk.LEFT)
+
+            speed_vars[axis] = tk.IntVar(value=0)
+            dir_vars[axis] = tk.IntVar(value=1)
+
+            def publish_speed(a=axis):
+                val = speed_vars[a].get()
+                direction = dir_vars[a].get()
+                speed = val if direction == 1 else -val
+                send(f"motor/speed{a}", speed)
+
             speed_slider = tk.Scale(row, from_=0, to=2000, orient=tk.HORIZONTAL, length=200,
-                                    command=lambda val, a=axis: send(f"motor/speed{a}", val))
+                                    variable=speed_vars[axis], command=lambda val, a=axis: publish_speed(a))
             speed_slider.pack(side=tk.LEFT, fill=tk.X, expand=True)
 
             dir_row = tk.Frame(control_frame)
             dir_row.pack(fill=tk.X, padx=5, pady=2)
             tk.Label(dir_row, text=f"Dirección {axis}", width=15).pack(side=tk.LEFT)
-            dir_var = tk.IntVar()
-            tk.Radiobutton(dir_row, text="Horario", variable=dir_var, value=1, command=lambda a=axis, v=dir_var: send(f"motor/direction{a}", v.get())).pack(side=tk.LEFT)
-            tk.Radiobutton(dir_row, text="Antihorario", variable=dir_var, value=0, command=lambda a=axis, v=dir_var: send(f"motor/direction{a}", v.get())).pack(side=tk.LEFT)
+            tk.Radiobutton(dir_row, text="Horario", variable=dir_vars[axis], value=1,
+                           command=lambda a=axis: publish_speed(a)).pack(side=tk.LEFT)
+            tk.Radiobutton(dir_row, text="Antihorario", variable=dir_vars[axis], value=0,
+                           command=lambda a=axis: publish_speed(a)).pack(side=tk.LEFT)
 
         sys_row = tk.Frame(control_frame)
         sys_row.pack(fill=tk.X, padx=5, pady=2)
@@ -199,7 +213,7 @@ class App:
         sensor_row = tk.LabelFrame(frame, text="Sensor CO2")
         sensor_row.pack(fill=tk.X, pady=5)
         tk.Button(sensor_row, text="Medir ahora", command=lambda: send("sensor/measure", 1)).pack(side=tk.LEFT, padx=10)
-        tk.Button(sensor_row, text="Detener medición", command=lambda: send("sensor/stop", 1)).pack(side=tk.LEFT, padx=10)
+        tk.Button(sensor_row, text="Detener medición", command=lambda: send("sensor/measure", 0)).pack(side=tk.LEFT, padx=10)
 
     def update_plot(self, safe_id):
         data = []

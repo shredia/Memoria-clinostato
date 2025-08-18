@@ -1,7 +1,8 @@
 #include "AccelStepper.h"
 #include <driver/gpio.h>
-
-extern "C" {
+#include "motores.h"
+#include "esp_log.h"
+// Pines
 #define DIR_PINX ((gpio_num_t)13)
 #define STEP_PINX ((gpio_num_t)12)
 #define DIR_PINY ((gpio_num_t)14)
@@ -9,19 +10,19 @@ extern "C" {
 #define MS1_PIN   ((gpio_num_t)25)
 #define MS2_PIN   ((gpio_num_t)33)
 #define MS3_PIN   ((gpio_num_t)32)
-#define ENABLE_PIN ((gpio_num_t)26)
- 
-    static AccelStepper stepperX(AccelStepper::DRIVER, DIR_PINX, STEP_PINX); // 
-    static AccelStepper steppery(AccelStepper::DRIVER, DIR_PINY, STEP_PINY); // 
 
-    void motores_setup(void){
-    // Estado del sistema
-    int speedX = 0;
-    int speedY = 0;
-    bool dirX = true;
-    bool dirY = true;
-    bool motorsEnabled = false;
-    int microstepping = 1;
+gpio_num_t ENABLE_PIN = (gpio_num_t)26;
+int SpeedX = 0;
+int SpeedY = 0;
+int micro_stepping = 0;
+bool enable_motors = false;
+
+AccelStepper MotorX(AccelStepper::DRIVER,STEP_PINX, DIR_PINX );
+AccelStepper MotorY(AccelStepper::DRIVER, STEP_PINY, DIR_PINY);
+
+void motores_setup(void) {
+        MotorX.setMaxSpeed(4000);
+        MotorY.setMaxSpeed(4000);
 
     gpio_config_t io_conf_ENABLE_PIN = {
         .pin_bit_mask = (1ULL << ENABLE_PIN),
@@ -60,16 +61,34 @@ extern "C" {
     gpio_config(&io_conf_MS3_PIN);
 }
 
-    void setMicrostepping(int ms) {
+void setMicrostepping(int ms) {
     if (ms == 0) {
-    gpio_set_level(MS1_PIN, 0);
-    gpio_set_level(MS2_PIN, 0);
-    gpio_set_level(MS3_PIN, 0);
-  } else {
-    gpio_set_level(MS1_PIN, ms & 1);
-    gpio_set_level(MS2_PIN, (ms >> 1) & 1);
-    gpio_set_level(MS3_PIN, (ms >> 2) & 1);
-  }
+        gpio_set_level(MS1_PIN, 0);
+        gpio_set_level(MS2_PIN, 0);
+        gpio_set_level(MS3_PIN, 0);
+    } else {
+        gpio_set_level(MS1_PIN, ms & 1);
+        gpio_set_level(MS2_PIN, (ms >> 1) & 1);
+        gpio_set_level(MS3_PIN, (ms >> 2) & 1);
+    }
 }
 
+void actualizarMotores() {
+    if (enable_motors)
+    {   
+        gpio_set_level(ENABLE_PIN, 0);
+        setMicrostepping(micro_stepping);
+        MotorX.setSpeed(SpeedX);
+        MotorY.setSpeed(SpeedY);
+        
+        MotorX.runSpeed();
+        MotorY.runSpeed();
+    } else 
+    {   
+        ESP_LOGI("Actualizar_motores", "Disabled");
+        gpio_set_level(ENABLE_PIN, 1); // Deshabilita el driver
+        MotorX.stop();
+        MotorY.stop();
+    }
 }
+

@@ -12,7 +12,9 @@
         "cstdint": "c",
         "cstddef": "c",
         "esp_timer.h": "c",
-        "compare": "c"
+        "compare": "c",
+        "mqtt_client.h": "c",
+        "app_mqtt.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled",
     "idf.customExtraVars": {

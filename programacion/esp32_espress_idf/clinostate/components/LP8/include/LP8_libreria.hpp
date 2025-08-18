@@ -6,6 +6,7 @@ int ModRTU_CRC(uint8_t n1);
 void LP8_procesarLectura(uint8_t n);
 void LP8_sendRequest(uart_port_t uart_num, const uint8_t *packet, size_t length);
 
+extern bool continuousMeasurement;
 class LP8{
     public:
     LP8();

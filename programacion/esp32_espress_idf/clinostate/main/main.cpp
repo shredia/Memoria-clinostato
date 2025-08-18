@@ -1,27 +1,45 @@
 // main.cpp
 #include <stdio.h>
 #include "motores.h"
-#include "Task_Core_0.h"
-#include "Task_Core_1.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "wifi.h"
 #include "esp_log.h"
+#include "app_mqtt.h"
 
+
+
+
+void motores_task(void *pvParameters) {
+     ESP_LOGI("MOTORES", "Núcleo actual: %d", xPortGetCoreID());
+    while (1) {
+           
+        actualizarMotores();
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+}
+
+void comunicaciones_task(void *pvParameters) {
+    mqtt_start("mqtt://192.168.31.82");
+    vTaskDelete(NULL);
+}
 
 extern "C" void app_main(void) {
-    
     ESP_ERROR_CHECK(wifi_init());
 
     esp_err_t err = wifi_connect("Oficina AG", "OficinaAG23", 15000);
     if (err == ESP_OK) {
         ESP_LOGI("MAIN", "¡Wi-Fi ok!");
-        // aquí ya puedes iniciar sockets, MQTT, etc.
+        xTaskCreatePinnedToCore(comunicaciones_task, "Comunicaciones", 4096, NULL, 5, NULL, 1);
     } else {
         ESP_LOGE("MAIN", "No se logró conectar");
     }
-    printf("Iniciando aplicación\n");
+
     motores_setup();
-    xTaskCreatePinnedToCore(Task_Core_0, "Core0", 2048, NULL, 1, NULL, 0); // núcleo 0
-    xTaskCreatePinnedToCore(Task_Core_1, "Core1", 2048, NULL, 1, NULL, 1); // núcleo 1
+    xTaskCreatePinnedToCore(motores_task, "Motores", 4096, NULL, 5, NULL, 1);
 }
+
+
+
+
+
