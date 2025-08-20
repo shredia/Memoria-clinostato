@@ -110,7 +110,7 @@ void mqtt_start(const char *uri) {
     esp_mqtt_client_start(client);
 
     // Inicia la tarea de heartbeat
-    xTaskCreate(heartbeat_task, "heartbeat_task", 2048, NULL, 5, NULL);
+    xTaskCreate(heartbeat_task, "heartbeat_task", 4098, NULL, 5, NULL);
 }
 
 void enviar_status() {

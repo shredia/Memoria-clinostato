@@ -11,16 +11,22 @@
 
 
 void motores_task(void *pvParameters) {
-     ESP_LOGI("MOTORES", "Núcleo actual: %d", xPortGetCoreID());
-    while (1) {
-           
+    ESP_LOGI("MOTORES", "Núcleo actual: %d", xPortGetCoreID());
+
+    const TickType_t frecuencia = pdMS_TO_TICKS(5);  // configurar el tick rate a 1000 hz 
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+
+    while (true) {
         actualizarMotores();
-        vTaskDelay(pdMS_TO_TICKS(1));
+
+        // Libera CPU hasta el siguiente periodo
+        vTaskDelayUntil(&xLastWakeTime, frecuencia);
     }
 }
 
+
 void comunicaciones_task(void *pvParameters) {
-    mqtt_start("mqtt://192.168.31.82");
+    mqtt_start("mqtt://192.168.31.81");
     vTaskDelete(NULL);
 }
 
@@ -37,6 +43,7 @@ extern "C" void app_main(void) {
 
     motores_setup();
     xTaskCreatePinnedToCore(motores_task, "Motores", 4096, NULL, 5, NULL, 1);
+
 }
 
 
