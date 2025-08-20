@@ -13,14 +13,13 @@
 void motores_task(void *pvParameters) {
     ESP_LOGI("MOTORES", "Núcleo actual: %d", xPortGetCoreID());
 
-    const TickType_t frecuencia = pdMS_TO_TICKS(5);  // configurar el tick rate a 1000 hz 
-    TickType_t xLastWakeTime = xTaskGetTickCount();
+    
 
-    while (true) {
+    for(;;) {
         actualizarMotores();
 
-        // Libera CPU hasta el siguiente periodo
-        vTaskDelayUntil(&xLastWakeTime, frecuencia);
+        
+         vTaskDelay(pdMS_TO_TICKS(1)); // Espera 1 milisegundo
     }
 }
 
@@ -36,7 +35,7 @@ extern "C" void app_main(void) {
     esp_err_t err = wifi_connect("Oficina AG", "OficinaAG23", 15000);
     if (err == ESP_OK) {
         ESP_LOGI("MAIN", "¡Wi-Fi ok!");
-        xTaskCreatePinnedToCore(comunicaciones_task, "Comunicaciones", 4096, NULL, 5, NULL, 1);
+        xTaskCreatePinnedToCore(comunicaciones_task, "Comunicaciones", 4096, NULL, 5, NULL, 0);
     } else {
         ESP_LOGE("MAIN", "No se logró conectar");
     }

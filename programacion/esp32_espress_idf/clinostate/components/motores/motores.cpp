@@ -23,7 +23,8 @@ AccelStepper MotorY(AccelStepper::DRIVER, (gpio_num_t)STEP_PINY, (gpio_num_t)DIR
 void motores_setup(void) {
     MotorX.setMaxSpeed(4000);
     MotorY.setMaxSpeed(4000);
-
+    MotorX.setAcceleration(100);
+    MotorY.setAcceleration(100);
     gpio_config_t io_conf_ENABLE_PIN = {
         .pin_bit_mask = (1ULL << ENABLE_PIN),
         .mode = GPIO_MODE_OUTPUT,
@@ -59,6 +60,43 @@ void motores_setup(void) {
         .intr_type = GPIO_INTR_DISABLE
     };
     gpio_config(&io_conf_MS3_PIN);
+
+    gpio_config_t io_conf_STEPX = {
+        .pin_bit_mask = (1ULL << STEP_PINX),
+        .mode = GPIO_MODE_OUTPUT,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type = GPIO_INTR_DISABLE
+    };
+    gpio_config(&io_conf_STEPX);
+
+    gpio_config_t io_conf_DIRX = {
+        .pin_bit_mask = (1ULL << DIR_PINX),
+        .mode = GPIO_MODE_OUTPUT,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type = GPIO_INTR_DISABLE
+    };
+    gpio_config(&io_conf_DIRX);
+
+    // Pines STEP y DIR MotorY
+    gpio_config_t io_conf_STEPY = {
+        .pin_bit_mask = (1ULL << STEP_PINY),
+        .mode = GPIO_MODE_OUTPUT,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type = GPIO_INTR_DISABLE
+    };
+    gpio_config(&io_conf_STEPY);
+
+    gpio_config_t io_conf_DIRY = {
+        .pin_bit_mask = (1ULL << DIR_PINY),
+        .mode = GPIO_MODE_OUTPUT,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type = GPIO_INTR_DISABLE
+    };
+    gpio_config(&io_conf_DIRY);
 }
 
 void setMicrostepping(int ms) {
