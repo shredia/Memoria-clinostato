@@ -6,6 +6,10 @@
 #include "wifi.h"
 #include "esp_log.h"
 #include "app_mqtt.h"
+#include "LP8_protocolo.hpp"
+#include "LP8_libreria.hpp"
+
+// Pines UART del sensor LP8
 
 
 
@@ -32,6 +36,21 @@ void comunicaciones_task(void *pvParameters) {
 extern "C" void app_main(void) {
     ESP_ERROR_CHECK(wifi_init());
 
+
+    //creamos el objeto de LP8
+    LP8 *sensor1 = new LP8();
+    sensor1->Setup();
+
+    xTaskCreatePinnedToCore(
+    [](void *pvParameters){ ((LP8*)pvParameters)->task_medicion_continua(pvParameters); },
+    "MedicionLP8_1",
+    4096,
+    sensor1,
+    5,
+    NULL,
+    0
+);
+    
     esp_err_t err = wifi_connect("Oficina AG", "OficinaAG23", 15000);
     if (err == ESP_OK) {
         ESP_LOGI("MAIN", "¡Wi-Fi ok!");
