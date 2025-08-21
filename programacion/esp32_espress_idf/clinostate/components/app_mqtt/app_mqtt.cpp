@@ -6,15 +6,16 @@
 #include "esp_system.h"
 #include "motores.h" // Asegúrate que este header tiene: extern AccelStepper MotorX; extern AccelStepper MotorY;
 #include "LP8_libreria.hpp"
+#include "LP8_protocolo.hpp"
 #include <driver/gpio.h>
 
 
 
 
 static const char *TAG = "MQTT";
-static esp_mqtt_client_handle_t client = NULL;
+esp_mqtt_client_handle_t client = NULL;
 
-static char client_id[20]; // Global para usar en la tarea
+ char client_id[20]; // Global para usar en la tarea
 
 static void mqtt_event_handler_cb(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data) {
     esp_mqtt_event_handle_t event = (esp_mqtt_event_handle_t)event_data;
@@ -95,6 +96,7 @@ static void heartbeat_task(void *pvParameters) {
 void mqtt_start(const char *uri) {
     uint8_t mac[6];
     esp_err_t err = esp_wifi_get_mac(WIFI_IF_STA, mac); // <-- CORREGIDO
+    (void)err; // Para evitar warning si no lo usas
 
     snprintf(client_id, sizeof(client_id), "ESP32_%02X%02X%02X%02X%02X%02X",
              mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
@@ -111,6 +113,7 @@ void mqtt_start(const char *uri) {
 
     // Inicia la tarea de heartbeat
     xTaskCreate(heartbeat_task, "heartbeat_task", 4098, NULL, 5, NULL);
+    
 }
 
 void enviar_status() {

@@ -1,39 +1,65 @@
+#ifndef LP8_LIBRERIA_HPP
+#define LP8_LIBRERIA_HPP
 
 #include <stdint.h>
 #include "driver/uart.h"
+#include "driver/gpio.h"
 
-int ModRTU_CRC(uint8_t n1);
-void LP8_procesarLectura(uint8_t n);
-void LP8_sendRequest(uart_port_t uart_num, const uint8_t *packet, size_t length);
+class LP8 {
+public:
+    LP8(gpio_num_t vbb_en_pin = GPIO_NUM_5, gpio_num_t rdy_pin = GPIO_NUM_18, uart_port_t uart_port = UART_NUM_2);
 
-extern bool continuousMeasurement;
-class LP8{
-    public:
-    LP8();
+    void Setup();
+    void SetPort(uart_port_t uart_port);
+    void SetTime_Out(uint32_t time_out_ms);
+    void SetTime_Sense(uint32_t time_sense);
 
-    void SetPort(uart_port_t);
-    void SetTime_Out(uint32_t);
+    uint32_t GetTime_Sense();
+    uint32_t GetTime_Out();
+    bool GetFirst_Sense();
+    void SetFirst_Sense(bool first_sense);
+    bool GetCalibrar();
+    void SetCalibrar(bool calibrar);
+    uart_port_t GetPort();
+
     void SendRequest(const uint8_t *packet);
-    int ModRTU_CRC(uint8_t);
-    bool ProcesarLectura(uint8_t);
-    private:
+    int ModRTU_CRC(uint8_t n1);
+    bool ProcesarLectura(uint8_t size_receive);
 
-    uart_port_t _uart_port; //definimos el puerto en el que estará
-    
-    //definimos el tiempo de espera de respuesta
-    uint32_t _time_out_ms; //definimos el tiempo a considerar en MS para la espera de datos
-    
+    void Reset_receive();
+    void SetFlag_CRC(bool flag);
 
-    const uint8_t *_packet; //definimos el puntero al arreglo dónde se guardará el paquete
-    uint8_t _Count_Send_Request;//contador de cuantas veces enviamos solicitud
-    uint8_t _response[49]; //donde se guardan los datos del paquete
+    float Get_C02();
+    bool GetCrc_flag();
+    float GetPresion();
+    uint16_t GetVcap1();
+    uint16_t GetVcap2();
+    uint8_t GetError(uint8_t index);
+    void task_medicion_continua(void *pvParameters); // <-- Agrega esta línea
+    void medir();
+    void publicar_datos_sensor();
 
-    uint8_t _Send_CRC_High; //CRC de comprobación del paquete que se ENVÍA
+
+private:
+    uart_port_t _uart_port;
+    uint32_t _time_out_ms;
+    uint32_t _time_sense;
+    bool _first_sense;
+    bool _calibrar;
+    bool _crc_flag;
+    gpio_num_t _vbb_en1;
+    gpio_num_t _rdy1;
+    uint8_t _Count_Send_Request;
+    uint8_t _response[49];
+    uint8_t _Send_CRC_High;
     uint8_t _Send_CRC_Low;
-
-    uint8_t _Receive_CRC_High; //CRC de comprobación del paquete que se recibe
+    uint8_t _Receive_CRC_High;
     uint8_t _Receive_CRC_Low;
-
-
-
+    uint8_t _error[4];
+    uint16_t _vcap1;
+    uint16_t _vcap2;
+    float _presion;
+    float _C02;
 };
+
+#endif // LP8_LIBRERIA_HPP
