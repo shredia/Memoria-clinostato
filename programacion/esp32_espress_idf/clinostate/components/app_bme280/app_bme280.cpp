@@ -41,7 +41,7 @@ void bme280_leer(float &temperature, float &humidity, float &pressure) {
 void bme280_task(void *pvParameters) {
     float temperature, humidity, pressure;
     for (;;) {
-        if (Flag_enable_BME280) {
+        if (continuousMeasurement) {
             bme280_leer(temperature, humidity, pressure);
             printf("BME280: Temp=%.2f°C Hum=%.2f%% Pres=%.2f hPa\n", temperature, humidity, pressure );
 

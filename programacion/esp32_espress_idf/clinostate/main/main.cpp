@@ -8,21 +8,13 @@
 #include "app_mqtt.h"
 #include "LP8_protocolo.hpp"
 #include "LP8_libreria.hpp"
-
-// Pines UART del sensor LP8
-
-
+#include "app_bme280.hpp"
 
 
 void motores_task(void *pvParameters) {
     ESP_LOGI("MOTORES", "Núcleo actual: %d", xPortGetCoreID());
-
-    
-
     for(;;) {
         actualizarMotores();
-
-        
          vTaskDelay(pdMS_TO_TICKS(1)); // Espera 1 milisegundo
     }
 }
@@ -40,6 +32,7 @@ extern "C" void app_main(void) {
     //creamos el objeto de LP8
     LP8 *sensor1 = new LP8();
     sensor1->Setup();
+    bme280_setup();
 
     xTaskCreatePinnedToCore(
     [](void *pvParameters){ ((LP8*)pvParameters)->task_medicion_continua(pvParameters); },
@@ -55,6 +48,7 @@ extern "C" void app_main(void) {
     if (err == ESP_OK) {
         ESP_LOGI("MAIN", "¡Wi-Fi ok!");
         xTaskCreatePinnedToCore(comunicaciones_task, "Comunicaciones", 4096, NULL, 5, NULL, 0);
+        bme280_start_periodic();
     } else {
         ESP_LOGE("MAIN", "No se logró conectar");
     }
