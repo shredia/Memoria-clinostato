@@ -87,4 +87,6 @@ $<TARGET_FILE:__idf_motores>
 $<TARGET_FILE:__idf_LP8>
 $<TARGET_FILE:__idf_app_mqtt>
 $<TARGET_FILE:__idf_DualCore>
+$<TARGET_FILE:__idf_espressif__i2c_bus>
+$<TARGET_FILE:__idf_espressif__bme280>
 $<TARGET_FILE:__idf_main>

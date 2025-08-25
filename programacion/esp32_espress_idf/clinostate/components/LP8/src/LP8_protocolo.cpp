@@ -35,7 +35,7 @@ void LP8::task_medicion_continua(void *pvParameters) {
                 printf("Error en el CRC.\n");
             }
            
-            
+
 
             vTaskDelay(pdMS_TO_TICKS(sensor->GetTime_Sense()));  // Esperar 20 segundos entre mediciones
         } else {
@@ -88,7 +88,7 @@ void LP8::medir() {
 
     // Enviar read_44_bytes y procesar lectura
     SendRequest(read_44_bytes);
-    SetFlag_CRC(ProcesarLectura(49)); // Procesamos la lectura y guardamos el flag crc si es correcto o no.
+    ProcesarLectura(); // Procesamos la lectura y guardamos el flag crc si es correcto o no.
 
     
     // mostrar_co2(); // Implementa esta función según tu lógica

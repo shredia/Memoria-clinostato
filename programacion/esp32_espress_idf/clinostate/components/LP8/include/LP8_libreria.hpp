@@ -23,8 +23,8 @@ public:
     uart_port_t GetPort();
 
     void SendRequest(const uint8_t *packet);
-    int ModRTU_CRC(uint8_t n1);
-    bool ProcesarLectura(uint8_t size_receive);
+    void ModRTU_CRC();
+    void ProcesarLectura();
 
     void Reset_receive();
     void SetFlag_CRC(bool flag);
@@ -41,25 +41,35 @@ public:
 
 
 private:
-    uart_port_t _uart_port;
+
     uint32_t _time_out_ms;
     uint32_t _time_sense;
+    //flags
     bool _first_sense;
     bool _calibrar;
     bool _crc_flag;
+
+    // Pines
     gpio_num_t _vbb_en1;
     gpio_num_t _rdy1;
     uint8_t _Count_Send_Request;
-    uint8_t _response[49];
-    uint8_t _Send_CRC_High;
-    uint8_t _Send_CRC_Low;
-    uint8_t _Receive_CRC_High;
-    uint8_t _Receive_CRC_Low;
+    uart_port_t _uart_port;
+
+    //variables de lectura
     uint8_t _error[4];
     uint16_t _vcap1;
     uint16_t _vcap2;
     float _presion;
     float _C02;
+
+    //variables internas
+    uint8_t _size_receive;
+    uint8_t _size_send;
+    uint8_t _response[49];
+    uint8_t _CRC_High;
+    uint8_t _CRC_Low;
+    uint8_t _Receive_CRC_High;
+    uint8_t _Receive_CRC_Low;
 };
 
 #endif // LP8_LIBRERIA_HPP

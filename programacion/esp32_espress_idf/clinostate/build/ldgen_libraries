@@ -87,4 +87,6 @@ D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/c
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/LP8/libLP8.a
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_mqtt/libapp_mqtt.a
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/DualCore/libDualCore.a
+D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/espressif__i2c_bus/libespressif__i2c_bus.a
+D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/espressif__bme280/libespressif__bme280.a
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/main/libmain.a
