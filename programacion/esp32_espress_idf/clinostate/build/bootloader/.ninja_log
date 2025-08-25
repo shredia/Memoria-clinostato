@@ -1,6 +1,5 @@
 # ninja log v6
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 34	377	7774229417835600	esp-idf/log/CMakeFiles/__idf_log.dir/src/log_timestamp_common.c.obj	4daa755b11c34b40
 55	324	7774134835316648	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj	ce88045047999b81
 29	356	7774229417785624	esp-idf/log/CMakeFiles/__idf_log.dir/src/noos/log_timestamp.c.obj	1df8caa341c03adf
@@ -137,8 +136,6 @@
 30	146	7778542345463320	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	28bcba854631a7d4
 30	146	7778542345463320	D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	28bcba854631a7d4
 =======
-=======
->>>>>>> Stashed changes
 43	368	7778587234887166	esp-idf/log/CMakeFiles/__idf_log.dir/src/noos/log_lock.c.obj	fea9892aa3334812
 64	381	7778587235097744	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj	ce88045047999b81
 31	403	7778587234764172	esp-idf/log/CMakeFiles/__idf_log.dir/src/noos/log_timestamp.c.obj	1df8caa341c03adf
@@ -253,7 +250,4 @@
 6202	6581	7778587300191109	D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/.bin_timestamp	85d60baca0dea77d
 6581	6704	7778587300266166	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	28bcba854631a7d4
 6581	6704	7778587300266166	D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	28bcba854631a7d4
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
