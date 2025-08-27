@@ -1,0 +1,6 @@
+Comparación clinostados:
+	nombre 	    	||    motor    	|| 		Control motor?			|| Feedback MPU? || Poleas ó motor cableado?  || grados?
+Student Experiences:	||  12 [V] dc. 	|| sin feedback, no especifica			|| no especifica || motor cableado	      ||   2
+technology and dev.     || no especifica|| no especifica, probablemente no      	|| no especifica || poleas		      ||   2
+Design of a novel 3DOF  ||no especifica ||   no epecifica, probablemente no     	|| no especifica || motor cableado  	      ||   3
+customized small-sized  || step and dc  || no especifica (step motor más ruidoso) 	|| no especifica || motor cableado 	      ||   2
