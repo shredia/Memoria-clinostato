@@ -178,8 +178,9 @@ void LP8::SendRequest(const uint8_t *packet) {
             }
         }
     }
+    int64_t lectura_fin = esp_timer_get_time();
     vTaskDelay(pdMS_TO_TICKS(10));
-        int64_t lectura_fin = esp_timer_get_time();
+        
     printf("Tiempo de lectura de respuesta: %lld ms\n", (lectura_fin - start_time) / 1000);
     int i = 4;
     
