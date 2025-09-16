@@ -29521,8 +29521,13 @@
                                 "children": [],
                                 "depends_on": null,
                                 "help": null,
+<<<<<<< Updated upstream
                                 "id": "ESP_IDF_VERSION",
                                 "name": "ESP_IDF_VERSION",
+=======
+                                "id": "ESP_IDF_VERSION_FOR_I2C",
+                                "name": "ESP_IDF_VERSION_FOR_I2C",
+>>>>>>> Stashed changes
                                 "range": null,
                                 "title": null,
                                 "type": "string"
@@ -29552,7 +29557,11 @@
                             },
                             {
                                 "children": [],
+<<<<<<< Updated upstream
                                 "depends_on": "ESP_IDF_VERSION >= 5.3",
+=======
+                                "depends_on": "ESP_IDF_VERSION_FOR_I2C >= 5.3",
+>>>>>>> Stashed changes
                                 "help": "Enable this option for backward compatibility with the old I2C driver",
                                 "id": "I2C_BUS_BACKWARD_CONFIG",
                                 "name": "I2C_BUS_BACKWARD_CONFIG",

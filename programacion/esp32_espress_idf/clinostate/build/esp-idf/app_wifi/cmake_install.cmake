@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 # Install script for directory: D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_wifi
+=======
+# Install script for directory: D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_wifi
+>>>>>>> Stashed changes
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

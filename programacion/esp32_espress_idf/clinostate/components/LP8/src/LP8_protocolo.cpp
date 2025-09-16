@@ -6,7 +6,7 @@
 
 uint8_t write_partida[]   = {0xfe, 0x41, 0x00, 0x80, 0x01, 0x10, 0x28, 0x7e};
 uint8_t write_normal[]    = {0xfe, 0x41, 0x00, 0x80, 0x01, 0x20, 0x28, 0x6A};
-uint8_t write_calibrar[]  = {0xfe, 0x41, 0x00, 0x80, 0x01, 0x53, 0x69, 0x8F};
+uint8_t write_calibrar[]  = {0xfe, 0x41, 0x00, 0x80, 0x01, 0x52, 0x69, 0x8F};
 uint8_t read_32_bytes[]   = {0xfe, 0x44, 0x00, 0x80, 0x20, 0x79, 0x3C};
 uint8_t read_44_bytes[]   = {0xfe, 0x44, 0x00, 0x80, 0x2c, 0x79, 0x39};
 uint8_t read_4_bytes[]    = {0xfe, 0x44, 0x00, 0xA4, 0x4, 0x62, 0x27};
@@ -92,7 +92,8 @@ void LP8::medir() {
 
     
     // mostrar_co2(); // Implementa esta función según tu lógica
-
+    int uart_num = GetPort(); // Obtiene el número de UART del sensor
+    printf("uart sensor: %d\n", uart_num);
     printf("=== Fin del ciclo de medición ===\n\n");
 }
 
@@ -101,7 +102,7 @@ void LP8::publicar_datos_sensor() {
 
     // CO2
     char mensaje_co2[32];
-    snprintf(mensaje_co2, sizeof(mensaje_co2), "CO2: %.2f", Get_C02());
+    snprintf(mensaje_co2, sizeof(mensaje_co2), "%.2f", Get_C02());
     char topic_co2[64];
     snprintf(topic_co2, sizeof(topic_co2), "esp32/%s/LP8_%d/co2", client_id, uart_num);
     printf("[MQTT] Publicando: topic=%s, mensaje=%s\n", topic_co2, mensaje_co2);
@@ -109,7 +110,7 @@ void LP8::publicar_datos_sensor() {
 
     // Presión
     char mensaje_presion[32];
-    snprintf(mensaje_presion, sizeof(mensaje_presion), "Presion: %.1f", GetPresion());
+    snprintf(mensaje_presion, sizeof(mensaje_presion), "%.1f", GetPresion());
     char topic_presion[64];
     snprintf(topic_presion, sizeof(topic_presion), "esp32/%s/LP8_%d/presion", client_id, uart_num);
     printf("[MQTT] Publicando: topic=%s, mensaje=%s\n", topic_presion, mensaje_presion);
@@ -117,7 +118,7 @@ void LP8::publicar_datos_sensor() {
 
     // Vcap1
     char mensaje_vcap1[32];
-    snprintf(mensaje_vcap1, sizeof(mensaje_vcap1), "Vcap1: %u", GetVcap1());
+    snprintf(mensaje_vcap1, sizeof(mensaje_vcap1), "%u", GetVcap1());
     char topic_vcap1[64];
     snprintf(topic_vcap1, sizeof(topic_vcap1), "esp32/%s/LP8_%d/vcap1", client_id, uart_num);
     printf("[MQTT] Publicando: topic=%s, mensaje=%s\n", topic_vcap1, mensaje_vcap1);
@@ -125,20 +126,22 @@ void LP8::publicar_datos_sensor() {
 
     // Vcap2
     char mensaje_vcap2[32];
-    snprintf(mensaje_vcap2, sizeof(mensaje_vcap2), "Vcap2: %u", GetVcap2());
+    snprintf(mensaje_vcap2, sizeof(mensaje_vcap2), "%u", GetVcap2());
     char topic_vcap2[64];
     snprintf(topic_vcap2, sizeof(topic_vcap2), "esp32/%s/LP8_%d/vcap2", client_id, uart_num);
     printf("[MQTT] Publicando: topic=%s, mensaje=%s\n", topic_vcap2, mensaje_vcap2);
     esp_mqtt_client_publish(client, topic_vcap2, mensaje_vcap2, 0, 1, 0);
 
-    // Errores
-    for (int i = 0; i < 4; i++) {
-        char mensaje_error[32];
-        snprintf(mensaje_error, sizeof(mensaje_error), "Error%d: %u", i, GetError(i));
-        char topic_error[64];
-        snprintf(topic_error, sizeof(topic_error), "esp32/%s/LP8_%d/error%d", client_id, uart_num, i);
-        esp_mqtt_client_publish(client, topic_error, mensaje_error, 0, 1, 0);
-    }
-    
+    // Concatenar errores en un solo mensaje
+    char mensaje_error[64];
+    snprintf(
+        mensaje_error, sizeof(mensaje_error),
+        "[%u][%u][%u][%u]",
+        GetError(3), GetError(2), GetError(1), GetError(0)
+    );
+    char topic_error[64];
+    snprintf(topic_error, sizeof(topic_error), "esp32/%s/LP8_%d/errores", client_id, uart_num);
+    printf("[MQTT] Publicando errores: topic=%s, mensaje=%s\n", topic_error, mensaje_error);
+    esp_mqtt_client_publish(client, topic_error, mensaje_error, 0, 1, 0);
 }
 

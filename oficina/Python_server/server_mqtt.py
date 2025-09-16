@@ -25,6 +25,11 @@ class App:
         self.lp8_files = {}
         self.lp8_plots = {}
         self.status_labels = {}
+        self.info_labels = {}  # Para mostrar errores, vcap1, vcap2
+        self._calibrar_flag_state = {}
+        self.lp8_buffer = {}  # Buffer temporal para cada sensor
+        self.lp8_buffer_time = {}  # Timestamp de inicio de cada buffer
+        self.lp8_buffer_timeout = 1.0  # segundos
 
         frame_list = tk.Frame(root)
         frame_list.pack(padx=10, pady=10, fill=tk.BOTH)
@@ -62,20 +67,39 @@ class App:
             self.esp32_devices[client_id] = time.time()
             self.root.after(0, self.refresh_listbox)
 
-        elif "/lp8" in topic:
-            client_id = topic.split("/")[1]
-            safe_id = client_id.replace(":", "_")
-            if safe_id in self.lp8_files:
-                try:
-                    value = float(payload)
-                    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-                    line = f"{timestamp},{value}\n"
-                    with open(self.lp8_files[safe_id], "a") as f:
-                        f.write(line)
-                    self.update_plot(safe_id)
-                except ValueError:
-                    pass
-
+        # Procesar tópicos de sensores LP8_1 y LP8_2
+        elif topic.count("/") >= 3 and topic.startswith("esp32/"):
+            parts = topic.split("/")
+            if len(parts) >= 4 and parts[2].startswith("LP8_"):
+                device_id = parts[1]
+                lp8_id = parts[2]  # LP8_1 o LP8_2
+                var = parts[3]     # co2, presion, vcap1, vcap2, errores
+                device_dir = device_id.replace(":", "_")
+                file_key = f"{device_dir}_{lp8_id}"
+                filename = self.lp8_files.get(file_key)
+                now_str = time.strftime('%Y-%m-%d %H:%M:%S')
+                # Buffer temporal
+                if file_key not in self.lp8_buffer or self.lp8_buffer[file_key]['timestamp'] != now_str:
+                    # Si hay buffer anterior, vaciarlo
+                    if file_key in self.lp8_buffer:
+                        self.flush_lp8_buffer(file_key, filename)
+                    self.lp8_buffer[file_key] = {'timestamp': now_str, 'data': {}}
+                    self.lp8_buffer_time[file_key] = time.time()
+                self.lp8_buffer[file_key]['data'][var] = payload
+                # Si ya tenemos todos los campos, escribir y limpiar
+                if all(k in self.lp8_buffer[file_key]['data'] for k in ["co2", "presion", "vcap1", "vcap2", "errores"]):
+                    self.flush_lp8_buffer(file_key, filename)
+                # Actualizar widgets si corresponde
+                if hasattr(self, 'info_labels') and lp8_id in self.info_labels:
+                    if var in ["errores", "vcap1", "vcap2"]:
+                        self.info_labels[lp8_id][var].config(text=f"{var}: {payload}")
+                # Graficar si es co2
+                if var == "co2":
+                    try:
+                        value = float(payload.split(":")[-1].strip())
+                        self.update_plot(device_id)
+                    except Exception:
+                        pass
         elif topic.endswith("/status"):
             client_id = topic.split("/")[1]
             safe_id = client_id.replace(":", "_")
@@ -110,24 +134,41 @@ class App:
     def add_module(self):
         selection = self.listbox.curselection()
         if not selection:
-            messagebox.showwarning("Atención", "Selecciona un ESP32 de la lista")
+            messagebox.showwarning("Advertencia", "Selecciona un dispositivo primero.")
             return
-
-        client_id = self.listbox.get(selection[0])
-        if client_id in self.tabs:
+        device_id = self.listbox.get(selection[0])
+        if device_id in self.tabs:
+            self.notebook.select(self.tabs[device_id])
             return
+        tab = tk.Frame(self.notebook)
+        self.notebook.add(tab, text=device_id)
+        self.tabs[device_id] = tab
 
-        frame = tk.Frame(self.notebook)
-        self.notebook.add(frame, text=client_id)
-        self.tabs[client_id] = frame
+        # Crear carpeta para el dispositivo y archivos únicos para LP8_1 y LP8_2
+        device_dir = device_id.replace(":", "_")
+        os.makedirs(device_dir, exist_ok=True)
+        for lp8_id in ["LP8_1", "LP8_2"]:
+            filename = os.path.join(device_dir, f"{lp8_id}.txt")
+            if not os.path.exists(filename):
+                with open(filename, "w") as f:
+                    f.write("timestamp,tipo,valor\n")
+            # Guardar la ruta completa, indexada por device_id+lp8_id
+            self.lp8_files[f"{device_dir}_{lp8_id}"] = filename
+        # Crear labels para errores, vcap1, vcap2 de cada sensor
+        info_frame = tk.LabelFrame(tab, text="Estado sensores LP8")
+        info_frame.pack(fill=tk.X, padx=10, pady=5)
+        for lp8_id in ["LP8_1", "LP8_2"]:
+            if lp8_id not in self.info_labels:
+                self.info_labels[lp8_id] = {}
+            subf = tk.Frame(info_frame)
+            subf.pack(fill=tk.X, padx=5, pady=2)
+            tk.Label(subf, text=lp8_id, width=8).pack(side=tk.LEFT)
+            for var in ["errores", "vcap1", "vcap2"]:
+                lbl = tk.Label(subf, text=f"{var}: ---", width=15)
+                lbl.pack(side=tk.LEFT, padx=5)
+                self.info_labels[lp8_id][var] = lbl
 
-        safe_id = client_id.replace(":", "_")
-        filename = f"{safe_id}_lp8.txt"
-        with open(filename, "w") as f:
-            f.write("timestamp,lp8_value\n")
-        self.lp8_files[safe_id] = filename
-
-        sub_tabs = ttk.Notebook(frame)
+        sub_tabs = ttk.Notebook(tab)
         sub_tabs.pack(fill=tk.BOTH, expand=True)
 
         # Sub-pestaña de estado y controles
@@ -136,28 +177,41 @@ class App:
 
         status_label = tk.Label(tab_status, text="Esperando estado...", anchor="w", justify="left")
         status_label.pack(pady=5, fill=tk.X)
-        self.status_labels[safe_id] = status_label
+        self.status_labels[device_id.replace(":", "_")] = status_label
 
-        self.create_controls(tab_status, client_id)
+        self.create_controls(tab_status, device_id)
 
         # Sub-pestaña de gráfica
         tab_graph = tk.Frame(sub_tabs)
         sub_tabs.add(tab_graph, text="Gráfico LP8")
 
         fig, ax = plt.subplots(figsize=(5, 3))
-        line, = ax.plot([], [], color='blue')
-        ax.set_title(f"LP8 - {client_id}")
+        line1, = ax.plot([], [], color='blue', label='LP8_1')
+        line2, = ax.plot([], [], color='green', label='LP8_2')
+        ax.set_title(f"LP8 - {device_id}")
         ax.set_xlabel("Tiempo")
         ax.set_ylabel("Valor")
         ax.grid(True)
+        ax.legend()
         canvas = FigureCanvasTkAgg(fig, master=tab_graph)
         canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
-        self.lp8_plots[safe_id] = (fig, ax, canvas, line)
+        # Guardar ambas líneas en el dict de plots
+        self.lp8_plots[device_id.replace(":", "_")] = (fig, ax, canvas, line1, line2)
 
-        topic_lp8 = f"esp32/{client_id}/lp8"
-        topic_status = f"esp32/{client_id}/status"
-        self.client.subscribe(topic_lp8)
+        # Suscribirse a todos los sub-tópicos de LP8_1 y LP8_2
+        subtopics = ["co2", "presion", "vcap1", "vcap2", "errores"]
+        for lp8 in ["LP8_1", "LP8_2"]:
+            for sub in subtopics:
+                topic = f"esp32/{device_id}/{lp8}/{sub}"
+                self.client.subscribe(topic)
+        topic_status = f"esp32/{device_id}/status"
         self.client.subscribe(topic_status)
+
+        # Sensor CO2 tab
+        sensor_frame = tk.Frame(tab)
+        sensor_frame.pack(fill=tk.BOTH, expand=True)
+        tk.Label(sensor_frame, text="Sensor CO2").pack(pady=10)
+    # El botón de calibrar se agregará junto a los otros botones en create_controls
 
     def create_controls(self, frame, client_id):
         control_frame = tk.LabelFrame(frame, text="Control de Motores")
@@ -214,24 +268,83 @@ class App:
         sensor_row.pack(fill=tk.X, pady=5)
         tk.Button(sensor_row, text="Medir ahora", command=lambda: send("sensor/measure", 1)).pack(side=tk.LEFT, padx=10)
         tk.Button(sensor_row, text="Detener medición", command=lambda: send("sensor/measure", 0)).pack(side=tk.LEFT, padx=10)
+        # Botón Flag calibrar junto a los otros
+        if client_id not in self._calibrar_flag_state:
+            self._calibrar_flag_state[client_id] = False
+        def enviar_flag_calibrar():
+            import paho.mqtt.client as mqtt
+            client = mqtt.Client()
+            client.connect(BROKER, PORT, 60)
+            topic = f"esp32/{client_id}/sensor/calibrar"
+            self._calibrar_flag_state[client_id] = not self._calibrar_flag_state[client_id]
+            client.publish(topic, str(int(self._calibrar_flag_state[client_id])))
+            client.disconnect()
+        tk.Button(sensor_row, text="Flag calibrar", command=enviar_flag_calibrar).pack(side=tk.LEFT, padx=10)
 
-    def update_plot(self, safe_id):
-        data = []
-        try:
-            with open(self.lp8_files[safe_id], "r") as f:
-                lines = f.readlines()[1:]
-                for line in lines[-100:]:
-                    _, val = line.strip().split(",")
-                    data.append(float(val))
-        except:
+    def flush_lp8_buffer(self, file_key, filename):
+        # Escribir y limpiar el buffer si existe
+        buf = self.lp8_buffer.get(file_key)
+        if not buf:
             return
+        vals = {"co2": "", "presion": "", "vcap1": "", "vcap2": "", "errores": ""}
+        vals.update(buf['data'])
+        line = f"{buf['timestamp']},{vals['co2']},{vals['presion']},{vals['vcap1']},{vals['vcap2']},{vals['errores']}\n"
+        with open(filename, "a") as f:
+            f.write(line)
+        del self.lp8_buffer[file_key]
+        del self.lp8_buffer_time[file_key]
 
-        fig, ax, canvas, line = self.lp8_plots[safe_id]
-        line.set_data(range(len(data)), data)
-        ax.set_xlim(0, max(10, len(data)))
-        if data:
-            ax.set_ylim(min(data) - 1, max(data) + 1)
-        canvas.draw()
+    def check_lp8_buffers(self):
+        # Llamar periódicamente para vaciar buffers expirados
+        now = time.time()
+        for file_key in list(self.lp8_buffer.keys()):
+            t0 = self.lp8_buffer_time[file_key]
+            if now - t0 > self.lp8_buffer_timeout:
+                filename = self.lp8_files.get(file_key)
+                if filename:
+                    self.flush_lp8_buffer(file_key, filename)
+        self.root.after(200, self.check_lp8_buffers)
+
+    def update_plot(self, device_id):
+        # Graficar ambos sensores LP8_1 y LP8_2 en la misma gráfica, leyendo desde la carpeta del dispositivo
+        device_dir = device_id.replace(":", "_")
+        data_lp8_1 = []
+        data_lp8_2 = []
+        try:
+            with open(os.path.join(device_dir, "LP8_1.txt"), "r") as f1:
+                lines1 = f1.readlines()[1:]
+                for line in lines1[-100:]:
+                    parts = line.strip().split(",")
+                    # Formato: timestamp,co2,presion,vcap1,vcap2,errores
+                    if len(parts) >= 2 and parts[1] != "":
+                        try:
+                            data_lp8_1.append(float(parts[1]))
+                        except ValueError:
+                            pass
+        except:
+            pass
+        try:
+            with open(os.path.join(device_dir, "LP8_2.txt"), "r") as f2:
+                lines2 = f2.readlines()[1:]
+                for line in lines2[-100:]:
+                    parts = line.strip().split(",")
+                    if len(parts) >= 2 and parts[1] != "":
+                        try:
+                            data_lp8_2.append(float(parts[1]))
+                        except ValueError:
+                            pass
+        except:
+            pass
+        key = device_id.replace(":", "_")
+        if key in self.lp8_plots:
+            fig, ax, canvas, line1, line2 = self.lp8_plots[key]
+            line1.set_data(range(len(data_lp8_1)), data_lp8_1)
+            line2.set_data(range(len(data_lp8_2)), data_lp8_2)
+            ax.set_xlim(0, max(10, len(data_lp8_1), len(data_lp8_2)))
+            all_data = data_lp8_1 + data_lp8_2
+            if all_data:
+                ax.set_ylim(min(all_data) - 1, max(all_data) + 1)
+            canvas.draw()
 
 if __name__ == "__main__":
     root = tk.Tk()

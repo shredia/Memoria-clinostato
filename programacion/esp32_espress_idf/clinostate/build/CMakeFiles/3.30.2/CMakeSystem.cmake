@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 set(CMAKE_HOST_SYSTEM "Windows-10.0.22621")
 set(CMAKE_HOST_SYSTEM_NAME "Windows")
 set(CMAKE_HOST_SYSTEM_VERSION "10.0.22621")
+=======
+set(CMAKE_HOST_SYSTEM "Windows-10.0.26100")
+set(CMAKE_HOST_SYSTEM_NAME "Windows")
+set(CMAKE_HOST_SYSTEM_VERSION "10.0.26100")
+>>>>>>> Stashed changes
 set(CMAKE_HOST_SYSTEM_PROCESSOR "AMD64")
 
 include("C:/Espressif/frameworks/esp-idf-v5.4/tools/cmake/toolchain-esp32.cmake")

@@ -9,6 +9,8 @@
 #include "LP8_protocolo.hpp"
 #include <driver/gpio.h>
 
+extern LP8 *sensor1;
+extern LP8 *sensor2;
 
 
 
@@ -49,12 +51,13 @@ static void mqtt_event_handler_cb(void *handler_args, esp_event_base_t base, int
             ESP_LOGI(TAG, "Mensaje recibido: topic=%s data=%s", topic_buf, data_buf);
 
             // Tópicos esperados
-            char topic_speedX[64], topic_speedY[64], topic_micro[64], topic_enabled[64], topic_co2[64];
+            char topic_speedX[64], topic_speedY[64], topic_micro[64], topic_enabled[64], topic_co2[64], topic_calibrar[64];
             snprintf(topic_speedX, sizeof(topic_speedX), "esp32/%s/motor/speedX", client_id);
             snprintf(topic_speedY, sizeof(topic_speedY), "esp32/%s/motor/speedY", client_id);
             snprintf(topic_micro,  sizeof(topic_micro),  "esp32/%s/motor/microstepping", client_id);
             snprintf(topic_enabled,sizeof(topic_enabled),"esp32/%s/motor/start", client_id);
             snprintf(topic_co2,    sizeof(topic_co2),    "esp32/%s/sensor/measure", client_id);
+            snprintf(topic_calibrar,sizeof(topic_calibrar),"esp32/%s/sensor/calibrar", client_id);
 
             // 3) Compara LONGITUD + CONTENIDO para que sea match exacto
             auto topic_eq = [](const char* a, const char* b){
@@ -76,7 +79,12 @@ static void mqtt_event_handler_cb(void *handler_args, esp_event_base_t base, int
                 enable_motors = (v != 0);
             } else if (topic_eq(topic_buf, topic_co2) && ok_number) {
                 continuousMeasurement = (v != 0);
+            }else if (topic_eq(topic_buf, topic_calibrar) && ok_number)
+            {
+                sensor1->SetCalibrar((v != 0));
+                sensor2->SetCalibrar((v != 0));
             }
+            
             break;
         }
         default:

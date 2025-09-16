@@ -73,5 +73,10 @@ source "C:/Espressif/frameworks/esp-idf-v5.4/components/usb/Kconfig"
 source "C:/Espressif/frameworks/esp-idf-v5.4/components/vfs/Kconfig"
 source "C:/Espressif/frameworks/esp-idf-v5.4/components/wear_levelling/Kconfig"
 source "C:/Espressif/frameworks/esp-idf-v5.4/components/wifi_provisioning/Kconfig"
+<<<<<<< Updated upstream
 source "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities/Kconfig"
 source "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus/Kconfig"
+=======
+source "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities/Kconfig"
+source "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus/Kconfig"
+>>>>>>> Stashed changes

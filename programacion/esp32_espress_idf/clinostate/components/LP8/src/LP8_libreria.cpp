@@ -91,8 +91,8 @@ void LP8::Setup() {
     gpio_num_t tx, rx;
     switch (_uart_port) {
         case UART_NUM_1:
-            tx = GPIO_NUM_4;   // ejemplo
-            rx = GPIO_NUM_5;   // ejemplo
+            tx = GPIO_NUM_18;   // ejemplo
+            rx = GPIO_NUM_12;   // ejemplo
             break;
         case UART_NUM_2:
             tx = GPIO_NUM_17;  // ejemplo
@@ -175,6 +175,18 @@ void LP8::SendRequest(const uint8_t *packet) {
                 printf("Inicio de mensaje detectado: 0xFE\n");
                 startFound = true;
                 break;
+            }
+
+            // Detecta patrón  44 00 80 2C (en caso de error)
+            if (buf[0] == 0x44 && buf[1] == 0x00 && buf[2] == 0x80 && buf[3] == 0x2C) {
+               
+                _response[0] = 0xFE; // Valor de ejemplo
+                _response[1] = 0x44; // Valor de ejemplo
+                _response[2] = 0x80; // Valor de ejemplo
+                _response[3] = 0x2C; // Valor de ejemplo
+                printf("Error: Inicio de mensaje detectado: 0x44\n");
+                startFound = true;
+                break; // Esto sale del while, pero asegúrate que después no vuelvas a leer más bytes antes de procesar
             }
         }
     }

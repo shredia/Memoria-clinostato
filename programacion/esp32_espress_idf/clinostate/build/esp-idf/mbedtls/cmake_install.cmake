@@ -39,6 +39,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+<<<<<<< Updated upstream
   include("D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
+=======
+  include("D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
+>>>>>>> Stashed changes
 endif()
 

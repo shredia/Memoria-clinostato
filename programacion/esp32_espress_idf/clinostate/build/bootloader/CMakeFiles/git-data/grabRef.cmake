@@ -15,7 +15,11 @@
 
 set(HEAD_HASH)
 
+<<<<<<< Updated upstream
 file(READ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/git-data/HEAD" HEAD_CONTENTS LIMIT 1024)
+=======
+file(READ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/git-data/HEAD" HEAD_CONTENTS LIMIT 1024)
+>>>>>>> Stashed changes
 
 string(STRIP "${HEAD_CONTENTS}" HEAD_CONTENTS)
 set(GIT_DIR "C:/Espressif/frameworks/esp-idf-v5.4/.git")
@@ -34,17 +38,31 @@ if(HEAD_CONTENTS MATCHES "ref")
 	# named branch
 	string(REPLACE "ref: " "" HEAD_REF "${HEAD_CONTENTS}")
 	if(EXISTS "${GIT_DIR}/${HEAD_REF}")
+<<<<<<< Updated upstream
 		configure_file("${GIT_DIR}/${HEAD_REF}" "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/git-data/head-ref" COPYONLY)
 	elseif(EXISTS "${GIT_DIR}/logs/${HEAD_REF}")
 		configure_file("${GIT_DIR}/logs/${HEAD_REF}" "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/git-data/head-ref" COPYONLY)
+=======
+		configure_file("${GIT_DIR}/${HEAD_REF}" "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/git-data/head-ref" COPYONLY)
+	elseif(EXISTS "${GIT_DIR}/logs/${HEAD_REF}")
+		configure_file("${GIT_DIR}/logs/${HEAD_REF}" "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/git-data/head-ref" COPYONLY)
+>>>>>>> Stashed changes
 		set(HEAD_HASH "${HEAD_REF}")
 	endif()
 else()
 	# detached HEAD
+<<<<<<< Updated upstream
 	configure_file("${GIT_DIR}/HEAD" "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/git-data/head-ref" COPYONLY)
 endif()
 
 if(NOT HEAD_HASH)
 	file(READ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/git-data/head-ref" HEAD_HASH LIMIT 1024)
+=======
+	configure_file("${GIT_DIR}/HEAD" "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/git-data/head-ref" COPYONLY)
+endif()
+
+if(NOT HEAD_HASH)
+	file(READ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/git-data/head-ref" HEAD_HASH LIMIT 1024)
+>>>>>>> Stashed changes
 	string(STRIP "${HEAD_HASH}" HEAD_HASH)
 endif()

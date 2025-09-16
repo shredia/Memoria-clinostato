@@ -1,0 +1,12 @@
+	power(x2 connector)
+|conector 	-> 	CAT6	  |
+___________________________________
+|negro		-> 	naranja   | gnd
+|verde		-> blanco/naranja | vcc(3.3 [v])
+
+
+    comunicación (x4 connector)
+|azul		-> 	verde	  |
+|naranjo 	->   blanco-verde |
+|verde 		-> blanco-café	  |
+|negro 		-> 	café	  |
