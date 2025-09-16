@@ -245,7 +245,11 @@ set(CONFIG_IDF_TARGET_ARCH_XTENSA "y")
 set(CONFIG_IDF_TARGET_ARCH "xtensa")
 set(CONFIG_IDF_TARGET "esp32")
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 set(CONFIG_IDF_INIT_VERSION "6.0.0")
+=======
+set(CONFIG_IDF_INIT_VERSION "5.4.0")
+>>>>>>> Stashed changes
 =======
 set(CONFIG_IDF_INIT_VERSION "5.4.0")
 >>>>>>> Stashed changes
@@ -436,9 +440,15 @@ set(CONFIG_XTAL_FREQ_AUTO "")
 set(CONFIG_XTAL_FREQ "40")
 set(CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_80 "")
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 set(CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_160 "y")
 set(CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240 "")
 set(CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ "160")
+=======
+set(CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_160 "")
+set(CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240 "y")
+set(CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ "240")
+>>>>>>> Stashed changes
 =======
 set(CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_160 "")
 set(CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240 "y")
@@ -499,7 +509,11 @@ set(CONFIG_ESP_IPC_ISR_ENABLE "y")
 set(CONFIG_FREERTOS_SMP "")
 set(CONFIG_FREERTOS_UNICORE "")
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 set(CONFIG_FREERTOS_HZ "100")
+=======
+set(CONFIG_FREERTOS_HZ "1000")
+>>>>>>> Stashed changes
 =======
 set(CONFIG_FREERTOS_HZ "1000")
 >>>>>>> Stashed changes
@@ -680,9 +694,15 @@ set(CONFIG_ESP32_XTAL_FREQ_AUTO "")
 set(CONFIG_ESP32_XTAL_FREQ "40")
 set(CONFIG_ESP32_DEFAULT_CPU_FREQ_80 "")
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 set(CONFIG_ESP32_DEFAULT_CPU_FREQ_160 "y")
 set(CONFIG_ESP32_DEFAULT_CPU_FREQ_240 "")
 set(CONFIG_ESP32_DEFAULT_CPU_FREQ_MHZ "160")
+=======
+set(CONFIG_ESP32_DEFAULT_CPU_FREQ_160 "")
+set(CONFIG_ESP32_DEFAULT_CPU_FREQ_240 "y")
+set(CONFIG_ESP32_DEFAULT_CPU_FREQ_MHZ "240")
+>>>>>>> Stashed changes
 =======
 set(CONFIG_ESP32_DEFAULT_CPU_FREQ_160 "")
 set(CONFIG_ESP32_DEFAULT_CPU_FREQ_240 "y")

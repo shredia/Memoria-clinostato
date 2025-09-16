@@ -1,5 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 # Install script for directory: D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities
+=======
+# Install script for directory: D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities
+>>>>>>> Stashed changes
 =======
 # Install script for directory: D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities
 >>>>>>> Stashed changes

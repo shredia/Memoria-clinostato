@@ -778,7 +778,11 @@ Discarded input sections
                 0x00000000       0x18 esp-idf/efuse/libefuse.a(esp_efuse_table.c.obj)
  .debug_line    0x00000000      0x21a esp-idf/efuse/libefuse.a(esp_efuse_table.c.obj)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  .debug_str     0x00000000     0x15ef esp-idf/efuse/libefuse.a(esp_efuse_table.c.obj)
+=======
+ .debug_str     0x00000000     0x15f1 esp-idf/efuse/libefuse.a(esp_efuse_table.c.obj)
+>>>>>>> Stashed changes
 =======
  .debug_str     0x00000000     0x15f1 esp-idf/efuse/libefuse.a(esp_efuse_table.c.obj)
 >>>>>>> Stashed changes
@@ -811,7 +815,11 @@ Discarded input sections
  .debug_ranges  0x00000000       0x28 esp-idf/efuse/libefuse.a(esp_efuse_fields.c.obj)
  .debug_line    0x00000000      0x5e0 esp-idf/efuse/libefuse.a(esp_efuse_fields.c.obj)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  .debug_str     0x00000000      0xccd esp-idf/efuse/libefuse.a(esp_efuse_fields.c.obj)
+=======
+ .debug_str     0x00000000      0xccf esp-idf/efuse/libefuse.a(esp_efuse_fields.c.obj)
+>>>>>>> Stashed changes
 =======
  .debug_str     0x00000000      0xccf esp-idf/efuse/libefuse.a(esp_efuse_fields.c.obj)
 >>>>>>> Stashed changes
@@ -910,7 +918,11 @@ Discarded input sections
  .debug_ranges  0x00000000       0xb8 esp-idf/efuse/libefuse.a(esp_efuse_api.c.obj)
  .debug_line    0x00000000     0x130b esp-idf/efuse/libefuse.a(esp_efuse_api.c.obj)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  .debug_str     0x00000000      0xfd3 esp-idf/efuse/libefuse.a(esp_efuse_api.c.obj)
+=======
+ .debug_str     0x00000000      0xfd5 esp-idf/efuse/libefuse.a(esp_efuse_api.c.obj)
+>>>>>>> Stashed changes
 =======
  .debug_str     0x00000000      0xfd5 esp-idf/efuse/libefuse.a(esp_efuse_api.c.obj)
 >>>>>>> Stashed changes
@@ -1025,7 +1037,11 @@ Discarded input sections
  .debug_ranges  0x00000000      0x318 esp-idf/efuse/libefuse.a(esp_efuse_utility.c.obj)
  .debug_line    0x00000000     0x1944 esp-idf/efuse/libefuse.a(esp_efuse_utility.c.obj)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  .debug_str     0x00000000     0x1149 esp-idf/efuse/libefuse.a(esp_efuse_utility.c.obj)
+=======
+ .debug_str     0x00000000     0x114b esp-idf/efuse/libefuse.a(esp_efuse_utility.c.obj)
+>>>>>>> Stashed changes
 =======
  .debug_str     0x00000000     0x114b esp-idf/efuse/libefuse.a(esp_efuse_utility.c.obj)
 >>>>>>> Stashed changes
@@ -1108,7 +1124,11 @@ Discarded input sections
  .debug_ranges  0x00000000       0xe8 esp-idf/efuse/libefuse.a(esp_efuse_api_key.c.obj)
  .debug_line    0x00000000      0xea7 esp-idf/efuse/libefuse.a(esp_efuse_api_key.c.obj)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  .debug_str     0x00000000     0x238c esp-idf/efuse/libefuse.a(esp_efuse_api_key.c.obj)
+=======
+ .debug_str     0x00000000     0x238e esp-idf/efuse/libefuse.a(esp_efuse_api_key.c.obj)
+>>>>>>> Stashed changes
 =======
  .debug_str     0x00000000     0x238e esp-idf/efuse/libefuse.a(esp_efuse_api_key.c.obj)
 >>>>>>> Stashed changes
@@ -1159,7 +1179,11 @@ Discarded input sections
  .debug_ranges  0x00000000      0x1f0 esp-idf/efuse/libefuse.a(esp_efuse_utility.c.obj)
  .debug_line    0x00000000     0x10e0 esp-idf/efuse/libefuse.a(esp_efuse_utility.c.obj)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  .debug_str     0x00000000      0xecb esp-idf/efuse/libefuse.a(esp_efuse_utility.c.obj)
+=======
+ .debug_str     0x00000000      0xecd esp-idf/efuse/libefuse.a(esp_efuse_utility.c.obj)
+>>>>>>> Stashed changes
 =======
  .debug_str     0x00000000      0xecd esp-idf/efuse/libefuse.a(esp_efuse_utility.c.obj)
 >>>>>>> Stashed changes
@@ -1332,7 +1356,11 @@ Discarded input sections
                 0x00000000       0x18 esp-idf/soc/libsoc.a(gpio_periph.c.obj)
  .debug_line    0x00000000      0x201 esp-idf/soc/libsoc.a(gpio_periph.c.obj)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  .debug_str     0x00000000      0x957 esp-idf/soc/libsoc.a(gpio_periph.c.obj)
+=======
+ .debug_str     0x00000000      0x959 esp-idf/soc/libsoc.a(gpio_periph.c.obj)
+>>>>>>> Stashed changes
 =======
  .debug_str     0x00000000      0x959 esp-idf/soc/libsoc.a(gpio_periph.c.obj)
 >>>>>>> Stashed changes
@@ -1433,7 +1461,11 @@ Discarded input sections
  .debug_ranges  0x00000000       0x10 esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_loader.c.obj)
  .debug_line    0x00000000      0x1fd esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_loader.c.obj)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  .debug_str     0x00000000      0x2e6 esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_loader.c.obj)
+=======
+ .debug_str     0x00000000      0x2e8 esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_loader.c.obj)
+>>>>>>> Stashed changes
 =======
  .debug_str     0x00000000      0x2e8 esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_loader.c.obj)
 >>>>>>> Stashed changes
@@ -5441,6 +5473,7 @@ LOAD C:/Espressif/tools/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/
  .debug_frame   0x00001570       0xe8 esp-idf/hal/libhal.a(mmu_hal.c.obj)
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .debug_str      0x00000000     0xad23
  *(.debug_str)
  .debug_str     0x00000000     0xad23 esp-idf/soc/libsoc.a(dport_access.c.obj)
@@ -5483,6 +5516,8 @@ LOAD C:/Espressif/tools/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/
  .debug_str     0x0000ad23     0x2487 esp-idf/hal/libhal.a(wdt_hal_iram.c.obj)
  .debug_str     0x0000ad23      0x698 esp-idf/hal/libhal.a(mmu_hal.c.obj)
 =======
+=======
+>>>>>>> Stashed changes
 .debug_str      0x00000000     0xad25
  *(.debug_str)
  .debug_str     0x00000000     0xad25 esp-idf/soc/libsoc.a(dport_access.c.obj)
@@ -5524,6 +5559,9 @@ LOAD C:/Espressif/tools/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/
  .debug_str     0x0000ad25     0x1957 esp-idf/hal/libhal.a(efuse_hal.c.obj)
  .debug_str     0x0000ad25     0x2489 esp-idf/hal/libhal.a(wdt_hal_iram.c.obj)
  .debug_str     0x0000ad25      0x69a esp-idf/hal/libhal.a(mmu_hal.c.obj)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 .debug_loc      0x00000000     0xa223

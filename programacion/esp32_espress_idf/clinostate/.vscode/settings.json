@@ -1,5 +1,6 @@
 {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "C_Cpp.intelliSenseEngine": "default",
     "idf.espIdfPathWin": "C:/Espressif/frameworks/esp-idf-v5.4/",
     "idf.pythonInstallPath": "c:\\Espressif\\tools\\tools\\idf-python\\3.11.2\\python.exe",
@@ -24,6 +25,11 @@
     "idf.flashType": "UART",
     "idf.portWin": "COM3",
     "idf.port": "/dev/ttyS3"
+=======
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.portWin": "COM11",
+  "idf.flashType": "UART"
+>>>>>>> Stashed changes
 =======
   "C_Cpp.intelliSenseEngine": "default",
   "idf.portWin": "COM11",

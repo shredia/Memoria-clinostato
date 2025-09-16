@@ -3,6 +3,7 @@
 	[
 		{
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 			"file" : "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/bootloader"
 		},
 		{
@@ -32,6 +33,8 @@
 		{
 			"file" : "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 =======
+=======
+>>>>>>> Stashed changes
 			"file" : "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/bootloader"
 		},
 		{
@@ -60,6 +63,9 @@
 		},
 		{
 			"file" : "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		}
 	],

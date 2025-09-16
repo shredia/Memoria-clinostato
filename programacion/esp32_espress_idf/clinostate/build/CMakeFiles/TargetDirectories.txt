@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/menuconfig.dir
 D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/confserver.dir
 D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/save-defconfig.dir
@@ -902,6 +903,8 @@ D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/cli
 D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/main/CMakeFiles/install/local.dir
 D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/main/CMakeFiles/install/strip.dir
 =======
+=======
+>>>>>>> Stashed changes
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/menuconfig.dir
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/confserver.dir
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/save-defconfig.dir
@@ -1804,4 +1807,7 @@ D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/c
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/main/CMakeFiles/install.dir
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/main/CMakeFiles/install/local.dir
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/main/CMakeFiles/install/strip.dir
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

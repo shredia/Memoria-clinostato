@@ -1,5 +1,6 @@
 {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "configurations": [
     {
       "name": "ESP-IDF",
@@ -22,6 +23,8 @@
   ],
   "version": 4
 =======
+=======
+>>>>>>> Stashed changes
     "configurations": [
         {
             "name": "ESP-IDF",
@@ -43,5 +46,8 @@
         }
     ],
     "version": 4
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }

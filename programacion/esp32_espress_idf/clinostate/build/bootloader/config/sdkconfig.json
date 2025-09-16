@@ -146,9 +146,15 @@
     "ESP_DEBUG_OCDAWARE": true,
     "ESP_DEBUG_STUBS_ENABLE": false,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "ESP_DEFAULT_CPU_FREQ_MHZ": 160,
     "ESP_DEFAULT_CPU_FREQ_MHZ_160": true,
     "ESP_DEFAULT_CPU_FREQ_MHZ_240": false,
+=======
+    "ESP_DEFAULT_CPU_FREQ_MHZ": 240,
+    "ESP_DEFAULT_CPU_FREQ_MHZ_160": false,
+    "ESP_DEFAULT_CPU_FREQ_MHZ_240": true,
+>>>>>>> Stashed changes
 =======
     "ESP_DEFAULT_CPU_FREQ_MHZ": 240,
     "ESP_DEFAULT_CPU_FREQ_MHZ_160": false,
@@ -234,7 +240,11 @@
     "FREERTOS_FPU_IN_ISR": false,
     "FREERTOS_GENERATE_RUN_TIME_STATS": false,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "FREERTOS_HZ": 100,
+=======
+    "FREERTOS_HZ": 1000,
+>>>>>>> Stashed changes
 =======
     "FREERTOS_HZ": 1000,
 >>>>>>> Stashed changes
@@ -283,7 +293,11 @@
     "IDF_EXPERIMENTAL_FEATURES": false,
     "IDF_FIRMWARE_CHIP_ID": 0,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "IDF_INIT_VERSION": "6.0.0",
+=======
+    "IDF_INIT_VERSION": "5.4.0",
+>>>>>>> Stashed changes
 =======
     "IDF_INIT_VERSION": "5.4.0",
 >>>>>>> Stashed changes

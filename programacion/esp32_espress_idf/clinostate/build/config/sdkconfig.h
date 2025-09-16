@@ -246,7 +246,11 @@
 #define CONFIG_IDF_TARGET_ARCH "xtensa"
 #define CONFIG_IDF_TARGET "esp32"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #define CONFIG_IDF_INIT_VERSION "6.0.0"
+=======
+#define CONFIG_IDF_INIT_VERSION "5.4.0"
+>>>>>>> Stashed changes
 =======
 #define CONFIG_IDF_INIT_VERSION "5.4.0"
 >>>>>>> Stashed changes
@@ -358,7 +362,11 @@
 #define CONFIG_ESP_HTTP_CLIENT_ENABLE_HTTPS 1
 #define CONFIG_ESP_HTTP_CLIENT_EVENT_POST_TIMEOUT 2000
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #define CONFIG_HTTPD_MAX_REQ_HDR_LEN 1024
+=======
+#define CONFIG_HTTPD_MAX_REQ_HDR_LEN 512
+>>>>>>> Stashed changes
 =======
 #define CONFIG_HTTPD_MAX_REQ_HDR_LEN 512
 >>>>>>> Stashed changes
@@ -405,9 +413,14 @@
 #define CONFIG_ESP_PHY_RF_CAL_PARTIAL 1
 #define CONFIG_ESP_PHY_CALIBRATION_MODE 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #define CONFIG_PM_SLP_IRAM_OPT 1
 #define CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_160 1
 #define CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ 160
+=======
+#define CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240 1
+#define CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ 240
+>>>>>>> Stashed changes
 =======
 #define CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240 1
 #define CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ 240
@@ -497,7 +510,11 @@
 #define CONFIG_FATFS_VFS_FSTAT_BLKSIZE 0
 #define CONFIG_FATFS_LINK_LOCK 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #define CONFIG_FREERTOS_HZ 100
+=======
+#define CONFIG_FREERTOS_HZ 1000
+>>>>>>> Stashed changes
 =======
 #define CONFIG_FREERTOS_HZ 1000
 >>>>>>> Stashed changes
@@ -565,7 +582,11 @@
 #define CONFIG_LWIP_DHCP_DOES_ARP_CHECK 1
 #define CONFIG_LWIP_DHCP_DISABLE_VENDOR_CLASS_ID 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #define CONFIG_LWIP_DHCP_OPTIONS_LEN 69
+=======
+#define CONFIG_LWIP_DHCP_OPTIONS_LEN 68
+>>>>>>> Stashed changes
 =======
 #define CONFIG_LWIP_DHCP_OPTIONS_LEN 68
 >>>>>>> Stashed changes
@@ -632,6 +653,10 @@
 #define CONFIG_MBEDTLS_SSL_IN_CONTENT_LEN 16384
 #define CONFIG_MBEDTLS_SSL_OUT_CONTENT_LEN 4096
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+#define CONFIG_MBEDTLS_SSL_KEEP_PEER_CERTIFICATE 1
+>>>>>>> Stashed changes
 =======
 #define CONFIG_MBEDTLS_SSL_KEEP_PEER_CERTIFICATE 1
 >>>>>>> Stashed changes
@@ -649,7 +674,10 @@
 #define CONFIG_MBEDTLS_ECDSA_DETERMINISTIC 1
 #define CONFIG_MBEDTLS_SHA512_C 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #define CONFIG_MBEDTLS_SHA3_C 1
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 #define CONFIG_MBEDTLS_TLS_SERVER_AND_CLIENT 1
@@ -658,7 +686,10 @@
 #define CONFIG_MBEDTLS_TLS_ENABLED 1
 #define CONFIG_MBEDTLS_KEY_EXCHANGE_RSA 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #define CONFIG_MBEDTLS_KEY_EXCHANGE_DHE_RSA 1
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 #define CONFIG_MBEDTLS_KEY_EXCHANGE_ELLIPTIC_CURVE 1
@@ -682,7 +713,10 @@
 #define CONFIG_MBEDTLS_PK_PARSE_EC_EXTENDED 1
 #define CONFIG_MBEDTLS_PK_PARSE_EC_COMPRESSED 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #define CONFIG_MBEDTLS_DHM_C 1
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 #define CONFIG_MBEDTLS_ECDH_C 1
@@ -710,6 +744,11 @@
 #define CONFIG_NEWLIB_STDIN_LINE_ENDING_CR 1
 #define CONFIG_NEWLIB_TIME_SYSCALL_USE_RTC_HRT 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+#define CONFIG_ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_0 1
+#define CONFIG_ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_1 1
+>>>>>>> Stashed changes
 =======
 #define CONFIG_ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_0 1
 #define CONFIG_ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_1 1
@@ -795,7 +834,11 @@
 #define CONFIG_ESP32_DEBUG_OCDAWARE CONFIG_ESP_DEBUG_OCDAWARE
 #define CONFIG_ESP32_DEEP_SLEEP_WAKEUP_DELAY CONFIG_ESP_SLEEP_WAIT_FLASH_READY_EXTRA_DELAY
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #define CONFIG_ESP32_DEFAULT_CPU_FREQ_160 CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_160
+=======
+#define CONFIG_ESP32_DEFAULT_CPU_FREQ_240 CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240
+>>>>>>> Stashed changes
 =======
 #define CONFIG_ESP32_DEFAULT_CPU_FREQ_240 CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240
 >>>>>>> Stashed changes

@@ -35,6 +35,9 @@ void motores_task(void *pvParameters) {
     for (;;) {
         actualizarMotores();      // Trabajo corto y NO bloqueante
         vTaskDelayUntil(&last, period);  // Cede SIEMPRE el CPU
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 }
@@ -52,6 +55,15 @@ extern "C" void app_main(void) {
     //creamos el objeto de LP8
     sensor1 = new LP8(GPIO_NUM_5,GPIO_NUM_4,UART_NUM_2);
     sensor1->Setup();
+<<<<<<< Updated upstream
+=======
+
+    sensor2 = new LP8(GPIO_NUM_19,GPIO_NUM_13,UART_NUM_1);
+    sensor2->Setup();
+
+
+    bme280_setup();
+>>>>>>> Stashed changes
 
     sensor2 = new LP8(GPIO_NUM_19,GPIO_NUM_13,UART_NUM_1);
     sensor2->Setup();

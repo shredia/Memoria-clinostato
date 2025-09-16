@@ -5,8 +5,13 @@
     "project_path":       "C:/Espressif/frameworks/esp-idf-v5.4/components/bootloader/subproject",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.4",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "build_dir":          "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader",
     "config_file":        "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/sdkconfig",
+=======
+    "build_dir":          "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader",
+    "config_file":        "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/sdkconfig",
+>>>>>>> Stashed changes
 =======
     "build_dir":          "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader",
     "config_file":        "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/sdkconfig",
@@ -60,7 +65,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/bootloader_support/libbootloader_support.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/bootloader_support/libbootloader_support.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/bootloader_support/libbootloader_support.a",
 >>>>>>> Stashed changes
@@ -79,7 +88,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/efuse/libefuse.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/efuse/libefuse.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/efuse/libefuse.a",
 >>>>>>> Stashed changes
@@ -113,7 +126,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a",
 >>>>>>> Stashed changes
@@ -132,7 +149,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_common/libesp_common.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_common/libesp_common.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_common/libesp_common.a",
 >>>>>>> Stashed changes
@@ -151,7 +172,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a",
 >>>>>>> Stashed changes
@@ -170,7 +195,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_rom/libesp_rom.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_rom/libesp_rom.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_rom/libesp_rom.a",
 >>>>>>> Stashed changes
@@ -204,7 +233,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_system/libesp_system.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_system/libesp_system.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_system/libesp_system.a",
 >>>>>>> Stashed changes
@@ -253,7 +286,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/hal/libhal.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/hal/libhal.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/hal/libhal.a",
 >>>>>>> Stashed changes
@@ -272,7 +309,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/log/liblog.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/log/liblog.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/log/liblog.a",
 >>>>>>> Stashed changes
@@ -291,7 +332,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/main/libmain.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/main/libmain.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/main/libmain.a",
 >>>>>>> Stashed changes
@@ -310,7 +355,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/micro-ecc/libmicro-ecc.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/micro-ecc/libmicro-ecc.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/micro-ecc/libmicro-ecc.a",
 >>>>>>> Stashed changes
@@ -359,7 +408,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/soc/libsoc.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/soc/libsoc.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/soc/libsoc.a",
 >>>>>>> Stashed changes
@@ -378,7 +431,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/spi_flash/libspi_flash.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/spi_flash/libspi_flash.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/spi_flash/libspi_flash.a",
 >>>>>>> Stashed changes
@@ -397,7 +454,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/xtensa/libxtensa.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/xtensa/libxtensa.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/xtensa/libxtensa.a",
 >>>>>>> Stashed changes
@@ -489,7 +550,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "include_dirs": [ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader" ]
+=======
+            "include_dirs": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader" ]
+>>>>>>> Stashed changes
 =======
             "include_dirs": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader" ]
 >>>>>>> Stashed changes
@@ -541,7 +606,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "include_dirs": [ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader", "esp-tls-crypto" ]
+=======
+            "include_dirs": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader", "esp-tls-crypto" ]
+>>>>>>> Stashed changes
 =======
             "include_dirs": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader", "esp-tls-crypto" ]
 >>>>>>> Stashed changes

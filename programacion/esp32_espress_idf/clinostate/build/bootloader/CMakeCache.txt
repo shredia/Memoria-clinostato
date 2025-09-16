@@ -1,6 +1,10 @@
 # This is the CMakeCache file.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 # For build in directory: d:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader
+=======
+# For build in directory: d:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader
+>>>>>>> Stashed changes
 =======
 # For build in directory: d:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader
 >>>>>>> Stashed changes
@@ -99,7 +103,11 @@ CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Path to a program.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
+=======
+CMAKE_DLLTOOL:FILEPATH=C:/MinGW/bin/dlltool.exe
+>>>>>>> Stashed changes
 =======
 CMAKE_DLLTOOL:FILEPATH=C:/MinGW/bin/dlltool.exe
 >>>>>>> Stashed changes
@@ -124,7 +132,11 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 
 //Value Computed by CMake.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/pkgRedirects
+=======
+CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/pkgRedirects
+>>>>>>> Stashed changes
 =======
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/pkgRedirects
 >>>>>>> Stashed changes
@@ -264,7 +276,11 @@ IGNORE_EXTRA_COMPONENT:UNINITIALIZED=
 
 //No help, variable specified on the command line.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 PROJECT_SOURCE_DIR:UNINITIALIZED=D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate
+=======
+PROJECT_SOURCE_DIR:UNINITIALIZED=D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate
+>>>>>>> Stashed changes
 =======
 PROJECT_SOURCE_DIR:UNINITIALIZED=D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate
 >>>>>>> Stashed changes
@@ -277,15 +293,21 @@ PYTHON_DEPS_CHECKED:UNINITIALIZED=1
 
 //No help, variable specified on the command line.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 SDKCONFIG:UNINITIALIZED=D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/sdkconfig
 
 //Value Computed by CMake
 bootloader_BINARY_DIR:STATIC=D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader
 =======
+=======
+>>>>>>> Stashed changes
 SDKCONFIG:UNINITIALIZED=D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/sdkconfig
 
 //Value Computed by CMake
 bootloader_BINARY_DIR:STATIC=D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 //Value Computed by CMake
@@ -296,7 +318,11 @@ bootloader_SOURCE_DIR:STATIC=C:/Espressif/frameworks/esp-idf-v5.4/components/boo
 
 //Value Computed by CMake
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 esp-idf_BINARY_DIR:STATIC=D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf
+=======
+esp-idf_BINARY_DIR:STATIC=D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf
+>>>>>>> Stashed changes
 =======
 esp-idf_BINARY_DIR:STATIC=D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf
 >>>>>>> Stashed changes
@@ -333,7 +359,11 @@ CMAKE_ASM_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_ASM_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 CMAKE_CACHEFILE_DIR:INTERNAL=d:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader
+=======
+CMAKE_CACHEFILE_DIR:INTERNAL=d:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader
+>>>>>>> Stashed changes
 =======
 CMAKE_CACHEFILE_DIR:INTERNAL=d:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader
 >>>>>>> Stashed changes

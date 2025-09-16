@@ -40,7 +40,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   include("D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/cmake_install.cmake")
+=======
+  include("D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/cmake_install.cmake")
+>>>>>>> Stashed changes
 =======
   include("D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/cmake_install.cmake")
 >>>>>>> Stashed changes
@@ -62,7 +66,11 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   file(WRITE "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/${CMAKE_INSTALL_MANIFEST}"
+=======
+  file(WRITE "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> Stashed changes
 =======
   file(WRITE "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/${CMAKE_INSTALL_MANIFEST}"
 >>>>>>> Stashed changes

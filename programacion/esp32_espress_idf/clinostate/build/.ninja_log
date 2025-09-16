@@ -1,5 +1,6 @@
 # ninja log v6
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 154	240	7779662219306472	project_elf_src_esp32.c	522386be93663382
 154	240	7779662219306472	D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/project_elf_src_esp32.c	522386be93663382
 114	299	7779662219894450	esp-idf/esp_system/ld/memory.ld	fefec5ca7b4b4473
@@ -1194,6 +1195,8 @@
 28470	28606	7779680516684780	esp-idf/esptool_py/CMakeFiles/app_check_size	8421c7fc247997f3
 28470	28606	7779680516684780	D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esptool_py/CMakeFiles/app_check_size	8421c7fc247997f3
 =======
+=======
+>>>>>>> Stashed changes
 180	253	7780106256091220	project_elf_src_esp32.c	24e207d0bb2e849
 10383	10509	7780128981282954	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/i2c_periph.c.obj	d9291fa2c21f7558
 180	253	7780106256091220	D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/project_elf_src_esp32.c	24e207d0bb2e849
@@ -3731,4 +3734,7 @@
 20596	20992	7797356174254936	D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/.bin_timestamp	c5fcd2a8baf72c9
 20993	21104	7797356174328862	esp-idf/esptool_py/CMakeFiles/app_check_size	87e6ca25f010f56d
 20993	21104	7797356174328862	D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esptool_py/CMakeFiles/app_check_size	87e6ca25f010f56d
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

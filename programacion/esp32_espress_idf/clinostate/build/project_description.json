@@ -2,6 +2,7 @@
     "version":            "1.1",
     "project_name":       "clinostate",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "project_version":    "5226666-dirty",
     "project_path":       "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.4",
@@ -10,6 +11,8 @@
     "config_defaults":    "",
     "bootloader_elf":     "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/bootloader.elf",
 =======
+=======
+>>>>>>> Stashed changes
     "project_version":    "bd680f0-dirty",
     "project_path":       "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.4",
@@ -17,6 +20,9 @@
     "config_file":        "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/sdkconfig",
     "config_defaults":    "",
     "bootloader_elf":     "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/bootloader.elf",
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     "app_elf":            "clinostate.elf",
     "app_bin":            "clinostate.bin",
@@ -32,7 +38,11 @@
     "c_compiler":         "C:/Espressif/tools/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc.exe",
     "config_environment" : {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "COMPONENT_KCONFIGS" : "C:/Espressif/frameworks/esp-idf-v5.4/components/app_trace/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/bt/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/console/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/driver/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/efuse/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp-tls/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_adc/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_coex/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_common/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_ana_cmpr/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_cam/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_dac/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_gpio/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_gptimer/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_i2c/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_i2s/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_isp/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_jpeg/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_ledc/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_mcpwm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_parlio/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_pcnt/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_rmt/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_sdm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_spi/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_touch_sens/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_tsens/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_uart/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_usb_serial_jtag/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_eth/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_event/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_gdbstub/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_http_client/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_http_server/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_https_ota/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_https_server/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_hw_support/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_lcd/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_mm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_netif/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_partition/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_phy/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_pm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_psram/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_ringbuf/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_security/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_system/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_timer/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_wifi/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/espcoredump/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/fatfs/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/freertos/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/hal/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/heap/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/ieee802154/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/log/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/lwip/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/mbedtls/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/newlib/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/nvs_flash/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/nvs_sec_provider/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/openthread/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/pthread/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/soc/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/spi_flash/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/spiffs/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/tcp_transport/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/ulp/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/unity/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/usb/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/vfs/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/wear_levelling/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/wifi_provisioning/Kconfig;D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities/Kconfig;D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus/Kconfig",
+=======
+        "COMPONENT_KCONFIGS" : "C:/Espressif/frameworks/esp-idf-v5.4/components/app_trace/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/bt/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/console/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/driver/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/efuse/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp-tls/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_adc/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_coex/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_common/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_ana_cmpr/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_cam/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_dac/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_gpio/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_gptimer/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_i2c/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_i2s/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_isp/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_jpeg/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_ledc/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_mcpwm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_parlio/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_pcnt/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_rmt/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_sdm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_spi/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_touch_sens/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_tsens/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_uart/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_usb_serial_jtag/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_eth/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_event/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_gdbstub/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_http_client/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_http_server/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_https_ota/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_https_server/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_hw_support/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_lcd/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_mm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_netif/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_partition/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_phy/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_pm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_psram/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_ringbuf/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_security/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_system/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_timer/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_wifi/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/espcoredump/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/fatfs/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/freertos/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/hal/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/heap/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/ieee802154/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/log/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/lwip/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/mbedtls/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/newlib/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/nvs_flash/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/nvs_sec_provider/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/openthread/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/pthread/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/soc/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/spi_flash/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/spiffs/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/tcp_transport/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/ulp/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/unity/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/usb/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/vfs/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/wear_levelling/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/wifi_provisioning/Kconfig;D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities/Kconfig;D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus/Kconfig",
+>>>>>>> Stashed changes
 =======
         "COMPONENT_KCONFIGS" : "C:/Espressif/frameworks/esp-idf-v5.4/components/app_trace/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/bt/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/console/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/driver/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/efuse/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp-tls/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_adc/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_coex/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_common/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_ana_cmpr/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_cam/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_dac/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_gpio/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_gptimer/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_i2c/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_i2s/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_isp/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_jpeg/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_ledc/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_mcpwm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_parlio/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_pcnt/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_rmt/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_sdm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_spi/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_touch_sens/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_tsens/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_uart/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_usb_serial_jtag/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_eth/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_event/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_gdbstub/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_http_client/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_http_server/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_https_ota/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_https_server/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_hw_support/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_lcd/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_mm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_netif/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_partition/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_phy/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_pm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_psram/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_ringbuf/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_security/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_system/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_timer/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/esp_wifi/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/espcoredump/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/fatfs/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/freertos/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/hal/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/heap/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/ieee802154/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/log/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/lwip/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/mbedtls/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/newlib/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/nvs_flash/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/nvs_sec_provider/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/openthread/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/pthread/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/soc/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/spi_flash/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/spiffs/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/tcp_transport/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/ulp/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/unity/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/usb/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/vfs/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/wear_levelling/Kconfig;C:/Espressif/frameworks/esp-idf-v5.4/components/wifi_provisioning/Kconfig;D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities/Kconfig;D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus/Kconfig",
 >>>>>>> Stashed changes
@@ -41,7 +51,11 @@
     "common_component_reqs": [ "cxx", "newlib", "freertos", "esp_hw_support", "heap", "log", "soc", "hal", "esp_rom", "esp_common", "esp_system", "xtensa" ],
     "build_components" : [ "AccelStepper", "DualCore", "LP8", "app_bme280", "app_mqtt", "app_trace", "app_update", "app_wifi", "bootloader", "bootloader_support", "bt", "cmock", "console", "cxx", "driver", "efuse", "esp-tls", "esp_adc", "esp_app_format", "esp_bootloader_format", "esp_coex", "esp_common", "esp_driver_ana_cmpr", "esp_driver_cam", "esp_driver_dac", "esp_driver_gpio", "esp_driver_gptimer", "esp_driver_i2c", "esp_driver_i2s", "esp_driver_isp", "esp_driver_jpeg", "esp_driver_ledc", "esp_driver_mcpwm", "esp_driver_parlio", "esp_driver_pcnt", "esp_driver_ppa", "esp_driver_rmt", "esp_driver_sdio", "esp_driver_sdm", "esp_driver_sdmmc", "esp_driver_sdspi", "esp_driver_spi", "esp_driver_touch_sens", "esp_driver_tsens", "esp_driver_uart", "esp_driver_usb_serial_jtag", "esp_eth", "esp_event", "esp_gdbstub", "esp_hid", "esp_http_client", "esp_http_server", "esp_https_ota", "esp_https_server", "esp_hw_support", "esp_lcd", "esp_local_ctrl", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_psram", "esp_ringbuf", "esp_rom", "esp_security", "esp_system", "esp_timer", "esp_vfs_console", "esp_wifi", "espcoredump", "espressif__bme280", "espressif__cmake_utilities", "espressif__i2c_bus", "esptool_py", "fatfs", "freertos", "hal", "heap", "http_parser", "idf_test", "ieee802154", "json", "log", "lwip", "main", "mbedtls", "motores", "mqtt", "newlib", "nvs_flash", "nvs_sec_provider", "openthread", "partition_table", "perfmon", "protobuf-c", "protocomm", "pthread", "rt", "sdmmc", "soc", "spi_flash", "spiffs", "tcp_transport", "ulp", "unity", "usb", "vfs", "wear_levelling", "wifi_provisioning", "wpa_supplicant", "xtensa", "" ],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "build_component_paths" : [ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper", "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/DualCore", "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/LP8", "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_bme280", "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_mqtt", "C:/Espressif/frameworks/esp-idf-v5.4/components/app_trace", "C:/Espressif/frameworks/esp-idf-v5.4/components/app_update", "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_wifi", "C:/Espressif/frameworks/esp-idf-v5.4/components/bootloader", "C:/Espressif/frameworks/esp-idf-v5.4/components/bootloader_support", "C:/Espressif/frameworks/esp-idf-v5.4/components/bt", "C:/Espressif/frameworks/esp-idf-v5.4/components/cmock", "C:/Espressif/frameworks/esp-idf-v5.4/components/console", "C:/Espressif/frameworks/esp-idf-v5.4/components/cxx", "C:/Espressif/frameworks/esp-idf-v5.4/components/driver", "C:/Espressif/frameworks/esp-idf-v5.4/components/efuse", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp-tls", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_adc", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_app_format", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_bootloader_format", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_coex", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_common", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_ana_cmpr", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_cam", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_dac", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_gpio", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_gptimer", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_i2c", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_i2s", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_isp", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_jpeg", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_ledc", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_mcpwm", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_parlio", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_pcnt", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_ppa", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_rmt", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_sdio", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_sdm", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_sdmmc", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_sdspi", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_spi", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_touch_sens", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_tsens", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_uart", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_usb_serial_jtag", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_eth", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_event", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_gdbstub", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_hid", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_http_client", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_http_server", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_https_ota", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_https_server", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_hw_support", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_lcd", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_local_ctrl", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_mm", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_netif", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_netif_stack", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_partition", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_phy", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_pm", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_psram", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_ringbuf", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_rom", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_security", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_system", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_timer", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_vfs_console", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_wifi", "C:/Espressif/frameworks/esp-idf-v5.4/components/espcoredump", "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__bme280", "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities", "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus", "C:/Espressif/frameworks/esp-idf-v5.4/components/esptool_py", "C:/Espressif/frameworks/esp-idf-v5.4/components/fatfs", "C:/Espressif/frameworks/esp-idf-v5.4/components/freertos", "C:/Espressif/frameworks/esp-idf-v5.4/components/hal", "C:/Espressif/frameworks/esp-idf-v5.4/components/heap", "C:/Espressif/frameworks/esp-idf-v5.4/components/http_parser", "C:/Espressif/frameworks/esp-idf-v5.4/components/idf_test", "C:/Espressif/frameworks/esp-idf-v5.4/components/ieee802154", "C:/Espressif/frameworks/esp-idf-v5.4/components/json", "C:/Espressif/frameworks/esp-idf-v5.4/components/log", "C:/Espressif/frameworks/esp-idf-v5.4/components/lwip", "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/main", "C:/Espressif/frameworks/esp-idf-v5.4/components/mbedtls", "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/motores", "C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt", "C:/Espressif/frameworks/esp-idf-v5.4/components/newlib", "C:/Espressif/frameworks/esp-idf-v5.4/components/nvs_flash", "C:/Espressif/frameworks/esp-idf-v5.4/components/nvs_sec_provider", "C:/Espressif/frameworks/esp-idf-v5.4/components/openthread", "C:/Espressif/frameworks/esp-idf-v5.4/components/partition_table", "C:/Espressif/frameworks/esp-idf-v5.4/components/perfmon", "C:/Espressif/frameworks/esp-idf-v5.4/components/protobuf-c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm", "C:/Espressif/frameworks/esp-idf-v5.4/components/pthread", "C:/Espressif/frameworks/esp-idf-v5.4/components/rt", "C:/Espressif/frameworks/esp-idf-v5.4/components/sdmmc", "C:/Espressif/frameworks/esp-idf-v5.4/components/soc", "C:/Espressif/frameworks/esp-idf-v5.4/components/spi_flash", "C:/Espressif/frameworks/esp-idf-v5.4/components/spiffs", "C:/Espressif/frameworks/esp-idf-v5.4/components/tcp_transport", "C:/Espressif/frameworks/esp-idf-v5.4/components/ulp", "C:/Espressif/frameworks/esp-idf-v5.4/components/unity", "C:/Espressif/frameworks/esp-idf-v5.4/components/usb", "C:/Espressif/frameworks/esp-idf-v5.4/components/vfs", "C:/Espressif/frameworks/esp-idf-v5.4/components/wear_levelling", "C:/Espressif/frameworks/esp-idf-v5.4/components/wifi_provisioning", "C:/Espressif/frameworks/esp-idf-v5.4/components/wpa_supplicant", "C:/Espressif/frameworks/esp-idf-v5.4/components/xtensa", "" ],
+=======
+    "build_component_paths" : [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/DualCore", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/LP8", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_bme280", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_mqtt", "C:/Espressif/frameworks/esp-idf-v5.4/components/app_trace", "C:/Espressif/frameworks/esp-idf-v5.4/components/app_update", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_wifi", "C:/Espressif/frameworks/esp-idf-v5.4/components/bootloader", "C:/Espressif/frameworks/esp-idf-v5.4/components/bootloader_support", "C:/Espressif/frameworks/esp-idf-v5.4/components/bt", "C:/Espressif/frameworks/esp-idf-v5.4/components/cmock", "C:/Espressif/frameworks/esp-idf-v5.4/components/console", "C:/Espressif/frameworks/esp-idf-v5.4/components/cxx", "C:/Espressif/frameworks/esp-idf-v5.4/components/driver", "C:/Espressif/frameworks/esp-idf-v5.4/components/efuse", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp-tls", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_adc", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_app_format", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_bootloader_format", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_coex", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_common", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_ana_cmpr", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_cam", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_dac", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_gpio", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_gptimer", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_i2c", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_i2s", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_isp", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_jpeg", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_ledc", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_mcpwm", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_parlio", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_pcnt", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_ppa", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_rmt", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_sdio", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_sdm", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_sdmmc", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_sdspi", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_spi", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_touch_sens", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_tsens", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_uart", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_usb_serial_jtag", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_eth", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_event", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_gdbstub", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_hid", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_http_client", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_http_server", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_https_ota", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_https_server", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_hw_support", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_lcd", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_local_ctrl", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_mm", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_netif", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_netif_stack", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_partition", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_phy", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_pm", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_psram", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_ringbuf", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_rom", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_security", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_system", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_timer", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_vfs_console", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_wifi", "C:/Espressif/frameworks/esp-idf-v5.4/components/espcoredump", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__bme280", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus", "C:/Espressif/frameworks/esp-idf-v5.4/components/esptool_py", "C:/Espressif/frameworks/esp-idf-v5.4/components/fatfs", "C:/Espressif/frameworks/esp-idf-v5.4/components/freertos", "C:/Espressif/frameworks/esp-idf-v5.4/components/hal", "C:/Espressif/frameworks/esp-idf-v5.4/components/heap", "C:/Espressif/frameworks/esp-idf-v5.4/components/http_parser", "C:/Espressif/frameworks/esp-idf-v5.4/components/idf_test", "C:/Espressif/frameworks/esp-idf-v5.4/components/ieee802154", "C:/Espressif/frameworks/esp-idf-v5.4/components/json", "C:/Espressif/frameworks/esp-idf-v5.4/components/log", "C:/Espressif/frameworks/esp-idf-v5.4/components/lwip", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/main", "C:/Espressif/frameworks/esp-idf-v5.4/components/mbedtls", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/motores", "C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt", "C:/Espressif/frameworks/esp-idf-v5.4/components/newlib", "C:/Espressif/frameworks/esp-idf-v5.4/components/nvs_flash", "C:/Espressif/frameworks/esp-idf-v5.4/components/nvs_sec_provider", "C:/Espressif/frameworks/esp-idf-v5.4/components/openthread", "C:/Espressif/frameworks/esp-idf-v5.4/components/partition_table", "C:/Espressif/frameworks/esp-idf-v5.4/components/perfmon", "C:/Espressif/frameworks/esp-idf-v5.4/components/protobuf-c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm", "C:/Espressif/frameworks/esp-idf-v5.4/components/pthread", "C:/Espressif/frameworks/esp-idf-v5.4/components/rt", "C:/Espressif/frameworks/esp-idf-v5.4/components/sdmmc", "C:/Espressif/frameworks/esp-idf-v5.4/components/soc", "C:/Espressif/frameworks/esp-idf-v5.4/components/spi_flash", "C:/Espressif/frameworks/esp-idf-v5.4/components/spiffs", "C:/Espressif/frameworks/esp-idf-v5.4/components/tcp_transport", "C:/Espressif/frameworks/esp-idf-v5.4/components/ulp", "C:/Espressif/frameworks/esp-idf-v5.4/components/unity", "C:/Espressif/frameworks/esp-idf-v5.4/components/usb", "C:/Espressif/frameworks/esp-idf-v5.4/components/vfs", "C:/Espressif/frameworks/esp-idf-v5.4/components/wear_levelling", "C:/Espressif/frameworks/esp-idf-v5.4/components/wifi_provisioning", "C:/Espressif/frameworks/esp-idf-v5.4/components/wpa_supplicant", "C:/Espressif/frameworks/esp-idf-v5.4/components/xtensa", "" ],
+>>>>>>> Stashed changes
 =======
     "build_component_paths" : [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/DualCore", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/LP8", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_bme280", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_mqtt", "C:/Espressif/frameworks/esp-idf-v5.4/components/app_trace", "C:/Espressif/frameworks/esp-idf-v5.4/components/app_update", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_wifi", "C:/Espressif/frameworks/esp-idf-v5.4/components/bootloader", "C:/Espressif/frameworks/esp-idf-v5.4/components/bootloader_support", "C:/Espressif/frameworks/esp-idf-v5.4/components/bt", "C:/Espressif/frameworks/esp-idf-v5.4/components/cmock", "C:/Espressif/frameworks/esp-idf-v5.4/components/console", "C:/Espressif/frameworks/esp-idf-v5.4/components/cxx", "C:/Espressif/frameworks/esp-idf-v5.4/components/driver", "C:/Espressif/frameworks/esp-idf-v5.4/components/efuse", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp-tls", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_adc", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_app_format", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_bootloader_format", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_coex", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_common", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_ana_cmpr", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_cam", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_dac", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_gpio", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_gptimer", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_i2c", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_i2s", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_isp", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_jpeg", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_ledc", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_mcpwm", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_parlio", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_pcnt", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_ppa", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_rmt", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_sdio", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_sdm", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_sdmmc", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_sdspi", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_spi", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_touch_sens", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_tsens", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_uart", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_driver_usb_serial_jtag", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_eth", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_event", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_gdbstub", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_hid", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_http_client", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_http_server", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_https_ota", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_https_server", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_hw_support", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_lcd", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_local_ctrl", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_mm", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_netif", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_netif_stack", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_partition", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_phy", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_pm", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_psram", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_ringbuf", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_rom", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_security", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_system", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_timer", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_vfs_console", "C:/Espressif/frameworks/esp-idf-v5.4/components/esp_wifi", "C:/Espressif/frameworks/esp-idf-v5.4/components/espcoredump", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__bme280", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus", "C:/Espressif/frameworks/esp-idf-v5.4/components/esptool_py", "C:/Espressif/frameworks/esp-idf-v5.4/components/fatfs", "C:/Espressif/frameworks/esp-idf-v5.4/components/freertos", "C:/Espressif/frameworks/esp-idf-v5.4/components/hal", "C:/Espressif/frameworks/esp-idf-v5.4/components/heap", "C:/Espressif/frameworks/esp-idf-v5.4/components/http_parser", "C:/Espressif/frameworks/esp-idf-v5.4/components/idf_test", "C:/Espressif/frameworks/esp-idf-v5.4/components/ieee802154", "C:/Espressif/frameworks/esp-idf-v5.4/components/json", "C:/Espressif/frameworks/esp-idf-v5.4/components/log", "C:/Espressif/frameworks/esp-idf-v5.4/components/lwip", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/main", "C:/Espressif/frameworks/esp-idf-v5.4/components/mbedtls", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/motores", "C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt", "C:/Espressif/frameworks/esp-idf-v5.4/components/newlib", "C:/Espressif/frameworks/esp-idf-v5.4/components/nvs_flash", "C:/Espressif/frameworks/esp-idf-v5.4/components/nvs_sec_provider", "C:/Espressif/frameworks/esp-idf-v5.4/components/openthread", "C:/Espressif/frameworks/esp-idf-v5.4/components/partition_table", "C:/Espressif/frameworks/esp-idf-v5.4/components/perfmon", "C:/Espressif/frameworks/esp-idf-v5.4/components/protobuf-c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm", "C:/Espressif/frameworks/esp-idf-v5.4/components/pthread", "C:/Espressif/frameworks/esp-idf-v5.4/components/rt", "C:/Espressif/frameworks/esp-idf-v5.4/components/sdmmc", "C:/Espressif/frameworks/esp-idf-v5.4/components/soc", "C:/Espressif/frameworks/esp-idf-v5.4/components/spi_flash", "C:/Espressif/frameworks/esp-idf-v5.4/components/spiffs", "C:/Espressif/frameworks/esp-idf-v5.4/components/tcp_transport", "C:/Espressif/frameworks/esp-idf-v5.4/components/ulp", "C:/Espressif/frameworks/esp-idf-v5.4/components/unity", "C:/Espressif/frameworks/esp-idf-v5.4/components/usb", "C:/Espressif/frameworks/esp-idf-v5.4/components/vfs", "C:/Espressif/frameworks/esp-idf-v5.4/components/wear_levelling", "C:/Espressif/frameworks/esp-idf-v5.4/components/wifi_provisioning", "C:/Espressif/frameworks/esp-idf-v5.4/components/wpa_supplicant", "C:/Espressif/frameworks/esp-idf-v5.4/components/xtensa", "" ],
 >>>>>>> Stashed changes
@@ -51,7 +65,11 @@
             "target": "___idf_AccelStepper",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper",
 >>>>>>> Stashed changes
@@ -62,8 +80,13 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/AccelStepper/libAccelStepper.a",
             "sources": [ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper/AccelStepper.cpp", "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper/MultiStepper.cpp" ],
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/AccelStepper/libAccelStepper.a",
+            "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper/AccelStepper.cpp", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper/MultiStepper.cpp" ],
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/AccelStepper/libAccelStepper.a",
             "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper/AccelStepper.cpp", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper/MultiStepper.cpp" ],
@@ -75,7 +98,11 @@
             "target": "___idf_DualCore",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/DualCore",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/DualCore",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/DualCore",
 >>>>>>> Stashed changes
@@ -86,8 +113,13 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/DualCore/libDualCore.a",
             "sources": [ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/DualCore/Task_Core_0.cpp", "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/DualCore/Task_Core_1.cpp" ],
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/DualCore/libDualCore.a",
+            "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/DualCore/Task_Core_0.cpp", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/DualCore/Task_Core_1.cpp" ],
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/DualCore/libDualCore.a",
             "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/DualCore/Task_Core_0.cpp", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/DualCore/Task_Core_1.cpp" ],
@@ -99,7 +131,11 @@
             "target": "___idf_LP8",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/LP8",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/LP8",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/LP8",
 >>>>>>> Stashed changes
@@ -110,8 +146,13 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/LP8/libLP8.a",
             "sources": [ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/LP8/src/LP8_libreria.cpp", "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/LP8/src/LP8_protocolo.cpp" ],
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/LP8/libLP8.a",
+            "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/LP8/src/LP8_libreria.cpp", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/LP8/src/LP8_protocolo.cpp" ],
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/LP8/libLP8.a",
             "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/LP8/src/LP8_libreria.cpp", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/LP8/src/LP8_protocolo.cpp" ],
@@ -123,7 +164,11 @@
             "target": "___idf_app_bme280",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_bme280",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_bme280",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_bme280",
 >>>>>>> Stashed changes
@@ -134,8 +179,13 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_bme280/libapp_bme280.a",
             "sources": [ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_bme280/app_bme280.cpp" ],
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_bme280/libapp_bme280.a",
+            "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_bme280/app_bme280.cpp" ],
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_bme280/libapp_bme280.a",
             "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_bme280/app_bme280.cpp" ],
@@ -147,7 +197,11 @@
             "target": "___idf_app_mqtt",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_mqtt",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_mqtt",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_mqtt",
 >>>>>>> Stashed changes
@@ -158,8 +212,13 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_mqtt/libapp_mqtt.a",
             "sources": [ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_mqtt/app_mqtt.cpp" ],
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_mqtt/libapp_mqtt.a",
+            "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_mqtt/app_mqtt.cpp" ],
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_mqtt/libapp_mqtt.a",
             "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_mqtt/app_mqtt.cpp" ],
@@ -178,7 +237,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_trace/libapp_trace.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_trace/libapp_trace.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_trace/libapp_trace.a",
 >>>>>>> Stashed changes
@@ -197,7 +260,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_update/libapp_update.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_update/libapp_update.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_update/libapp_update.a",
 >>>>>>> Stashed changes
@@ -209,7 +276,11 @@
             "target": "___idf_app_wifi",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_wifi",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_wifi",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_wifi",
 >>>>>>> Stashed changes
@@ -220,8 +291,13 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_wifi/libapp_wifi.a",
             "sources": [ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_wifi/wifi.c" ],
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_wifi/libapp_wifi.a",
+            "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_wifi/wifi.c" ],
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/app_wifi/libapp_wifi.a",
             "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_wifi/wifi.c" ],
@@ -255,7 +331,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/bootloader_support/libbootloader_support.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/bootloader_support/libbootloader_support.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/bootloader_support/libbootloader_support.a",
 >>>>>>> Stashed changes
@@ -289,7 +369,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/cmock/libcmock.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/cmock/libcmock.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/cmock/libcmock.a",
 >>>>>>> Stashed changes
@@ -308,7 +392,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/console/libconsole.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/console/libconsole.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/console/libconsole.a",
 >>>>>>> Stashed changes
@@ -327,7 +415,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/cxx/libcxx.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/cxx/libcxx.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/cxx/libcxx.a",
 >>>>>>> Stashed changes
@@ -346,7 +438,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/driver/libdriver.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/driver/libdriver.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/driver/libdriver.a",
 >>>>>>> Stashed changes
@@ -365,7 +461,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/efuse/libefuse.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/efuse/libefuse.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/efuse/libefuse.a",
 >>>>>>> Stashed changes
@@ -384,7 +484,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp-tls/libesp-tls.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp-tls/libesp-tls.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp-tls/libesp-tls.a",
 >>>>>>> Stashed changes
@@ -403,7 +507,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_adc/libesp_adc.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_adc/libesp_adc.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_adc/libesp_adc.a",
 >>>>>>> Stashed changes
@@ -422,7 +530,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_app_format/libesp_app_format.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_app_format/libesp_app_format.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_app_format/libesp_app_format.a",
 >>>>>>> Stashed changes
@@ -441,7 +553,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_bootloader_format/libesp_bootloader_format.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_bootloader_format/libesp_bootloader_format.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_bootloader_format/libesp_bootloader_format.a",
 >>>>>>> Stashed changes
@@ -460,7 +576,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_coex/libesp_coex.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_coex/libesp_coex.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_coex/libesp_coex.a",
 >>>>>>> Stashed changes
@@ -479,7 +599,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_common/libesp_common.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_common/libesp_common.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_common/libesp_common.a",
 >>>>>>> Stashed changes
@@ -513,7 +637,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_cam/libesp_driver_cam.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_cam/libesp_driver_cam.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_cam/libesp_driver_cam.a",
 >>>>>>> Stashed changes
@@ -532,7 +660,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_dac/libesp_driver_dac.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_dac/libesp_driver_dac.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_dac/libesp_driver_dac.a",
 >>>>>>> Stashed changes
@@ -551,7 +683,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_gpio/libesp_driver_gpio.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_gpio/libesp_driver_gpio.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_gpio/libesp_driver_gpio.a",
 >>>>>>> Stashed changes
@@ -570,7 +706,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_gptimer/libesp_driver_gptimer.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_gptimer/libesp_driver_gptimer.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_gptimer/libesp_driver_gptimer.a",
 >>>>>>> Stashed changes
@@ -589,7 +729,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_i2c/libesp_driver_i2c.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_i2c/libesp_driver_i2c.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_i2c/libesp_driver_i2c.a",
 >>>>>>> Stashed changes
@@ -608,7 +752,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_i2s/libesp_driver_i2s.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_i2s/libesp_driver_i2s.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_i2s/libesp_driver_i2s.a",
 >>>>>>> Stashed changes
@@ -657,7 +805,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_ledc/libesp_driver_ledc.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_ledc/libesp_driver_ledc.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_ledc/libesp_driver_ledc.a",
 >>>>>>> Stashed changes
@@ -676,7 +828,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_mcpwm/libesp_driver_mcpwm.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_mcpwm/libesp_driver_mcpwm.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_mcpwm/libesp_driver_mcpwm.a",
 >>>>>>> Stashed changes
@@ -710,7 +866,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_pcnt/libesp_driver_pcnt.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_pcnt/libesp_driver_pcnt.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_pcnt/libesp_driver_pcnt.a",
 >>>>>>> Stashed changes
@@ -744,7 +904,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_rmt/libesp_driver_rmt.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_rmt/libesp_driver_rmt.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_rmt/libesp_driver_rmt.a",
 >>>>>>> Stashed changes
@@ -763,7 +927,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_sdio/libesp_driver_sdio.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_sdio/libesp_driver_sdio.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_sdio/libesp_driver_sdio.a",
 >>>>>>> Stashed changes
@@ -782,7 +950,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_sdm/libesp_driver_sdm.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_sdm/libesp_driver_sdm.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_sdm/libesp_driver_sdm.a",
 >>>>>>> Stashed changes
@@ -801,7 +973,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_sdmmc/libesp_driver_sdmmc.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_sdmmc/libesp_driver_sdmmc.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_sdmmc/libesp_driver_sdmmc.a",
 >>>>>>> Stashed changes
@@ -820,7 +996,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_sdspi/libesp_driver_sdspi.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_sdspi/libesp_driver_sdspi.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_sdspi/libesp_driver_sdspi.a",
 >>>>>>> Stashed changes
@@ -839,7 +1019,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_spi/libesp_driver_spi.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_spi/libesp_driver_spi.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_spi/libesp_driver_spi.a",
 >>>>>>> Stashed changes
@@ -888,7 +1072,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_uart/libesp_driver_uart.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_uart/libesp_driver_uart.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_driver_uart/libesp_driver_uart.a",
 >>>>>>> Stashed changes
@@ -922,7 +1110,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_eth/libesp_eth.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_eth/libesp_eth.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_eth/libesp_eth.a",
 >>>>>>> Stashed changes
@@ -941,7 +1133,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_event/libesp_event.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_event/libesp_event.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_event/libesp_event.a",
 >>>>>>> Stashed changes
@@ -960,7 +1156,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_gdbstub/libesp_gdbstub.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_gdbstub/libesp_gdbstub.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_gdbstub/libesp_gdbstub.a",
 >>>>>>> Stashed changes
@@ -979,7 +1179,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_hid/libesp_hid.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_hid/libesp_hid.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_hid/libesp_hid.a",
 >>>>>>> Stashed changes
@@ -998,7 +1202,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_http_client/libesp_http_client.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_http_client/libesp_http_client.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_http_client/libesp_http_client.a",
 >>>>>>> Stashed changes
@@ -1017,7 +1225,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_http_server/libesp_http_server.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_http_server/libesp_http_server.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_http_server/libesp_http_server.a",
 >>>>>>> Stashed changes
@@ -1036,7 +1248,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_https_ota/libesp_https_ota.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_https_ota/libesp_https_ota.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_https_ota/libesp_https_ota.a",
 >>>>>>> Stashed changes
@@ -1055,7 +1271,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_https_server/libesp_https_server.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_https_server/libesp_https_server.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_https_server/libesp_https_server.a",
 >>>>>>> Stashed changes
@@ -1074,7 +1294,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_hw_support/libesp_hw_support.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_hw_support/libesp_hw_support.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_hw_support/libesp_hw_support.a",
 >>>>>>> Stashed changes
@@ -1093,7 +1317,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_lcd/libesp_lcd.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_lcd/libesp_lcd.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_lcd/libesp_lcd.a",
 >>>>>>> Stashed changes
@@ -1112,7 +1340,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_local_ctrl/libesp_local_ctrl.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_local_ctrl/libesp_local_ctrl.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_local_ctrl/libesp_local_ctrl.a",
 >>>>>>> Stashed changes
@@ -1131,7 +1363,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_mm/libesp_mm.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_mm/libesp_mm.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_mm/libesp_mm.a",
 >>>>>>> Stashed changes
@@ -1150,7 +1386,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_netif/libesp_netif.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_netif/libesp_netif.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_netif/libesp_netif.a",
 >>>>>>> Stashed changes
@@ -1184,7 +1424,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_partition/libesp_partition.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_partition/libesp_partition.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_partition/libesp_partition.a",
 >>>>>>> Stashed changes
@@ -1203,7 +1447,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_phy/libesp_phy.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_phy/libesp_phy.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_phy/libesp_phy.a",
 >>>>>>> Stashed changes
@@ -1222,7 +1470,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_pm/libesp_pm.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_pm/libesp_pm.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_pm/libesp_pm.a",
 >>>>>>> Stashed changes
@@ -1256,7 +1508,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_ringbuf/libesp_ringbuf.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_ringbuf/libesp_ringbuf.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_ringbuf/libesp_ringbuf.a",
 >>>>>>> Stashed changes
@@ -1275,7 +1531,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_rom/libesp_rom.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_rom/libesp_rom.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_rom/libesp_rom.a",
 >>>>>>> Stashed changes
@@ -1294,7 +1554,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_security/libesp_security.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_security/libesp_security.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_security/libesp_security.a",
 >>>>>>> Stashed changes
@@ -1313,7 +1577,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_system/libesp_system.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_system/libesp_system.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_system/libesp_system.a",
 >>>>>>> Stashed changes
@@ -1332,7 +1600,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_timer/libesp_timer.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_timer/libesp_timer.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_timer/libesp_timer.a",
 >>>>>>> Stashed changes
@@ -1351,7 +1623,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_vfs_console/libesp_vfs_console.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_vfs_console/libesp_vfs_console.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_vfs_console/libesp_vfs_console.a",
 >>>>>>> Stashed changes
@@ -1370,7 +1646,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_wifi/libesp_wifi.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_wifi/libesp_wifi.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/esp_wifi/libesp_wifi.a",
 >>>>>>> Stashed changes
@@ -1389,7 +1669,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/espcoredump/libespcoredump.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/espcoredump/libespcoredump.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/espcoredump/libespcoredump.a",
 >>>>>>> Stashed changes
@@ -1401,7 +1685,11 @@
             "target": "___idf_espressif__bme280",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__bme280",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__bme280",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__bme280",
 >>>>>>> Stashed changes
@@ -1412,8 +1700,13 @@
             "managed_reqs": [ "espressif__i2c_bus" ],
             "managed_priv_reqs": [ "espressif__cmake_utilities" ],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/espressif__bme280/libespressif__bme280.a",
             "sources": [ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__bme280/bme280.c" ],
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/espressif__bme280/libespressif__bme280.a",
+            "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__bme280/bme280.c" ],
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/espressif__bme280/libespressif__bme280.a",
             "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__bme280/bme280.c" ],
@@ -1425,7 +1718,11 @@
             "target": "___idf_espressif__cmake_utilities",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities",
 >>>>>>> Stashed changes
@@ -1444,7 +1741,11 @@
             "target": "___idf_espressif__i2c_bus",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus",
 >>>>>>> Stashed changes
@@ -1455,8 +1756,13 @@
             "managed_reqs": [],
             "managed_priv_reqs": [ "espressif__cmake_utilities" ],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/espressif__i2c_bus/libespressif__i2c_bus.a",
             "sources": [ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus/i2c_bus_v2.c" ],
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/espressif__i2c_bus/libespressif__i2c_bus.a",
+            "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus/i2c_bus_v2.c" ],
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/espressif__i2c_bus/libespressif__i2c_bus.a",
             "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus/i2c_bus_v2.c" ],
@@ -1490,7 +1796,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/fatfs/libfatfs.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/fatfs/libfatfs.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/fatfs/libfatfs.a",
 >>>>>>> Stashed changes
@@ -1509,7 +1819,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/freertos/libfreertos.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/freertos/libfreertos.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/freertos/libfreertos.a",
 >>>>>>> Stashed changes
@@ -1528,7 +1842,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/hal/libhal.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/hal/libhal.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/hal/libhal.a",
 >>>>>>> Stashed changes
@@ -1547,7 +1865,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/heap/libheap.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/heap/libheap.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/heap/libheap.a",
 >>>>>>> Stashed changes
@@ -1566,7 +1888,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/http_parser/libhttp_parser.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/http_parser/libhttp_parser.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/http_parser/libhttp_parser.a",
 >>>>>>> Stashed changes
@@ -1615,7 +1941,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/json/libjson.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/json/libjson.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/json/libjson.a",
 >>>>>>> Stashed changes
@@ -1634,7 +1964,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/log/liblog.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/log/liblog.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/log/liblog.a",
 >>>>>>> Stashed changes
@@ -1653,7 +1987,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/lwip/liblwip.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/lwip/liblwip.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/lwip/liblwip.a",
 >>>>>>> Stashed changes
@@ -1665,7 +2003,11 @@
             "target": "___idf_main",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/main",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/main",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/main",
 >>>>>>> Stashed changes
@@ -1676,8 +2018,13 @@
             "managed_reqs": [],
             "managed_priv_reqs": [ "espressif__bme280", "espressif__i2c_bus" ],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/main/libmain.a",
             "sources": [ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/main/main.cpp" ],
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/main/libmain.a",
+            "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/main/main.cpp" ],
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/main/libmain.a",
             "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/main/main.cpp" ],
@@ -1696,8 +2043,13 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/libmbedtls.a",
             "sources": [ "C:/Espressif/frameworks/esp-idf-v5.4/components/mbedtls/esp_crt_bundle/esp_crt_bundle.c", "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/x509_crt_bundle.S" ],
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/libmbedtls.a",
+            "sources": [ "C:/Espressif/frameworks/esp-idf-v5.4/components/mbedtls/esp_crt_bundle/esp_crt_bundle.c", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/x509_crt_bundle.S" ],
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/libmbedtls.a",
             "sources": [ "C:/Espressif/frameworks/esp-idf-v5.4/components/mbedtls/esp_crt_bundle/esp_crt_bundle.c", "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/x509_crt_bundle.S" ],
@@ -1709,7 +2061,11 @@
             "target": "___idf_motores",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/motores",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/motores",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/motores",
 >>>>>>> Stashed changes
@@ -1720,8 +2076,13 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/motores/libmotores.a",
             "sources": [ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/motores/motores.cpp" ],
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/motores/libmotores.a",
+            "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/motores/motores.cpp" ],
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/motores/libmotores.a",
             "sources": [ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/motores/motores.cpp" ],
@@ -1740,7 +2101,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mqtt/libmqtt.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mqtt/libmqtt.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mqtt/libmqtt.a",
 >>>>>>> Stashed changes
@@ -1759,7 +2124,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/newlib/libnewlib.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/newlib/libnewlib.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/newlib/libnewlib.a",
 >>>>>>> Stashed changes
@@ -1778,7 +2147,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/nvs_flash/libnvs_flash.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/nvs_flash/libnvs_flash.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/nvs_flash/libnvs_flash.a",
 >>>>>>> Stashed changes
@@ -1797,7 +2170,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/nvs_sec_provider/libnvs_sec_provider.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/nvs_sec_provider/libnvs_sec_provider.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/nvs_sec_provider/libnvs_sec_provider.a",
 >>>>>>> Stashed changes
@@ -1846,7 +2223,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/perfmon/libperfmon.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/perfmon/libperfmon.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/perfmon/libperfmon.a",
 >>>>>>> Stashed changes
@@ -1865,7 +2246,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/protobuf-c/libprotobuf-c.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/protobuf-c/libprotobuf-c.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/protobuf-c/libprotobuf-c.a",
 >>>>>>> Stashed changes
@@ -1884,8 +2269,13 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/protocomm/libprotocomm.a",
             "sources": [ "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/common/protocomm.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/proto-c/constants.pb-c.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/proto-c/sec0.pb-c.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/proto-c/sec1.pb-c.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/proto-c/sec2.pb-c.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/proto-c/session.pb-c.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/transports/protocomm_console.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/transports/protocomm_httpd.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/security/security2.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/crypto/srp6a/esp_srp.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/crypto/srp6a/esp_srp_mpi.c" ],
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/protocomm/libprotocomm.a",
+            "sources": [ "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/common/protocomm.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/proto-c/constants.pb-c.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/proto-c/sec0.pb-c.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/proto-c/sec1.pb-c.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/proto-c/sec2.pb-c.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/proto-c/session.pb-c.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/transports/protocomm_console.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/transports/protocomm_httpd.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/security/security0.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/security/security1.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/security/security2.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/crypto/srp6a/esp_srp.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/crypto/srp6a/esp_srp_mpi.c" ],
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/protocomm/libprotocomm.a",
             "sources": [ "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/common/protocomm.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/proto-c/constants.pb-c.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/proto-c/sec0.pb-c.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/proto-c/sec1.pb-c.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/proto-c/sec2.pb-c.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/proto-c/session.pb-c.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/transports/protocomm_console.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/transports/protocomm_httpd.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/security/security0.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/security/security1.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/security/security2.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/crypto/srp6a/esp_srp.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/protocomm/src/crypto/srp6a/esp_srp_mpi.c" ],
@@ -1904,7 +2294,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/pthread/libpthread.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/pthread/libpthread.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/pthread/libpthread.a",
 >>>>>>> Stashed changes
@@ -1923,7 +2317,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/rt/librt.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/rt/librt.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/rt/librt.a",
 >>>>>>> Stashed changes
@@ -1942,7 +2340,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/sdmmc/libsdmmc.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/sdmmc/libsdmmc.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/sdmmc/libsdmmc.a",
 >>>>>>> Stashed changes
@@ -1961,7 +2363,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/soc/libsoc.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/soc/libsoc.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/soc/libsoc.a",
 >>>>>>> Stashed changes
@@ -1980,7 +2386,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/spi_flash/libspi_flash.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/spi_flash/libspi_flash.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/spi_flash/libspi_flash.a",
 >>>>>>> Stashed changes
@@ -1999,7 +2409,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/spiffs/libspiffs.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/spiffs/libspiffs.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/spiffs/libspiffs.a",
 >>>>>>> Stashed changes
@@ -2018,7 +2432,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/tcp_transport/libtcp_transport.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/tcp_transport/libtcp_transport.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/tcp_transport/libtcp_transport.a",
 >>>>>>> Stashed changes
@@ -2052,7 +2470,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/unity/libunity.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/unity/libunity.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/unity/libunity.a",
 >>>>>>> Stashed changes
@@ -2086,7 +2508,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/vfs/libvfs.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/vfs/libvfs.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/vfs/libvfs.a",
 >>>>>>> Stashed changes
@@ -2105,7 +2531,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/wear_levelling/libwear_levelling.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/wear_levelling/libwear_levelling.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/wear_levelling/libwear_levelling.a",
 >>>>>>> Stashed changes
@@ -2124,7 +2554,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/wifi_provisioning/libwifi_provisioning.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/wifi_provisioning/libwifi_provisioning.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/wifi_provisioning/libwifi_provisioning.a",
 >>>>>>> Stashed changes
@@ -2143,7 +2577,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/wpa_supplicant/libwpa_supplicant.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/wpa_supplicant/libwpa_supplicant.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/wpa_supplicant/libwpa_supplicant.a",
 >>>>>>> Stashed changes
@@ -2162,7 +2600,11 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "file": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/xtensa/libxtensa.a",
+=======
+            "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/xtensa/libxtensa.a",
+>>>>>>> Stashed changes
 =======
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/xtensa/libxtensa.a",
 >>>>>>> Stashed changes
@@ -3436,7 +3878,11 @@
             "target": "___idf_main",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/main",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/main",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/main",
 >>>>>>> Stashed changes
@@ -3452,7 +3898,11 @@
             "target": "___idf_AccelStepper",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/AccelStepper",
 >>>>>>> Stashed changes
@@ -3468,7 +3918,11 @@
             "target": "___idf_DualCore",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/DualCore",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/DualCore",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/DualCore",
 >>>>>>> Stashed changes
@@ -3484,7 +3938,11 @@
             "target": "___idf_LP8",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/LP8",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/LP8",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/LP8",
 >>>>>>> Stashed changes
@@ -3500,7 +3958,11 @@
             "target": "___idf_app_bme280",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_bme280",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_bme280",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_bme280",
 >>>>>>> Stashed changes
@@ -3516,7 +3978,11 @@
             "target": "___idf_app_mqtt",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_mqtt",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_mqtt",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_mqtt",
 >>>>>>> Stashed changes
@@ -3532,7 +3998,11 @@
             "target": "___idf_app_wifi",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_wifi",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_wifi",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/app_wifi",
 >>>>>>> Stashed changes
@@ -3548,7 +4018,11 @@
             "target": "___idf_motores",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/motores",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/motores",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/components/motores",
 >>>>>>> Stashed changes
@@ -3564,7 +4038,11 @@
             "target": "___idf_espressif__bme280",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__bme280",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__bme280",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__bme280",
 >>>>>>> Stashed changes
@@ -3580,7 +4058,11 @@
             "target": "___idf_espressif__cmake_utilities",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__cmake_utilities",
 >>>>>>> Stashed changes
@@ -3596,7 +4078,11 @@
             "target": "___idf_espressif__i2c_bus",
             "prefix": "idf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "dir": "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus",
+=======
+            "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus",
+>>>>>>> Stashed changes
 =======
             "dir": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/managed_components/espressif__i2c_bus",
 >>>>>>> Stashed changes

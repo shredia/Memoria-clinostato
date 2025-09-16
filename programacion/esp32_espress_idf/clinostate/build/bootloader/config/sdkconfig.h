@@ -246,7 +246,11 @@
 #define CONFIG_IDF_TARGET_ARCH "xtensa"
 #define CONFIG_IDF_TARGET "esp32"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #define CONFIG_IDF_INIT_VERSION "6.0.0"
+=======
+#define CONFIG_IDF_INIT_VERSION "5.4.0"
+>>>>>>> Stashed changes
 =======
 #define CONFIG_IDF_INIT_VERSION "5.4.0"
 >>>>>>> Stashed changes
@@ -343,8 +347,13 @@
 #define CONFIG_XTAL_FREQ_40 1
 #define CONFIG_XTAL_FREQ 40
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #define CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_160 1
 #define CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ 160
+=======
+#define CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240 1
+#define CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ 240
+>>>>>>> Stashed changes
 =======
 #define CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240 1
 #define CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ 240
@@ -381,7 +390,11 @@
 #define CONFIG_ESP_IPC_USES_CALLERS_PRIORITY 1
 #define CONFIG_ESP_IPC_ISR_ENABLE 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #define CONFIG_FREERTOS_HZ 100
+=======
+#define CONFIG_FREERTOS_HZ 1000
+>>>>>>> Stashed changes
 =======
 #define CONFIG_FREERTOS_HZ 1000
 >>>>>>> Stashed changes
@@ -466,7 +479,11 @@
 #define CONFIG_ESP32_DEBUG_OCDAWARE CONFIG_ESP_DEBUG_OCDAWARE
 #define CONFIG_ESP32_DEEP_SLEEP_WAKEUP_DELAY CONFIG_ESP_SLEEP_WAIT_FLASH_READY_EXTRA_DELAY
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #define CONFIG_ESP32_DEFAULT_CPU_FREQ_160 CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_160
+=======
+#define CONFIG_ESP32_DEFAULT_CPU_FREQ_240 CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240
+>>>>>>> Stashed changes
 =======
 #define CONFIG_ESP32_DEFAULT_CPU_FREQ_240 CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240
 >>>>>>> Stashed changes

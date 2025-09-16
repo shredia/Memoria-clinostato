@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/menuconfig.dir
 D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/confserver.dir
 D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/save-defconfig.dir
@@ -87,6 +88,8 @@ D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/cli
 D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/main/CMakeFiles/edit_cache.dir
 D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/main/CMakeFiles/rebuild_cache.dir
 =======
+=======
+>>>>>>> Stashed changes
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/menuconfig.dir
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/confserver.dir
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/CMakeFiles/save-defconfig.dir
@@ -174,4 +177,7 @@ D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/c
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/main/CMakeFiles/__idf_main.dir
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/main/CMakeFiles/edit_cache.dir
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/main/CMakeFiles/rebuild_cache.dir
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

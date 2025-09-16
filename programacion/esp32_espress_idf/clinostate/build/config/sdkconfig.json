@@ -185,9 +185,15 @@
     "ESP_DEBUG_OCDAWARE": true,
     "ESP_DEBUG_STUBS_ENABLE": false,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "ESP_DEFAULT_CPU_FREQ_MHZ": 160,
     "ESP_DEFAULT_CPU_FREQ_MHZ_160": true,
     "ESP_DEFAULT_CPU_FREQ_MHZ_240": false,
+=======
+    "ESP_DEFAULT_CPU_FREQ_MHZ": 240,
+    "ESP_DEFAULT_CPU_FREQ_MHZ_160": false,
+    "ESP_DEFAULT_CPU_FREQ_MHZ_240": true,
+>>>>>>> Stashed changes
 =======
     "ESP_DEFAULT_CPU_FREQ_MHZ": 240,
     "ESP_DEFAULT_CPU_FREQ_MHZ_160": false,
@@ -258,8 +264,13 @@
     "ESP_PHY_RF_CAL_NONE": false,
     "ESP_PHY_RF_CAL_PARTIAL": true,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_0": false,
     "ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_1": false,
+=======
+    "ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_0": true,
+    "ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_1": true,
+>>>>>>> Stashed changes
 =======
     "ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_0": true,
     "ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_1": true,
@@ -450,7 +461,11 @@
     "FREERTOS_FPU_IN_ISR": false,
     "FREERTOS_GENERATE_RUN_TIME_STATS": false,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "FREERTOS_HZ": 100,
+=======
+    "FREERTOS_HZ": 1000,
+>>>>>>> Stashed changes
 =======
     "FREERTOS_HZ": 1000,
 >>>>>>> Stashed changes
@@ -517,7 +532,11 @@
     "HTTPD_ERR_RESP_NO_DELAY": true,
     "HTTPD_LOG_PURGE_DATA": false,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "HTTPD_MAX_REQ_HDR_LEN": 1024,
+=======
+    "HTTPD_MAX_REQ_HDR_LEN": 512,
+>>>>>>> Stashed changes
 =======
     "HTTPD_MAX_REQ_HDR_LEN": 512,
 >>>>>>> Stashed changes
@@ -527,6 +546,10 @@
     "HTTPD_SERVER_EVENT_POST_TIMEOUT": 2000,
     "HTTPD_WS_SUPPORT": false,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    "I2C_BUS_BACKWARD_CONFIG": false,
+>>>>>>> Stashed changes
 =======
     "I2C_BUS_BACKWARD_CONFIG": false,
 >>>>>>> Stashed changes
@@ -544,7 +567,11 @@
     "IDF_EXPERIMENTAL_FEATURES": false,
     "IDF_FIRMWARE_CHIP_ID": 0,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "IDF_INIT_VERSION": "6.0.0",
+=======
+    "IDF_INIT_VERSION": "5.4.0",
+>>>>>>> Stashed changes
 =======
     "IDF_INIT_VERSION": "5.4.0",
 >>>>>>> Stashed changes
@@ -599,7 +626,11 @@
     "LWIP_DHCP_DOES_NOT_CHECK_OFFERED_IP": false,
     "LWIP_DHCP_GET_NTP_SRV": false,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "LWIP_DHCP_OPTIONS_LEN": 69,
+=======
+    "LWIP_DHCP_OPTIONS_LEN": 68,
+>>>>>>> Stashed changes
 =======
     "LWIP_DHCP_OPTIONS_LEN": 68,
 >>>>>>> Stashed changes
@@ -734,7 +765,11 @@
     "MBEDTLS_DEFAULT_MEM_ALLOC": false,
     "MBEDTLS_DES_C": false,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "MBEDTLS_DHM_C": true,
+=======
+    "MBEDTLS_DHM_C": false,
+>>>>>>> Stashed changes
 =======
     "MBEDTLS_DHM_C": false,
 >>>>>>> Stashed changes
@@ -771,7 +806,10 @@
     "MBEDTLS_HKDF_C": false,
     "MBEDTLS_INTERNAL_MEM_ALLOC": true,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "MBEDTLS_KEY_EXCHANGE_DHE_RSA": true,
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     "MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA": true,
@@ -794,7 +832,11 @@
     "MBEDTLS_ROM_MD5": true,
     "MBEDTLS_SERVER_SSL_SESSION_TICKETS": true,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "MBEDTLS_SHA3_C": true,
+=======
+    "MBEDTLS_SHA3_C": false,
+>>>>>>> Stashed changes
 =======
     "MBEDTLS_SHA3_C": false,
 >>>>>>> Stashed changes
@@ -803,7 +845,11 @@
     "MBEDTLS_SSL_CONTEXT_SERIALIZATION": false,
     "MBEDTLS_SSL_IN_CONTENT_LEN": 16384,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "MBEDTLS_SSL_KEEP_PEER_CERTIFICATE": false,
+=======
+    "MBEDTLS_SSL_KEEP_PEER_CERTIFICATE": true,
+>>>>>>> Stashed changes
 =======
     "MBEDTLS_SSL_KEEP_PEER_CERTIFICATE": true,
 >>>>>>> Stashed changes
@@ -812,6 +858,10 @@
     "MBEDTLS_SSL_PROTO_GMTSSL1_1": false,
     "MBEDTLS_SSL_PROTO_TLS1_2": true,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    "MBEDTLS_SSL_PROTO_TLS1_3": false,
+>>>>>>> Stashed changes
 =======
     "MBEDTLS_SSL_PROTO_TLS1_3": false,
 >>>>>>> Stashed changes
@@ -878,7 +928,11 @@
     "PERIPH_CTRL_FUNC_IN_IRAM": true,
     "PM_ENABLE": false,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "PM_SLP_IRAM_OPT": true,
+=======
+    "PM_SLP_IRAM_OPT": false,
+>>>>>>> Stashed changes
 =======
     "PM_SLP_IRAM_OPT": false,
 >>>>>>> Stashed changes
