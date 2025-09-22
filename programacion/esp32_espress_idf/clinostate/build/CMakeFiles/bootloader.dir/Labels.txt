@@ -1,21 +1,6 @@
 # Target labels
  bootloader
 # Source files and their labels
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/bootloader
-D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/bootloader.rule
-D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/bootloader-complete.rule
-D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
-=======
-=======
->>>>>>> Stashed changes
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/bootloader
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/bootloader.rule
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/bootloader-complete.rule
@@ -26,7 +11,3 @@ D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/c
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
 D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes

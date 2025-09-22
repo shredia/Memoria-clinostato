@@ -9,7 +9,7 @@ from collections import deque
 import os
 import json
 
-BROKER = "192.168.1.8"  # Cambia por tu IP
+BROKER = "192.168.31.81"  # Cambia por tu IP
 PORT = 1883
 
 HEARTBEAT_TOPIC = "esp32/heartbeat/#"
@@ -31,6 +31,9 @@ class App:
         self.lp8_buffer_time = {}  # Timestamp de inicio de cada buffer
         self.lp8_buffer_timeout = 1.0  # segundos
 
+        self.bme_buffer = {}  # <--- Agrega esta línea
+        self.bme_buffer_time = {}  # <--- Y esta línea
+
         frame_list = tk.Frame(root)
         frame_list.pack(padx=10, pady=10, fill=tk.BOTH)
 
@@ -50,6 +53,7 @@ class App:
         threading.Thread(target=self.client.loop_forever, daemon=True).start()
 
         self.update_list()
+        self.check_lp8_buffers()
 
     def on_connect(self, client, userdata, flags, rc):
         if rc == 0:
@@ -68,38 +72,63 @@ class App:
             self.root.after(0, self.refresh_listbox)
 
         # Procesar tópicos de sensores LP8_1 y LP8_2
-        elif topic.count("/") >= 3 and topic.startswith("esp32/"):
+        elif topic.startswith("esp32/"):
             parts = topic.split("/")
-            if len(parts) >= 4 and parts[2].startswith("LP8_"):
+            if len(parts) >= 4 and parts[2].startswith("LP8_") and parts[3] in ["co2", "presion", "vcap1", "vcap2", "errores"]:
                 device_id = parts[1]
-                lp8_id = parts[2]  # LP8_1 o LP8_2
-                var = parts[3]     # co2, presion, vcap1, vcap2, errores
-                device_dir = device_id.replace(":", "_")
-                file_key = f"{device_dir}_{lp8_id}"
-                filename = self.lp8_files.get(file_key)
-                now_str = time.strftime('%Y-%m-%d %H:%M:%S')
-                # Buffer temporal
-                if file_key not in self.lp8_buffer or self.lp8_buffer[file_key]['timestamp'] != now_str:
-                    # Si hay buffer anterior, vaciarlo
-                    if file_key in self.lp8_buffer:
-                        self.flush_lp8_buffer(file_key, filename)
-                    self.lp8_buffer[file_key] = {'timestamp': now_str, 'data': {}}
-                    self.lp8_buffer_time[file_key] = time.time()
-                self.lp8_buffer[file_key]['data'][var] = payload
-                # Si ya tenemos todos los campos, escribir y limpiar
-                if all(k in self.lp8_buffer[file_key]['data'] for k in ["co2", "presion", "vcap1", "vcap2", "errores"]):
-                    self.flush_lp8_buffer(file_key, filename)
-                # Actualizar widgets si corresponde
-                if hasattr(self, 'info_labels') and lp8_id in self.info_labels:
-                    if var in ["errores", "vcap1", "vcap2"]:
-                        self.info_labels[lp8_id][var].config(text=f"{var}: {payload}")
-                # Graficar si es co2
-                if var == "co2":
-                    try:
-                        value = float(payload.split(":")[-1].strip())
-                        self.update_plot(device_id)
-                    except Exception:
-                        pass
+                if device_id in self.tabs:
+                    if parts[2].startswith("LP8_") and parts[3] in ["co2", "presion", "vcap1", "vcap2", "errores"]:
+                        lp8_id = parts[2]  # LP8_1 o LP8_2
+                        var = parts[3]
+                        device_dir = device_id.replace(":", "_")
+                        file_key = f"{device_dir}_{lp8_id}"
+                        filename = os.path.join(device_dir, f"{lp8_id}.txt")
+                        now_str = time.strftime('%Y-%m-%d %H:%M:%S')
+                        # Buffer temporal por timestamp
+                        if file_key not in self.lp8_buffer or self.lp8_buffer[file_key]['timestamp'] != now_str:
+                            # Si hay buffer anterior, vaciarlo
+                            if file_key in self.lp8_buffer:
+                                self.flush_lp8_buffer(file_key, filename)
+                            self.lp8_buffer[file_key] = {'timestamp': now_str, 'data': {}}
+                            self.lp8_buffer_time[file_key] = time.time()
+                        self.lp8_buffer[file_key]['data'][var] = payload
+                        # Si ya tenemos todos los campos, escribir y limpiar
+                        if all(k in self.lp8_buffer[file_key]['data'] for k in ["co2", "presion", "vcap1", "vcap2", "errores"]):
+                            self.flush_lp8_buffer(file_key, filename)
+            elif len(parts) >= 4 and parts[2].lower() == "bme280" and parts[3] in ["temp", "hum", "presion"]:
+                device_id = parts[1]
+                if device_id in self.tabs:
+                    device_dir = device_id.replace(":", "_")
+                    bme_file = os.path.join(device_dir, "bme280.txt")
+                    now_str = time.strftime('%Y-%m-%d %H:%M:%S')
+                    var = parts[3]
+                    # Si el archivo no existe, crea encabezado
+                    if not os.path.exists(bme_file):
+                        with open(bme_file, "w") as f:
+                            f.write("timestamp,temp,hum,presion\n")
+                    # Buffer temporal por timestamp
+                    if not hasattr(self, "bme_buffer"):
+                        self.bme_buffer = {}
+                        self.bme_buffer_time = {}
+                    file_key = device_dir
+                    if file_key not in self.bme_buffer or self.bme_buffer[file_key]['timestamp'] != now_str:
+                        # Si hay buffer anterior, vaciarlo
+                        if file_key in self.bme_buffer:
+                            vals = self.bme_buffer[file_key]['data']
+                            line = f"{self.bme_buffer[file_key]['timestamp']},{vals.get('temp','')},{vals.get('hum','')},{vals.get('presion','')}\n"
+                            with open(bme_file, "a") as f:
+                                f.write(line)
+                        self.bme_buffer[file_key] = {'timestamp': now_str, 'data': {}}
+                        self.bme_buffer_time[file_key] = time.time()
+                    self.bme_buffer[file_key]['data'][var] = payload
+                    # Si ya tenemos todos los campos, escribir y limpiar
+                    if all(k in self.bme_buffer[file_key]['data'] for k in ["temp", "hum", "presion"]):
+                        vals = self.bme_buffer[file_key]['data']
+                        line = f"{self.bme_buffer[file_key]['timestamp']},{vals.get('temp','')},{vals.get('hum','')},{vals.get('presion','')}\n"
+                        with open(bme_file, "a") as f:
+                            f.write(line)
+                        del self.bme_buffer[file_key]
+                        del self.bme_buffer_time[file_key]
         elif topic.endswith("/status"):
             client_id = topic.split("/")[1]
             safe_id = client_id.replace(":", "_")
@@ -151,7 +180,7 @@ class App:
             filename = os.path.join(device_dir, f"{lp8_id}.txt")
             if not os.path.exists(filename):
                 with open(filename, "w") as f:
-                    f.write("timestamp,tipo,valor\n")
+                    f.write("timestamp,co2,presion,vcap1,vcap2,errores\n")
             # Guardar la ruta completa, indexada por device_id+lp8_id
             self.lp8_files[f"{device_dir}_{lp8_id}"] = filename
         # Crear labels para errores, vcap1, vcap2 de cada sensor
@@ -195,8 +224,11 @@ class App:
         ax.legend()
         canvas = FigureCanvasTkAgg(fig, master=tab_graph)
         canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
-        # Guardar ambas líneas en el dict de plots
-        self.lp8_plots[device_id.replace(":", "_")] = (fig, ax, canvas, line1, line2)
+
+        
+
+        # Guardar ambas líneas y los labels en el dict de plots
+        self.lp8_plots[device_id.replace(":", "_")] = (fig, ax, canvas, line1, line2, info_labels)
 
         # Suscribirse a todos los sub-tópicos de LP8_1 y LP8_2
         subtopics = ["co2", "presion", "vcap1", "vcap2", "errores"]
@@ -291,6 +323,9 @@ class App:
         line = f"{buf['timestamp']},{vals['co2']},{vals['presion']},{vals['vcap1']},{vals['vcap2']},{vals['errores']}\n"
         with open(filename, "a") as f:
             f.write(line)
+        # Extraer device_id del file_key
+        device_id = file_key.split("_")[0]
+        self.update_plot(device_id)
         del self.lp8_buffer[file_key]
         del self.lp8_buffer_time[file_key]
 
@@ -306,45 +341,81 @@ class App:
         self.root.after(200, self.check_lp8_buffers)
 
     def update_plot(self, device_id):
-        # Graficar ambos sensores LP8_1 y LP8_2 en la misma gráfica, leyendo desde la carpeta del dispositivo
+        import datetime
+        import matplotlib.dates as mdates
         device_dir = device_id.replace(":", "_")
         data_lp8_1 = []
         data_lp8_2 = []
+        time_lp8_1 = []
+        time_lp8_2 = []
+        vcap1_1 = vcap2_1 = errores_1 = ""
+        vcap1_2 = vcap2_2 = errores_2 = ""
+
+        def parse_time(ts):
+            try:
+                return datetime.datetime.strptime(ts, "%Y-%m-%d %H:%M:%S")
+            except Exception:
+                return None
+
+        # LP8_1
         try:
             with open(os.path.join(device_dir, "LP8_1.txt"), "r") as f1:
                 lines1 = f1.readlines()[1:]
                 for line in lines1[-100:]:
                     parts = line.strip().split(",")
-                    # Formato: timestamp,co2,presion,vcap1,vcap2,errores
-                    if len(parts) >= 2 and parts[1] != "":
-                        try:
-                            data_lp8_1.append(float(parts[1]))
-                        except ValueError:
-                            pass
-        except:
+                    # Formato: fecha, co2, presion, vcap1, vcap2, errores
+                    if len(parts) >= 6 and parts[1] != "":
+                        t = parse_time(parts[0])
+                        if t is not None:
+                            try:
+                                data_lp8_1.append(float(parts[1]))
+                                time_lp8_1.append(t)
+                                vcap1_1 = parts[3]
+                                vcap2_1 = parts[4]
+                                errores_1 = parts[5]
+                            except ValueError:
+                                pass
+        except Exception:
             pass
+
+        # LP8_2
         try:
             with open(os.path.join(device_dir, "LP8_2.txt"), "r") as f2:
                 lines2 = f2.readlines()[1:]
                 for line in lines2[-100:]:
                     parts = line.strip().split(",")
-                    if len(parts) >= 2 and parts[1] != "":
-                        try:
-                            data_lp8_2.append(float(parts[1]))
-                        except ValueError:
-                            pass
-        except:
+                    if len(parts) >= 6 and parts[1] != "":
+                        t = parse_time(parts[0])
+                        if t is not None:
+                            try:
+                                data_lp8_2.append(float(parts[1]))
+                                time_lp8_2.append(t)
+                                vcap1_2 = parts[3]
+                                vcap2_2 = parts[4]
+                                errores_2 = parts[5]
+                            except ValueError:
+                                pass
+        except Exception:
             pass
+
+        # Eje X: hora de medición
+        x1 = time_lp8_1
+        x2 = time_lp8_2
+
         key = device_id.replace(":", "_")
         if key in self.lp8_plots:
-            fig, ax, canvas, line1, line2 = self.lp8_plots[key]
-            line1.set_data(range(len(data_lp8_1)), data_lp8_1)
-            line2.set_data(range(len(data_lp8_2)), data_lp8_2)
-            ax.set_xlim(0, max(10, len(data_lp8_1), len(data_lp8_2)))
+            fig, ax, canvas, line1, line2, info_labels = self.lp8_plots[key]
+            line1.set_data(x1, data_lp8_1)
+            line2.set_data(x2, data_lp8_2)
+            ax.set_xlim(min(x1 + x2) if (x1 + x2) else 0, max(x1 + x2) if (x1 + x2) else 1)
             all_data = data_lp8_1 + data_lp8_2
             if all_data:
                 ax.set_ylim(min(all_data) - 1, max(all_data) + 1)
+            ax.set_xlabel("Hora de medición")
+            ax.xaxis.set_major_formatter(mdates.DateFormatter('%H:%M:%S'))
+            fig.autofmt_xdate()
             canvas.draw()
+           
 
 if __name__ == "__main__":
     root = tk.Tk()

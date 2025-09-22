@@ -22,11 +22,6 @@ LP8 *sensor2 = nullptr;
 
 void motores_task(void *pvParameters) {
     ESP_LOGI("MOTORES", "Núcleo actual: %d", xPortGetCoreID());
-<<<<<<< Updated upstream
-    for(;;) {
-        actualizarMotores();
-         vTaskDelay(pdMS_TO_TICKS(10)); // En el pc no funciona 1 ms, se cambió a 5 ms
-=======
     TickType_t last = xTaskGetTickCount();
 
     //recordar configurar el MenuConfig -> Config_FREERTOS_HZ de 100 a 1000
@@ -35,16 +30,12 @@ void motores_task(void *pvParameters) {
     for (;;) {
         actualizarMotores();      // Trabajo corto y NO bloqueante
         vTaskDelayUntil(&last, period);  // Cede SIEMPRE el CPU
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     }
 }
     
 
 void comunicaciones_task(void *pvParameters) {
-    mqtt_start("mqtt://192.168.1.8"); //ip oficina mqtt://192.168.31.81 ip casa: mqtt://192.168.1.8
+    mqtt_start("mqtt://192.168.31.81"); //ip oficina mqtt://192.168.31.81 ip casa: mqtt://192.168.1.8
     vTaskDelete(NULL);
 }
 
@@ -55,15 +46,6 @@ extern "C" void app_main(void) {
     //creamos el objeto de LP8
     sensor1 = new LP8(GPIO_NUM_5,GPIO_NUM_4,UART_NUM_2);
     sensor1->Setup();
-<<<<<<< Updated upstream
-=======
-
-    sensor2 = new LP8(GPIO_NUM_19,GPIO_NUM_13,UART_NUM_1);
-    sensor2->Setup();
-
-
-    bme280_setup();
->>>>>>> Stashed changes
 
     sensor2 = new LP8(GPIO_NUM_19,GPIO_NUM_13,UART_NUM_1);
     sensor2->Setup();
@@ -91,7 +73,7 @@ extern "C" void app_main(void) {
     0
 );
     
-    esp_err_t err = wifi_connect("Renatita", "dino$auri0", 15000); //ID oficina:  Oficina AG ID casa: Renatita
+    esp_err_t err = wifi_connect("Oficina AG", "OficinaAG23", 15000); //ID oficina:  Oficina AG ID casa: Renatita
     if (err == ESP_OK) {
         ESP_LOGI("MAIN", "¡Wi-Fi ok!");
         xTaskCreatePinnedToCore(comunicaciones_task, "Comunicaciones", 4096, NULL, 5, NULL, 0);

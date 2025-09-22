@@ -15,23 +15,10 @@
 
 set(HEAD_HASH)
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-file(READ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/git-data/HEAD" HEAD_CONTENTS LIMIT 1024)
-
-string(STRIP "${HEAD_CONTENTS}" HEAD_CONTENTS)
-set(GIT_DIR "D:/Utal/Memoria_Clinostato/Memoria-clinostato/.git")
-=======
-=======
->>>>>>> Stashed changes
 file(READ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/git-data/HEAD" HEAD_CONTENTS LIMIT 1024)
 
 string(STRIP "${HEAD_CONTENTS}" HEAD_CONTENTS)
 set(GIT_DIR "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/.git")
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 # handle git-worktree
 if(EXISTS "${GIT_DIR}/commondir")
 	file(READ "${GIT_DIR}/commondir" GIT_DIR_NEW LIMIT 1024)
@@ -47,43 +34,17 @@ if(HEAD_CONTENTS MATCHES "ref")
 	# named branch
 	string(REPLACE "ref: " "" HEAD_REF "${HEAD_CONTENTS}")
 	if(EXISTS "${GIT_DIR}/${HEAD_REF}")
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-		configure_file("${GIT_DIR}/${HEAD_REF}" "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/git-data/head-ref" COPYONLY)
-	elseif(EXISTS "${GIT_DIR}/logs/${HEAD_REF}")
-		configure_file("${GIT_DIR}/logs/${HEAD_REF}" "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/git-data/head-ref" COPYONLY)
-=======
 		configure_file("${GIT_DIR}/${HEAD_REF}" "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/git-data/head-ref" COPYONLY)
 	elseif(EXISTS "${GIT_DIR}/logs/${HEAD_REF}")
 		configure_file("${GIT_DIR}/logs/${HEAD_REF}" "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/git-data/head-ref" COPYONLY)
->>>>>>> Stashed changes
-=======
-		configure_file("${GIT_DIR}/${HEAD_REF}" "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/git-data/head-ref" COPYONLY)
-	elseif(EXISTS "${GIT_DIR}/logs/${HEAD_REF}")
-		configure_file("${GIT_DIR}/logs/${HEAD_REF}" "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/git-data/head-ref" COPYONLY)
->>>>>>> Stashed changes
 		set(HEAD_HASH "${HEAD_REF}")
 	endif()
 else()
 	# detached HEAD
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-	configure_file("${GIT_DIR}/HEAD" "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/git-data/head-ref" COPYONLY)
-endif()
-
-if(NOT HEAD_HASH)
-	file(READ "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/git-data/head-ref" HEAD_HASH LIMIT 1024)
-=======
-=======
->>>>>>> Stashed changes
 	configure_file("${GIT_DIR}/HEAD" "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/git-data/head-ref" COPYONLY)
 endif()
 
 if(NOT HEAD_HASH)
 	file(READ "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/git-data/head-ref" HEAD_HASH LIMIT 1024)
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 	string(STRIP "${HEAD_HASH}" HEAD_HASH)
 endif()

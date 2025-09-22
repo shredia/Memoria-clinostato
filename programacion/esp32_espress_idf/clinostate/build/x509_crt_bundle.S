@@ -1,12 +1,4 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-/* * Data converted from D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/x509_crt_bundle
-=======
 /* * Data converted from D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/x509_crt_bundle
->>>>>>> Stashed changes
-=======
-/* * Data converted from D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/x509_crt_bundle
->>>>>>> Stashed changes
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)

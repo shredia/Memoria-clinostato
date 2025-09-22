@@ -39,27 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  include("D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_hw_support/port/esp32/cmake_install.cmake")
-=======
   include("D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_hw_support/port/esp32/cmake_install.cmake")
->>>>>>> Stashed changes
-=======
-  include("D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_hw_support/port/esp32/cmake_install.cmake")
->>>>>>> Stashed changes
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  include("D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_hw_support/lowpower/cmake_install.cmake")
-=======
   include("D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_hw_support/lowpower/cmake_install.cmake")
->>>>>>> Stashed changes
-=======
-  include("D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader/esp-idf/esp_hw_support/lowpower/cmake_install.cmake")
->>>>>>> Stashed changes
 endif()
 

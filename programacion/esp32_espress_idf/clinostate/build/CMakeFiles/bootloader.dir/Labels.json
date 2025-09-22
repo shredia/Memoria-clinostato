@@ -2,39 +2,6 @@
 	"sources" : 
 	[
 		{
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-			"file" : "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/bootloader"
-		},
-		{
-			"file" : "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/bootloader.rule"
-		},
-		{
-			"file" : "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/bootloader-complete.rule"
-		},
-		{
-			"file" : "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
-		},
-		{
-			"file" : "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
-		},
-		{
-			"file" : "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
-		},
-		{
-			"file" : "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
-		},
-		{
-			"file" : "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
-		},
-		{
-			"file" : "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
-		},
-		{
-			"file" : "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
-=======
-=======
->>>>>>> Stashed changes
 			"file" : "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/CMakeFiles/bootloader"
 		},
 		{
@@ -63,10 +30,6 @@
 		},
 		{
 			"file" : "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 		}
 	],
 	"target" : 
