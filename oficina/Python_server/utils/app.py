@@ -6,7 +6,7 @@ from plot_utils import update_lp8_plot, update_bme_plot
 from ui_controls import create_controls
 
 class App:
-    def __init__(self, root):
+    def __init__(self, root, broker_ip="192.168.31.81", broker_port=1883):
         self.root = root
         self.root.title("Detector ESP32 con MQTT")
         self.esp32_devices = {}
@@ -19,7 +19,7 @@ class App:
         self._calibrar_flag_state = {}
 
         # Instancias de módulos
-        self.sensor_state = SensorState(self)
+        self.sensor_state = SensorState(self, broker_ip, broker_port)
         self.mqtt = MQTTHandler(self)
         
         frame_list = tk.Frame(root)
@@ -170,8 +170,6 @@ class App:
         # Actualiza los labels de estado
         lp8_1_label.config(text=f"LP8_1 - Vcap1: {vcap1_1}   Vcap2: {vcap2_1}   error: {errores_1}")
         lp8_2_label.config(text=f"LP8_2 - Vcap1: {vcap1_2}   Vcap2: {vcap2_2}   error: {errores_2}")
-    def plot_temperaturas(frame_temp, device_dir):
-
 
     def update_bme_plot(self, device_id):
         import os

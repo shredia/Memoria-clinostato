@@ -3,13 +3,13 @@ import time
 import json
 
 class SensorState:
-    BROKER = "192.168.31.81"
-    PORT = 1883
-    HEARTBEAT_TOPIC = "esp32/#"
-    HEARTBEAT_TIMEOUT = 15
-
-    def __init__(self, app):
+    def __init__(self, app, broker_ip="192.168.31.81", broker_port=1883):
         self.app = app
+        self.BROKER = broker_ip
+        self.PORT = broker_port
+        self.HEARTBEAT_TOPIC = "esp32/#"
+        self.HEARTBEAT_TIMEOUT = 15
+
         self.lp8_buffer = {}
         self.lp8_buffer_time = {}
         self.lp8_buffer_timeout = 1.0

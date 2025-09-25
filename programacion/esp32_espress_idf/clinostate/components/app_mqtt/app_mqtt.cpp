@@ -8,16 +8,17 @@
 #include "LP8_libreria.hpp"
 #include "LP8_protocolo.hpp"
 #include <driver/gpio.h>
+#include "esp_mac.h"
 
 extern LP8 *sensor1;
 extern LP8 *sensor2;
 
-
+extern "C" uint32_t esp_random(void);
 
 static const char *TAG = "MQTT";
 esp_mqtt_client_handle_t client = NULL;
 
- char client_id[20]; // Global para usar en la tarea
+ char client_id[32]; // Global para usar en la tarea
 
 static void mqtt_event_handler_cb(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data) {
     esp_mqtt_event_handle_t event = (esp_mqtt_event_handle_t)event_data;
@@ -87,6 +88,11 @@ static void mqtt_event_handler_cb(void *handler_args, esp_event_base_t base, int
             
             break;
         }
+        
+        case MQTT_EVENT_DISCONNECTED:
+            ESP_LOGW("MQTT  ", "MQTT desconectado, intentando reconectar...");
+            // Forzar reconexión (opcional, normalmente el cliente lo hace sol
+            break;
         default:
             break;
     }
@@ -103,44 +109,53 @@ static void heartbeat_task(void *pvParameters) {
 
 void mqtt_start(const char *uri) {
     uint8_t mac[6];
-    esp_err_t err = esp_wifi_get_mac(WIFI_IF_STA, mac); // <-- CORREGIDO
-    (void)err; // Para evitar warning si no lo usas
+    esp_err_t err;
 
+    err = esp_read_mac(mac, ESP_MAC_WIFI_STA);
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "No pude leer MAC (%s), usando fallback", esp_err_to_name(err));
+        for (int i = 0; i < 6; ++i) mac[i] = (uint8_t)(esp_random() & 0xFF);
+    }
+
+    // Usa la global:
     snprintf(client_id, sizeof(client_id), "ESP32_%02X%02X%02X%02X%02X%02X",
-             mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
+         mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
 
-    esp_mqtt_client_config_t mqtt_cfg = {}; // <-- CORREGIDO
+    esp_mqtt_client_config_t mqtt_cfg = {};
     mqtt_cfg.broker.address.uri = uri;
     mqtt_cfg.credentials.client_id = client_id;
+    // Ajustes de estabilidad/rendimiento:
+    mqtt_cfg.session.keepalive = 90;                  // más holgado
+    //mqtt_cfg.buffer.size = 4096;                      // default 1024 → sube si envías JSON grandes
+    //mqtt_cfg.outbox.size = 16384;                     // default 4096 → sube si publicas mucho/rápido
+    mqtt_cfg.network.disable_auto_reconnect = false;  // auto-reconnect ON
+    mqtt_cfg.network.reconnect_timeout_ms = 2000;     // backoff corto
+    //.task.priority = 5,                     // opcional: subir prioridad si hay mucha carga
 
     client = esp_mqtt_client_init(&mqtt_cfg);
+    if (!client) {
+        ESP_LOGE(TAG, "esp_mqtt_client_init falló");
+        return;
+    }
 
-    esp_mqtt_client_register_event(client, MQTT_EVENT_ANY, mqtt_event_handler_cb, NULL); // <-- CORREGIDO
+    esp_mqtt_client_register_event(client, MQTT_EVENT_ANY, mqtt_event_handler_cb, NULL);
 
-    esp_mqtt_client_start(client);
+    // Para depurar desconexiones por ahorro de energía Wi-Fi:
+    // esp_wifi_set_ps(WIFI_PS_NONE);
 
-    // Inicia la tarea de heartbeat
-    xTaskCreate(heartbeat_task, "heartbeat_task", 4098, NULL, 5, NULL);
+    ESP_ERROR_CHECK(esp_mqtt_client_start(client));
+    ESP_LOGI(TAG, "MQTT iniciado con client_id=%s", client_id); 
+
     
-}
 
-void enviar_status() {
-    char topic[64];
-    snprintf(topic, sizeof(topic), "esp32/%s/status", client_id);
-
-    char status[256];
-    snprintf(status, sizeof(status),
-        "{\"motorX_speed\":%d,"
-        "\"motorY_speed\":%d,"
-        "\"microstepping\":%d,"
-        "\"motors_enabled\":%s,"
-        "\"measure\":%s}",
-        SpeedX,
-        SpeedY,
-        micro_stepping,
-        enable_motors ? "true" : "false",
-        continuousMeasurement ? "true" : "false"
+    // Agrega la tarea de heartbeat aquí:
+    xTaskCreatePinnedToCore(
+        heartbeat_task,      // función de la tarea
+        "heartbeat_task",    // nombre
+        4096,                // stack size
+        NULL,                // parámetro
+        5,                   // prioridad
+        NULL,                // handle
+        0       // core (puedes poner 0 o 1 si quieres fijar)
     );
-
-    esp_mqtt_client_publish(client, topic, status, 0, 0, 0);
 }

@@ -32,12 +32,14 @@ public:
     float Get_C02();
     bool GetCrc_flag();
     float GetPresion();
+    float Gettemp();
     uint16_t GetVcap1();
     uint16_t GetVcap2();
     uint8_t GetError(uint8_t index);
     void task_medicion_continua(void *pvParameters); // <-- Agrega esta línea
     void medir();
     void publicar_datos_sensor();
+    void Generate_Request();
 
 
 private:
@@ -61,6 +63,7 @@ private:
     uint16_t _vcap2;
     float _presion;
     float _C02;
+    float _temp;
 
     //variables internas
     uint8_t _size_receive;
@@ -70,6 +73,8 @@ private:
     uint8_t _CRC_Low;
     uint8_t _Receive_CRC_High;
     uint8_t _Receive_CRC_Low;
+    uint8_t _sensor_state[24];
+    
 };
 
 #endif // LP8_LIBRERIA_HPP

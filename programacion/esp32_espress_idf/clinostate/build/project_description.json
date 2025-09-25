@@ -1375,7 +1375,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mqtt/libmqtt.a",
-            "sources": [ "C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/mqtt_client.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/lib/mqtt_msg.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/lib/mqtt_outbox.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/lib/platform_esp32_idf.c" ],
+            "sources": [ "C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/mqtt_client.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/lib/mqtt_msg.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/lib/mqtt_outbox.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/lib/platform_esp32_idf.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/lib/mqtt5_msg.c", "C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/mqtt5_client.c" ],
             "include_dirs": [ "C:/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/include" ]
         },
         "newlib": {
