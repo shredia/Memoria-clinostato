@@ -48,7 +48,7 @@ class SensorState:
         elif topic.startswith("esp32/"):
             parts = topic.split("/")
             # --- LP8 ---
-            if len(parts) >= 4 and parts[2].startswith("LP8_") and parts[3] in ["co2", "presion", "vcap1", "vcap2", "errores"]:
+            if len(parts) >= 4 and parts[2].startswith("LP8_") and parts[3] in ["co2", "presion", "vcap1", "vcap2", "errores", "temp"]:
                 device_id = parts[1]
                 if device_id in self.app.tabs:
                     lp8_id = parts[2]
@@ -94,14 +94,14 @@ class SensorState:
         if not buf:
             return
         # Si falta algún campo, pon -1
-        vals = {"co2": "-1", "presion": "-1", "vcap1": "-1", "vcap2": "-1", "errores": "-1"}
+        vals = {"co2": "-1", "presion": "-1", "vcap1": "-1", "vcap2": "-1", "errores": "-1", "temp": "-1"}
         vals.update(buf['data'])
-        line = f"{buf['timestamp']},{vals['co2']},{vals['presion']},{vals['vcap1']},{vals['vcap2']},{vals['errores']}\n"
+        line = f"{buf['timestamp']},{vals['co2']},{vals['presion']},{vals['vcap1']},{vals['vcap2']},{vals['errores']},{vals['temp']}\n"
         with open(filename, "a") as f:
             f.write(line)
         device_id = buf.get('device_id', None)
         if device_id:
-            self.app.update_plot(device_id)
+            self.app.root.after(0, self.app.update_plot, device_id)
         del self.lp8_buffer[file_key]
         del self.lp8_buffer_time[file_key]
 
@@ -118,7 +118,7 @@ class SensorState:
             f.write(line)
         device_id = buf.get('device_id', None)
         if device_id:
-            self.app.update_bme_plot(device_id)
+            self.app.root.after(0, self.app.update_bme_plot, device_id)
         del self.bme_buffer[file_key]
         del self.bme_buffer_time[file_key]
 

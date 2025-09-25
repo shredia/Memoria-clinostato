@@ -115,7 +115,7 @@ class App:
                 for line in lines1[-100:]:
                     parts = line.strip().split(",")
                     print(f"[DEBUG] Línea LP8_1: {parts}")
-                    if len(parts) >= 6:
+                    if len(parts) >= 7:
                         try:
                             t = datetime.datetime.strptime(parts[0], "%Y-%m-%d %H:%M:%S")
                             print(f"[DEBUG] Fecha parseada: {t}, CO2: {parts[1]}")
@@ -124,6 +124,7 @@ class App:
                             vcap1_1 = parts[3]
                             vcap2_1 = parts[4]
                             errores_1 = parts[5]
+                            temp = float(parts[6])
                         except Exception as e:
                             print(f"[DEBUG] Error parseando: {e}")
                             continue
@@ -166,6 +167,7 @@ class App:
         ax.xaxis.set_major_formatter(mdates.DateFormatter('%H:%M:%S'))
         fig.autofmt_xdate()
         canvas.draw()
+        
 
         # Actualiza los labels de estado
         lp8_1_label.config(text=f"LP8_1 - Vcap1: {vcap1_1}   Vcap2: {vcap2_1}   error: {errores_1}")
@@ -220,6 +222,7 @@ class App:
         canvas1 = FigureCanvasTkAgg(fig1, master=frame_temp)
         canvas1.get_tk_widget().pack(fill='both', expand=True)
         canvas1.draw()
+        plt.close(fig1)  # <-- CIERRA la figura después de dibujar
 
         # --- Humedad ---
         for widget in frame_hum.winfo_children():
@@ -233,6 +236,7 @@ class App:
         canvas2 = FigureCanvasTkAgg(fig2, master=frame_hum)
         canvas2.get_tk_widget().pack(fill='both', expand=True)
         canvas2.draw()
+        plt.close(fig2)  # <-- CIERRA la figura después de dibujar
 
         # --- Presión ---
         for widget in frame_pres.winfo_children():
@@ -246,3 +250,4 @@ class App:
         canvas3 = FigureCanvasTkAgg(fig3, master=frame_pres)
         canvas3.get_tk_widget().pack(fill='both', expand=True)
         canvas3.draw()
+        plt.close(fig3)  # <-- CIERRA la figura después de dibujar
