@@ -170,6 +170,8 @@ class App:
         # Actualiza los labels de estado
         lp8_1_label.config(text=f"LP8_1 - Vcap1: {vcap1_1}   Vcap2: {vcap2_1}   error: {errores_1}")
         lp8_2_label.config(text=f"LP8_2 - Vcap1: {vcap1_2}   Vcap2: {vcap2_2}   error: {errores_2}")
+    def plot_temperaturas(frame_temp, device_dir):
+
 
     def update_bme_plot(self, device_id):
         import os
