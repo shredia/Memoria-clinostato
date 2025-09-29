@@ -3,10 +3,10 @@
 #include "motores.h"
 #include "esp_log.h"
 // Pines
-#define DIR_PINX 15
-#define STEP_PINX 2
-#define DIR_PINY 14
-#define STEP_PINY 27
+#define DIR_PINX 2
+#define STEP_PINX 15
+#define DIR_PINY 27
+#define STEP_PINY 14
 #define MS1_PIN  25
 #define MS2_PIN  33
 #define MS3_PIN  32
@@ -16,6 +16,11 @@ int SpeedX = 0;
 int SpeedY = 0;
 int micro_stepping = 0;
 bool enable_motors = false;
+
+// variables estáticas para detectar cambios
+static bool prev_enable = false;
+static int  prev_micro  = -1;
+static float prev_vx = 0, prev_vy = 0;
 
 AccelStepper MotorX(AccelStepper::DRIVER, (gpio_num_t)STEP_PINX, (gpio_num_t)DIR_PINX );
 AccelStepper MotorY(AccelStepper::DRIVER, (gpio_num_t)STEP_PINY, (gpio_num_t)DIR_PINY );
@@ -106,17 +111,25 @@ void setMicrostepping(int ms) {
 }
 
 void actualizarMotores() {
-    if (enable_motors) {   
-        gpio_set_level((gpio_num_t)ENABLE_PIN, 0); // Correcto
-        setMicrostepping(micro_stepping);
-        MotorX.setSpeed(SpeedX);
-        MotorY.setSpeed(SpeedY);
-        MotorX.runSpeed();
-        MotorY.runSpeed();
-    } else {
-        
-        gpio_set_level((gpio_num_t)ENABLE_PIN, 1); // Deshabilita el driver
-        
+    // Habilitar/deshabilitar SOLO si cambia
+    if (enable_motors != prev_enable) {
+        gpio_set_level((gpio_num_t)ENABLE_PIN, enable_motors ? 0 : 1);
+        prev_enable = enable_motors;
     }
-}
 
+    if (!enable_motors) return;
+
+    // Microstepping SOLO si cambia
+    if (micro_stepping != prev_micro) {
+        setMicrostepping(micro_stepping);
+        prev_micro = micro_stepping;
+    }
+
+    // Actualiza velocidades SOLO si cambian
+    if (SpeedX != prev_vx) { MotorX.setSpeed(SpeedX); prev_vx = SpeedX; }
+    if (SpeedY != prev_vy) { MotorY.setSpeed(SpeedY); prev_vy = SpeedY; }
+
+    // Avance no bloqueante
+    MotorX.runSpeed();
+    MotorY.runSpeed();
+}

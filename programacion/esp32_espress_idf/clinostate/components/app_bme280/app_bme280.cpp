@@ -32,6 +32,9 @@ void bme280_setup() {
 }
 
 void bme280_leer(float &temperature, float &humidity, float &pressure) {
+    temperature = -1;
+    humidity = -1;
+    pressure = -1;
     bme280_read_temperature(bme280, &temperature);
     bme280_read_humidity(bme280, &humidity);
     bme280_read_pressure(bme280, &pressure);

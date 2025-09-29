@@ -1,4 +1,4 @@
-# Install script for directory: D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/main
+# Install script for directory: D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

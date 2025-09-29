@@ -39,10 +39,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
-  include("D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
-  include("D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
-  include("D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/mbedtls/pkgconfig/cmake_install.cmake")
+  include("D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
+  include("D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
+  include("D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
+  include("D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/esp-idf/mbedtls/mbedtls/pkgconfig/cmake_install.cmake")
 
 endif()
 

@@ -1,1 +1,0 @@
-timestamp,lp8_value

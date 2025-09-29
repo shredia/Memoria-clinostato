@@ -1,26 +1,33 @@
 {
-    "C_Cpp.intelliSenseEngine": "default",
-    "idf.espIdfPathWin": "C:/Espressif/frameworks/esp-idf-v5.4/",
-    "idf.pythonInstallPath": "c:\\Espressif\\tools\\tools\\idf-python\\3.11.2\\python.exe",
-    "idf.openOcdConfigs": [
-        "board/esp32-wrover-kit-3.3v.cfg"
-    ],
-    "idf.toolsPathWin": "c:\\Espressif\\tools",
-    "files.associations": {
-        "accelstepper.h": "c",
-        "gpio.h": "c",
-        "cstdint": "c",
-        "cstddef": "c",
-        "esp_timer.h": "c",
-        "compare": "c",
-        "mqtt_client.h": "c",
-        "app_mqtt.h": "c"
-    },
-    "C_Cpp.errorSquiggles": "enabled",
-    "idf.customExtraVars": {
-        "IDF_TARGET": "esp32"
-    },
-    "idf.flashType": "UART",
-    "idf.portWin": "COM3",
-    "idf.port": "/dev/ttyS3"
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.espIdfPathWin": "C:/Espressif/frameworks/esp-idf-v5.4/",
+  "idf.pythonInstallPath": "c:/Espressif/tools/tools/idf-python/3.11.2/python.exe",
+  "idf.openOcdConfigs": [
+    "board/esp32-wrover-kit-3.3v.cfg"
+  ],
+  "idf.toolsPathWin": "c:/Espressif/tools",
+  "files.associations": {
+    "accelstepper.h": "c",
+    "gpio.h": "c",
+    "cstdint": "c",
+    "cstddef": "c",
+    "esp_timer.h": "c",
+    "compare": "c",
+    "mqtt_client.h": "c",
+    "app_mqtt.h": "c",
+    "array": "cpp",
+    "bitset": "cpp",
+    "string_view": "cpp",
+    "format": "cpp",
+    "initializer_list": "cpp",
+    "span": "cpp",
+    "regex": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "enabled",
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32"
+  },
+  "idf.flashType": "UART",
+  "idf.portWin": "COM11",
+  "idf.port": "/dev/ttyS3"
 }

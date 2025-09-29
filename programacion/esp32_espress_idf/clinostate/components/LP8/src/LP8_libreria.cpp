@@ -2,6 +2,8 @@
 #include "esp_timer.h"
 #include <stdint.h>
 #include "LP8_libreria.hpp"
+#include <string.h>
+#include "esp_log.h" // <-- Asegúrate de incluir esto
 
 
 bool continuousMeasurement = false;
@@ -35,10 +37,12 @@ LP8::LP8(gpio_num_t vbb_en_pin /*= GPIO_NUM_5*/, gpio_num_t rdy_pin /*= GPIO_NUM
     _vcap2 = 0;
     _presion = 0;
     _C02 = 0;
+    _temp = 0;
 
     //variables internas
     _size_receive = 0;
     _size_send = 0;
+    memset(_sensor_state, 0, sizeof(_sensor_state));
 
 
 }
@@ -83,7 +87,9 @@ void LP8::Setup() {
         .data_bits = UART_DATA_8_BITS,
         .parity    = UART_PARITY_DISABLE,
         .stop_bits = UART_STOP_BITS_2,
-        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE
+        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
+        .rx_flow_ctrl_thresh = 0,
+        .flags = 0
     };
     uart_param_config(_uart_port, &uart_config);
 
@@ -91,8 +97,8 @@ void LP8::Setup() {
     gpio_num_t tx, rx;
     switch (_uart_port) {
         case UART_NUM_1:
-            tx = GPIO_NUM_4;   // ejemplo
-            rx = GPIO_NUM_5;   // ejemplo
+            tx = GPIO_NUM_18;   // ejemplo
+            rx = GPIO_NUM_12;   // ejemplo
             break;
         case UART_NUM_2:
             tx = GPIO_NUM_17;  // ejemplo
@@ -112,6 +118,8 @@ bool LP8::GetCalibrar() {
     return _calibrar;
 }
 
+
+
 void LP8::SetCalibrar(bool calibrar) {
     _calibrar = calibrar;
 }
@@ -130,8 +138,7 @@ void LP8::ModRTU_CRC(){
     }
   }
 
-  printf("CRC calculado: ");
-  printf("%02X\n",crc);
+  ESP_LOGI("LP8", "CRC calculado: %02X", crc);
   _Receive_CRC_High = (crc >> 8) & 0xFF;
   _Receive_CRC_Low = crc & 0xFF;
 }
@@ -146,33 +153,38 @@ void LP8::SendRequest(const uint8_t *packet) {
         _size_send = 8;
     }
 
-    printf("Esperando disponibilidad del puerto serial...\n");
+    ESP_LOGI("LP8", "Esperando disponibilidad del puerto serial...");
     uart_write_bytes(_uart_port, (const char *)packet, _size_send);
     uart_wait_tx_done(_uart_port, pdMS_TO_TICKS(100));
 
-   
     bool startFound = false;
 
     uint8_t buf[4] = {0, 0, 0, 0};
     int64_t start_time = esp_timer_get_time(); // microsegundos
     while (!startFound && ((esp_timer_get_time() - start_time) < (_time_out_ms * 1000))) {
-        // Desplaza los valores ANTES de leer el nuevo byte
         buf[0] = buf[1];
         buf[1] = buf[2];
         buf[2] = buf[3];
         if (uart_read_bytes(_uart_port, &buf[3], 1, pdMS_TO_TICKS(10)) > 0) {
-            printf("buf[0]=%02X buf[1]=%02X buf[2]=%02X buf[3]=%02X\n", buf[0], buf[1], buf[2], buf[3]);
-            // Detecta patrón FE 41 81 E0
+            ESP_LOGI("LP8", "buf[0]=%02X buf[1]=%02X buf[2]=%02X buf[3]=%02X", buf[0], buf[1], buf[2], buf[3]);
             if (buf[0] == 0xFE && buf[1] == 0x41 && buf[2] == 0x81 && buf[3] == 0xE0) {
                 for (int i = 0; i < 4; i++) _response[i] = buf[i];
-                printf("Inicio de mensaje detectado: 0xFE\n");
+                ESP_LOGI("LP8", "Inicio de mensaje detectado: 0xFE");
                 startFound = true;
                 break;
             }
-            // Detecta patrón FE 44 2C 00
             if (buf[0] == 0xFE && buf[1] == 0x44 && buf[2] == 0x2C && buf[3] == 0x00) {
                 for (int i = 0; i < 4; i++) _response[i] = buf[i];
-                printf("Inicio de mensaje detectado: 0xFE\n");
+                ESP_LOGI("LP8", "Inicio de mensaje detectado: 0xFE");
+                startFound = true;
+                break;
+            }
+            if (buf[0] == 0x44 && buf[1] == 0x00 && buf[2] == 0x80 && buf[3] == 0x2C) {
+                _response[0] = 0xFE;
+                _response[1] = 0x44;
+                _response[2] = 0x80;
+                _response[3] = 0x2C;
+                ESP_LOGI("LP8", "Error: Inicio de mensaje detectado: 0x44");
                 startFound = true;
                 break;
             }
@@ -181,95 +193,103 @@ void LP8::SendRequest(const uint8_t *packet) {
     int64_t lectura_fin = esp_timer_get_time();
     vTaskDelay(pdMS_TO_TICKS(10));
         
-    printf("Tiempo de lectura de respuesta: %lld ms\n", (lectura_fin - start_time) / 1000);
+    ESP_LOGI("LP8", "Tiempo de lectura de respuesta: %lld ms", (lectura_fin - start_time) / 1000);
     int i = 4;
-    
 
-    // Imprime los primeros 4 bytes
     for (int j = 0; j < 4; j++) {
-        printf("response[%d] = %02X\n", j, _response[j]);
+        ESP_LOGI("LP8", "response[%d] = %02X", j, _response[j]);
     }
 
-    // Justo después de leer los primeros 4 bytes en _response
     if (_response[1] == 0x41) {
-        _size_receive = 4;  // Solo 4 bytes para comando 0x41
+        _size_receive = 4;
     } else if (_response[1] == 0x44) {
-        _size_receive = 49; // 49 bytes para comando 0x44
+        _size_receive = 49;
     } else {
-        printf("Advertencia: comando desconocido 0x%02X\n", _response[1]);
-        _size_receive = 4; // Valor seguro por defecto
+        ESP_LOGI("LP8", "Advertencia: comando desconocido 0x%02X", _response[1]);
+        _size_receive = 4;
     }
-    printf("size_receive ajustado: %d\n", _size_receive);
+    ESP_LOGI("LP8", "size_receive ajustado: %d", _size_receive);
 
-  start_time = esp_timer_get_time();
+    start_time = esp_timer_get_time();
 
-    // Leer el resto de la respuesta
     while (i < _size_receive && ((esp_timer_get_time() - start_time) < (_time_out_ms * 1000))) {
         if (uart_read_bytes(_uart_port, &_response[i], 1, pdMS_TO_TICKS(10)) > 0) {
-            printf("response[%d] = %02X\n", i, _response[i]);
+            ESP_LOGI("LP8", "response[%d] = %02X", i, _response[i]);
             i++;
         }
     }
     lectura_fin = esp_timer_get_time();
-    printf("Tiempo de lectura de respuesta: %lld ms\n", (lectura_fin - start_time) / 1000);
+    ESP_LOGI("LP8", "Tiempo de lectura de respuesta: %lld ms", (lectura_fin - start_time) / 1000);
     if (i < _size_receive) {
-        printf("Timeout leyendo respuesta completa.\n");
+        ESP_LOGI("LP8", "Timeout leyendo respuesta completa.");
         return;
     }
 
-    printf("Mensaje completo recibido.\n");
+    ESP_LOGI("LP8", "Mensaje completo recibido.");
 }
 
 void LP8::ProcesarLectura(){
-    // Calcular CRC
     ModRTU_CRC();
-
 
     _CRC_Low = _response[_size_receive-2];
     _CRC_High = _response[_size_receive-1];
 
     if ((_CRC_High != _Receive_CRC_High) || (_CRC_Low != _Receive_CRC_Low)) {
-        printf("! ! ! El CRC calculado no coincide con el CRC del sensor.\n");
-        printf("crc_High = %02X\n", _response[_size_receive-2]);
-        printf("crc_Low = %02X\n", _response[_size_receive-1]);
+        ESP_LOGI("LP8", "! ! ! El CRC calculado no coincide con el CRC del sensor.");
+        ESP_LOGI("LP8", "crc_High = %02X", _response[_size_receive-2]);
+        ESP_LOGI("LP8", "crc_Low = %02X", _response[_size_receive-1]);
         SetFlag_CRC(false);
         for(int i = 0; i < _size_receive; i++){
-            printf("%02X\n", _response[i]);
+            ESP_LOGI("LP8", "%02X", _response[i]);
         }
         return;
     } else {
-        printf("El CRC calculado coincide con el CRC del sensor.\n");
+        ESP_LOGI("LP8", "El CRC calculado coincide con el CRC del sensor.");
 
+        if(_size_receive > 26){
+            for(int i = 0; i < 14; i++){
+                _sensor_state[i] = _response[4 + i];
+                ESP_LOGI("LP8", "Sensor State[%d]: %02X", i, _sensor_state[i]);
+            }
 
+            for(int i = 0; i < 8; i++){
+                _sensor_state[i + 14] = _response[19 + i];
+                ESP_LOGI("LP8", "Sensor State[%d]: %02X", i + 14, _sensor_state[i + 14]);
+            }
+        }
         // Mostrar presión si hay datos suficientes
         if(_size_receive > 28){
             int16_t rawValue = (int16_t)((_response[27] << 8) | _response[28]);
-            _presion = rawValue * 0.1f; // Escala a hPa
-            printf("Mostrando Host Pressure\n");
-            printf("Presión: %.1f hPa\n", _presion);
+            _presion = rawValue * 0.1f;
+            ESP_LOGI("LP8", "Mostrando Host Pressure");
+            ESP_LOGI("LP8", "Presión: %.1f hPa", _presion);
         }
 
         if(_size_receive > 30){
             int co2 = (_response[29] << 8) | _response[30];
             _C02 = (float)co2;
-            printf("CO2: %d ppm\n", co2);
+            ESP_LOGI("LP8", "CO2: %d ppm", co2);
+        }
+
+        if(_size_receive > 34){
+            int temp = (_response[33] << 8) | _response[34];
+            _temp = (float)temp * 0.01f;
+            ESP_LOGI("LP8", "Temperatura: %.1f °C", _temp);
         }
         // Mostrar Vcap1 y Vcap2 si hay datos suficientes
         if(_size_receive > 39){
             _vcap1 = (uint16_t)((_response[35] << 8) | _response[36]);
             _vcap2 = (uint16_t)((_response[37] << 8) | _response[38]);
-            printf("Vcap1 %u mV\n", _vcap1);
-            printf("Vcap2 %u mV\n", _vcap2);
-            
+            ESP_LOGI("LP8", "Vcap1 %u mV", _vcap1);
+            ESP_LOGI("LP8", "Vcap2 %u mV", _vcap2);
         }
-
         // Mostrar bits de error si hay datos suficientes
         if(_size_receive > 43){
-            printf("Mostrando bits de errores:\n");
-            printf("Error bit 3: %u\n", _response[39]);
-            printf("Error bit 2: %u\n", _response[40]);
-            printf("Error bit 1: %u\n", _response[41]);
-            printf("Error bit 0: %u\n", _response[42]);
+            ESP_LOGI("LP8", "Mostrando bits de errores:");
+            ESP_LOGI("LP8", "Error bit 3: %u", _response[39]);
+            ESP_LOGI("LP8", "Error bit 2: %u", _response[40]);
+            ESP_LOGI("LP8", "Error bit 1: %u", _response[41]);
+            ESP_LOGI("LP8", "Error bit 0: %u", _response[42]);
             _error[3] = _response[39];
             _error[2] = _response[40];
             _error[1] = _response[41];
@@ -277,7 +297,6 @@ void LP8::ProcesarLectura(){
         }
 
         SetFlag_CRC(true);
-
     }
 }
 
@@ -311,6 +330,9 @@ uint16_t LP8::GetVcap2(){
   return _vcap2;
 }
 
+float LP8::Gettemp(){
+  return _temp;
+}
 
 uint8_t LP8::GetError(uint8_t index){
   if(index > 3) {

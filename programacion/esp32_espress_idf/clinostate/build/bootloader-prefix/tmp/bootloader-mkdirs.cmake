@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/Espressif/frameworks/esp-idf-v5.4/components/bootloader/subpro
   file(MAKE_DIRECTORY "C:/Espressif/frameworks/esp-idf-v5.4/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader"
-  "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix"
-  "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/tmp"
-  "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp"
-  "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src"
-  "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader"
+  "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix"
+  "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/tmp"
+  "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src"
+  "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "D:/Utal/Memoria_Clinostato/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "D:/Damian/Utal/Memoria_clino/Memoria-clinostato/programacion/esp32_espress_idf/clinostate/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()
